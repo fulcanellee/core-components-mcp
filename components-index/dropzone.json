@@ -1,0 +1,84 @@
+{
+  "componentName": "Dropzone",
+  "packageName": "dropzone",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контента"
+    },
+    "text": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "Перетащите файлы",
+      "description": "Подпись для заглушки"
+    },
+    "disabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заблокированное состояние"
+    },
+    "error": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Состояние ошибки"
+    },
+    "block": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Растягивать ли компонент на всю ширину"
+    },
+    "Overlay": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "({ text = 'Перетащите файлы', visible = false }) => (\n    <div\n        className={cn(styles.overlay, {\n            [styles.visible]: visible,\n        })}\n    >\n        <ContainerMIcon />\n        <span className={styles.text}>{text}</span>\n    </div>\n)",
+      "description": "Компонент оверлея"
+    },
+    "onDrop": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'drop'"
+    },
+    "onDragOver": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragover'"
+    },
+    "onDragLeave": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragleave'"
+    },
+    "onDragEnter": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragenter'"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    }
+  }
+}

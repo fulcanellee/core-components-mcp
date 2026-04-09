@@ -1,0 +1,96 @@
+{
+  "componentName": "PassCode",
+  "packageName": "pass-code",
+  "props": {
+    "value": {
+      "type": "string",
+      "required": false,
+      "defaultValue": null,
+      "description": "Код"
+    },
+    "onChange": {
+      "type": "(code: string) => void",
+      "required": true,
+      "defaultValue": null,
+      "description": "Обработчик изменения кода"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "error": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение ошибки ввода"
+    },
+    "success": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение успешного ввода"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    },
+    "rightAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот справа"
+    },
+    "rightAddonsTitle": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заголовок для правого слота"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования.\nДля враппера используется модификатор -wrapper, ошибки -error,\nсообщения над клавиатурой -message, блока с кодом -input-progress,\nблока с цифрами -keypad"
+    },
+    "breakpoint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1024",
+      "description": "Контрольная точка, с нее начинается desktop версия"
+    },
+    "client": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Версия, которая будет использоваться при серверном рендеринге"
+    },
+    "defaultMatchMediaValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
+    },
+    "disabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отключает ввод и удаление кода"
+    },
+    "maxCodeLength": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "10",
+      "description": "Максимально возможная длина кода"
+    },
+    "codeLength": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Длина кода"
+    }
+  }
+}

@@ -9,10 +9,14 @@
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js",
-    "inspect": "npx @modelcontextprotocol/inspector"
+    "inspect": "npx @modelcontextprotocol/inspector",
+    "extract-props": "tsx scripts/extract-props.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.18.0",
+    "dotenv": "^17.4.1",
+    "glob": "^13.0.6",
+    "react-docgen-typescript": "^2.4.0",
     "zod": "^4.1.11"
   },
   "devDependencies": {

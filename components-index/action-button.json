@@ -1,0 +1,66 @@
+{
+  "componentName": "ActionButton",
+  "packageName": "action-button",
+  "props": {
+    "icon": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Иконка кнопки"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "48",
+      "description": "Размер кнопки"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "primary",
+      "description": "Тип кнопки"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "iconWrapperClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для обертки иконки"
+    },
+    "href": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение href для ссылки"
+    },
+    "disabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заблокировать кнопку"
+    },
+    "loading": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Показать лоадер"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования.\nДля спиннера используется модификатор -loader"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Палитра, в контексте которой используется кнопка"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "componentName": "ListHeader",
+  "packageName": "list-header",
+  "props": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "defaultValue": null,
+      "description": "Заголовок"
+    },
+    "description": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительное описание"
+    },
+    "filled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Наличие фоновой подложки"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

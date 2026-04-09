@@ -1,0 +1,60 @@
+{
+  "componentName": "Spinner",
+  "packageName": "spinner",
+  "props": {
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Палитра, в контексте которой используется спиннер"
+    },
+    "visible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управление видимостью компонента"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "id": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор компонента в DOM"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "style": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные инлайн стили для cпиннера"
+    },
+    "size": {
+      "type": "number",
+      "required": true,
+      "defaultValue": null,
+      "description": "Размер спиннера (кольца)"
+    },
+    "lineWidth": {
+      "type": "number",
+      "required": true,
+      "defaultValue": null,
+      "description": "Толщина линии спинера (кольца)"
+    },
+    "preset": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Преднастроенный вариант"
+    }
+  }
+}

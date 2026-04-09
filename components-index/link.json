@@ -1,0 +1,54 @@
+{
+  "componentName": "Link",
+  "packageName": "link",
+  "props": {
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "primary",
+      "description": "Тип ссылки"
+    },
+    "pseudo": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Пунктирное подчеркивание"
+    },
+    "underline": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Включает / отключает подчеркивание"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    },
+    "rightAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот справа"
+    },
+    "Component": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "pseudo ? 'button' : 'a'",
+      "description": "Позволяет использовать кастомный компонент для кнопки (например Link из роутера)"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  }
+}

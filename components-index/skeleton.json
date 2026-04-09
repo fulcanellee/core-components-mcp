@@ -1,0 +1,60 @@
+{
+  "componentName": "Skeleton",
+  "packageName": "skeleton",
+  "props": {
+    "visible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Флаг, явно задающий состояние, при котором контент закрывается прелоадером"
+    },
+    "animate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Флаг явного включения анимации скелета"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "style": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные инлайн стили"
+    },
+    "allowBackdropBlur": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Включает размытие фона"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "borderRadius": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "8",
+      "description": "Скругление углов"
+    }
+  }
+}

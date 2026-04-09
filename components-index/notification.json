@@ -1,0 +1,156 @@
+{
+  "componentName": "Notification",
+  "packageName": "notification",
+  "props": {
+    "block": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивает компонент на ширину контейнера"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Набор цветов для компонента"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева, заменяет стандартную иконку"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контентной области"
+    },
+    "onClose": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по крестику"
+    },
+    "hasCloser": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управляет отображением кнопки закрытия уведомления\n@deprecated Используйте пропс `closerProps`"
+    },
+    "closerProps": {
+      "type": "{Object}",
+      "required": false,
+      "defaultValue": "{ hasCloser: true }",
+      "description": "Параметры кнопки закрытия\n@property {boolean} [hasCloser] - Управляет отображением кнопки закрытия уведомления\n@property {string} [closerWrapperClassName] - Дополнительный класс враппера кнопки \"закрыть\"\n@property {string} [closerClassName] - Дополнительный класс кнопки \"закрыть\"\n@property {boolean} [divider] - Показывать разделитель\n@property {import('@alfalab/core-components-icon-button').IconButtonProps['view']} [view] - Вид кнопки закрытия"
+    },
+    "titleClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для заголовка"
+    },
+    "actionSectionClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для области с кнопкой действия"
+    },
+    "boldTitle": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Жирный заголовок"
+    },
+    "badge": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид бэйджа"
+    },
+    "actionButton": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кнопка действия"
+    },
+    "closerWrapperClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс враппера кнопки \"закрыть\".\n@deprecated Используйте пропс `closerProps`"
+    },
+    "closerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс кнопки \"закрыть\".\n@deprecated Используйте пропс `closerProps`"
+    },
+    "getBadgeIcons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Функция, с помощью которой можно переопределить иконки в StatusBadge"
+    },
+    "visible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление видимостью компонента"
+    },
+    "offset": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "108",
+      "description": "Отступ от верхнего края"
+    },
+    "autoCloseDelay": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "5000",
+      "description": "Время до закрытия компонента"
+    },
+    "usePortal": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Использовать портал"
+    },
+    "zIndex": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1000",
+      "description": "z-index компонента"
+    },
+    "position": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "top",
+      "description": "Позиционирование компонента от верхнего или нижнего края экрана"
+    },
+    "onCloseTimeout": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события истечения времени до закрытия компонента"
+    },
+    "onClickOutside": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика вне компонента"
+    },
+    "containerRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Ссылка на контейнер компонента, к которому применяется анимация"
+    }
+  }
+}

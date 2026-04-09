@@ -1,0 +1,312 @@
+{
+  "componentName": "SliderInput",
+  "packageName": "slider-input",
+  "props": {
+    "defaultValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Начальное значение поля"
+    },
+    "onClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по полю"
+    },
+    "onMouseDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик MouseDown по полю"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "onMouseUp": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик MouseUp по полю"
+    },
+    "block": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивает компонент на ширину контейнера"
+    },
+    "clear": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Крестик для очистки поля"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Набор цветов для компонента"
+    },
+    "error": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение ошибки"
+    },
+    "success": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение иконки успеха"
+    },
+    "hint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подсказки"
+    },
+    "label": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Лейбл компонента"
+    },
+    "labelView": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид лейбла внутри / снаружи"
+    },
+    "wrapperRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Ref для обертки input"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    },
+    "rightAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот справа"
+    },
+    "leftAddonsProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Свойства для обертки левых аддонов"
+    },
+    "rightAddonsProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Свойства для обертки правых аддонов"
+    },
+    "fieldClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для поля"
+    },
+    "inputClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс инпута\nКласс для инпута"
+    },
+    "labelClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для лейбла"
+    },
+    "addonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для аддонов"
+    },
+    "focusedClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс, который будет установлен при фокусе"
+    },
+    "filledClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс, который будет установлен, если в поле есть значение"
+    },
+    "onClear": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку очистки"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования.\nДля FormControl используется модификатор -form-control\nИдентификатор для систем автоматизированного тестирования"
+    },
+    "disableUserInput": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Запрещает ввод с клавиатуры"
+    },
+    "bold": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Жирный текст\nЖирность текста\n@deprecated Используйте {@link BaseInputProps.fontWeight }"
+    },
+    "fontWeight": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вес шрифта инпута, в том числе плейсхолдера"
+    },
+    "breakpoint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1024",
+      "description": "Контрольная точка, с нее начинается desktop версия"
+    },
+    "client": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Версия, которая будет использоваться при серверном рендеринге"
+    },
+    "defaultMatchMediaValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "48",
+      "description": "Размер компонента\n@description s, m, l, xl deprecated, используйте вместо них 48, 56, 64, 72 соответственно"
+    },
+    "min": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Мин. допустимое число"
+    },
+    "max": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "100",
+      "description": "Макс. допустимое число"
+    },
+    "steps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "[]",
+      "description": "Массив подписей к слайдеру"
+    },
+    "step": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1",
+      "description": "Шаг (должен нацело делить отрезок между мин и макс)"
+    },
+    "pips": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение подписей\nhttps://refreshless.com/nouislider/pips/"
+    },
+    "range": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Настройка шагов\nhttps://refreshless.com/nouislider/pips/#section-range"
+    },
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение инпута"
+    },
+    "sliderValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "+value",
+      "description": "Значение слайдера"
+    },
+    "info": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительная информация в правой части поля"
+    },
+    "Input": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "forwardRef<HTMLInputElement, InputProps>(\n    (\n        {\n            breakpoint,\n            client,\n            defaultMatchMediaValue = client === undefined ? undefined : client === 'desktop',\n            ...restProps\n        },\n        ref,\n    ) => {\n        const isDesktop = useIsDesktop(breakpoint, defaultMatchMediaValue);\n\n        const Component = isDesktop ? InputDesktop : InputMobile;\n\n        return <Component ref={ref} {...restProps} />;\n    },\n)",
+      "description": "Компонент поля ввода"
+    },
+    "customInputProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Кастомные пропсы для поля ввода"
+    },
+    "sliderClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс для слайдера"
+    },
+    "stepsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс для шагов"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения значения через слайдер или поле ввода"
+    },
+    "onInputChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик ввода"
+    },
+    "onSliderChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения слайдера"
+    },
+    "onSliderStart": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик начала перетаскивания ползунка"
+    },
+    "onSliderEnd": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик окончания перетаскивания ползунка"
+    }
+  }
+}

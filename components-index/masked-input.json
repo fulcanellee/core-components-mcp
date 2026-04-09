@@ -1,0 +1,246 @@
+{
+  "componentName": "MaskedInput",
+  "packageName": "masked-input",
+  "props": {
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "48",
+      "description": "Размер компонента"
+    },
+    "type": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Атрибут type"
+    },
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение поля ввода"
+    },
+    "defaultValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Начальное значение поля"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик поля ввода"
+    },
+    "onClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по полю"
+    },
+    "onMouseDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик MouseDown по полю"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "onMouseUp": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик MouseUp по полю"
+    },
+    "block": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивает компонент на ширину контейнера"
+    },
+    "clear": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Крестик для очистки поля"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Набор цветов для компонента"
+    },
+    "error": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение ошибки"
+    },
+    "success": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение иконки успеха"
+    },
+    "hint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подсказки"
+    },
+    "label": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Лейбл компонента"
+    },
+    "labelView": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид лейбла внутри / снаружи"
+    },
+    "wrapperRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Ref для обертки input"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    },
+    "rightAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот справа"
+    },
+    "leftAddonsProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Свойства для обертки левых аддонов"
+    },
+    "rightAddonsProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Свойства для обертки правых аддонов"
+    },
+    "bottomAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот под инпутом"
+    },
+    "fieldClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для поля"
+    },
+    "inputClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс инпута"
+    },
+    "labelClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для лейбла"
+    },
+    "addonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для аддонов"
+    },
+    "focusedClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс, который будет установлен при фокусе"
+    },
+    "filledClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс, который будет установлен, если в поле есть значение"
+    },
+    "onClear": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку очистки"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования.\nДля FormControl используется модификатор -form-control"
+    },
+    "disableUserInput": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Запрещает ввод с клавиатуры"
+    },
+    "bold": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Жирный текст\n@deprecated Используйте {@link BaseInputProps.fontWeight }"
+    },
+    "fontWeight": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вес шрифта инпута, в том числе плейсхолдера"
+    },
+    "breakpoint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1024",
+      "description": "Контрольная точка, с нее начинается desktop версия"
+    },
+    "client": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Версия, которая будет использоваться при серверном рендеринге"
+    },
+    "defaultMatchMediaValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
+    },
+    "mask": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Маска для поля ввода\nhttps://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#mask-array"
+    },
+    "keepCharPositions": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет поведением компонента при удалении символов"
+    },
+    "onBeforeDisplay": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дает возможность изменить значение поля перед рендером"
+    }
+  }
+}

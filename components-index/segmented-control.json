@@ -1,0 +1,72 @@
+{
+  "componentName": "SegmentedControl",
+  "packageName": "segmented-control",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный className"
+    },
+    "onChange": {
+      "type": "(id: IDType) => void",
+      "required": true,
+      "defaultValue": null,
+      "description": "Обработчик смены выбранного сегмента"
+    },
+    "selectedId": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "ID выбранного сегмента"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "32",
+      "description": "Размер компонента"
+    },
+    "shape": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "rectangular",
+      "description": "Форма компонента"
+    },
+    "children": {
+      "type": "ReactElement<SegmentProps, string | JSXElementConstructor<any>>[]",
+      "required": true,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "style": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные инлайн стили для враппера"
+    },
+    "disabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает пользовательский ввод"
+    },
+    "skeleton": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Настройки скелетона"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "componentName": "Gap",
+  "packageName": "gap",
+  "props": {
+    "size": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Размер отступа"
+    },
+    "direction": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "vertical",
+      "description": "Вид отступа (вертикальный или горизонтальный)"
+    },
+    "tag": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "div",
+      "description": "HTML тег"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

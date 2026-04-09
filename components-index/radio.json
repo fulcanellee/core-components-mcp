@@ -1,0 +1,102 @@
+{
+  "componentName": "Radio",
+  "packageName": "radio",
+  "props": {
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "hint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подсказки снизу"
+    },
+    "label": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подписи"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "20",
+      "description": "Размер компонента"
+    },
+    "checked": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление состоянием отмечен/не отмечен"
+    },
+    "disabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление состоянием включен / выключен"
+    },
+    "name": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Html аттрибут name инпута"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс компонента"
+    },
+    "circleClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс радио кнопки"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс контента"
+    },
+    "align": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "start",
+      "description": "Выравнивание"
+    },
+    "addons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный слот"
+    },
+    "block": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивать ли компонент на всю ширину"
+    },
+    "labelProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для label"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик на выбор элемента"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  }
+}

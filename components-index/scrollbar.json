@@ -1,0 +1,102 @@
+{
+  "componentName": "Scrollbar",
+  "packageName": "scrollbar",
+  "props": {
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Оборачиваемый элемент."
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс на корневой элемент."
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "horizontalAutoStretch": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Растягивать контент по горизонтали по ширине содержимого."
+    },
+    "widthPropName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "minWidth",
+      "description": "Название css свойства, которое устанавливается на контейнер при horizontalAutoStretch."
+    },
+    "autoHide": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Включает автоскрытие ползунка."
+    },
+    "autoHideTimeout": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1000",
+      "description": "Время в мс, определяющее задержку до исчезновения полосы прокрутки (при включенной опции autoHide)."
+    },
+    "forceVisible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Принудительное отображение полосы прокрутки."
+    },
+    "clickOnTrack": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Управление поведением клика по треку.\nЕсли true, то будет выполняться прокрутка к месту клика."
+    },
+    "scrollableNodeProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{ ref: null }",
+      "description": "HTML-aтрибуты на прокручиваемый узел."
+    },
+    "contentNodeProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{ ref: null }",
+      "description": "HTML-aтрибуты на узел с контентом."
+    },
+    "maskProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "HTML-aтрибуты маски."
+    },
+    "verticalBarClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс контейнера вертикальной полосы прокрутки"
+    },
+    "horizontalBarClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс контейнера горизонтальной полосы прокрутки"
+    },
+    "onContentScroll": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения скролла"
+    },
+    "verticalBarRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Ref для вертикальной полосы прокрутки"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "componentName": "CalendarRange",
+  "packageName": "calendar-range",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "valueFrom": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение инпута (используется и для календаря)"
+    },
+    "valueTo": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение инпута (используется и для календаря)"
+    },
+    "defaultMonth": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Месяц в календаре по умолчанию"
+    },
+    "minDate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Минимальная дата, доступная для выбора (timestamp)"
+    },
+    "maxDate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Максимальная дата, доступная для выбора (timestamp)"
+    },
+    "onDateFromChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения даты от"
+    },
+    "onDateToChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения даты до"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения"
+    },
+    "onError": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Коллбэк, срабатывающий при возникновении ошибок валидации дат внутри компонента."
+    },
+    "events": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список событий"
+    },
+    "offDays": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список выходных"
+    },
+    "inputFromProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для инпута даты от"
+    },
+    "inputToProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для инпута даты до"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "calendarPosition": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "static",
+      "description": "Определяет, как рендерить календарь — в поповере или снизу инпута"
+    },
+    "defaultMonthPosition": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "calendarPosition = static\nОтображать начальный месяц слева или справа (влияет только на начальный рендер)"
+    },
+    "returnInvalidDates": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Возвращать невалидную дату для кастомной валидации"
+    },
+    "calendarContainerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контейнера календаря"
+    }
+  }
+}

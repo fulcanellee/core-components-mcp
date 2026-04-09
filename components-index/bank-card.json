@@ -1,0 +1,60 @@
+{
+  "componentName": "BankCard",
+  "packageName": "bank-card",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "backgroundColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "#EF3124",
+      "description": "Цвет фона карты"
+    },
+    "bankLogo": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "<AlfaBankSignMIcon width={30} height={40} />",
+      "description": "Иконка логотипа банка (размер L)"
+    },
+    "inputLabel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "getDefaultInputLabel(maskType)",
+      "description": "Лэйбл поля ввода"
+    },
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение поля ввода"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик ввода"
+    },
+    "onUsePhoto": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик вызова камеры"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "maskType": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "MaskTypeEnum.Default",
+      "description": "Тип вводимой маски. Позволяет устанавливать необходимый тип номера (номер карты или номер счёта)\nЕсли параметр не передавать - работает с обоими типами номеров"
+    }
+  }
+}

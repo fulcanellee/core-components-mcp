@@ -1,0 +1,48 @@
+{
+  "componentName": "SteppedProgressBar",
+  "packageName": "stepped-progress-bar",
+  "props": {
+    "maxStep": {
+      "type": "number",
+      "required": true,
+      "defaultValue": null,
+      "description": "Общее количество шагов"
+    },
+    "description": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Постфикс описание под прогрессбаром"
+    },
+    "step": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Количество пройденных шагов"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заполнения"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    }
+  }
+}

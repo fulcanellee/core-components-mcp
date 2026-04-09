@@ -1,0 +1,66 @@
+{
+  "componentName": "Text",
+  "packageName": "text",
+  "props": {
+    "tag": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "span",
+      "description": "HTML тег"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "paragraph-primary-medium",
+      "description": "Cтиль типографики"
+    },
+    "align": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "left",
+      "description": "Выравнивание текста"
+    },
+    "color": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет текста"
+    },
+    "textBackgroundColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет фона"
+    },
+    "rowLimit": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Количество строк"
+    },
+    "monospaceNumbers": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Делает цифры моноширинными"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования."
+    }
+  }
+}

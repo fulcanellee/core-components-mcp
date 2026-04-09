@@ -1,0 +1,42 @@
+{
+  "componentName": "StatusBadge",
+  "packageName": "status-badge",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "24",
+      "description": "Размер компонента"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "view": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Вид бейджа."
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "customIcons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомные иконки"
+    }
+  }
+}

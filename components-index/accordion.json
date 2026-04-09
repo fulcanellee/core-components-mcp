@@ -1,0 +1,90 @@
+{
+  "componentName": "Accordion",
+  "packageName": "accordion",
+  "props": {
+    "expanded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Состояние компонента"
+    },
+    "header": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Элемент заголовка"
+    },
+    "control": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот для элемента управления"
+    },
+    "controlPosition": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "end",
+      "description": "Указывает компоненту - где будет размещен control"
+    },
+    "defaultExpanded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Начальное состояние uncontrolled компонента"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Основной элемент для отображения содержимого"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс обертки"
+    },
+    "containerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контейнера с заголовком"
+    },
+    "headerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для header"
+    },
+    "controlClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для control"
+    },
+    "bodyClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для body"
+    },
+    "bodyContentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для body content"
+    },
+    "onExpandedChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик смены состояний `expanded`"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

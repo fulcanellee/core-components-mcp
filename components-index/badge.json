@@ -1,0 +1,72 @@
+{
+  "componentName": "Badge",
+  "packageName": "badge",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "view": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Вид компонента"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "m",
+      "description": "Размер компонента (только для view=icon)\n//deprecated(используйте height для view=count )"
+    },
+    "visibleIconOutline": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Видимость белой обводки вокруг иконки"
+    },
+    "visibleColorOutline": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Видимость цветной обводки вокруг иконки (только для view=icon)"
+    },
+    "content": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Контент компонента"
+    },
+    "height": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "16",
+      "description": "Высота компонента, min = 16; max = 48 (только для view=count)"
+    },
+    "color": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "accent",
+      "description": "Цветовое оформление бейджа при view='count'"
+    },
+    "iconColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цветовое оформление бейджа при view='icon'"
+    },
+    "iconUnderlayColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "static-light",
+      "description": "Цвет подложки под иконкой"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

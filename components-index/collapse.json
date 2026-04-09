@@ -1,0 +1,78 @@
+{
+  "componentName": "Collapse",
+  "packageName": "collapse",
+  "props": {
+    "expanded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Состояние компонента"
+    },
+    "collapsedLabel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст ссылки в `expanded` состоянии"
+    },
+    "expandedLabel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст ссылки в `collapsed` состоянии"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы `Collapse`"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс обертки"
+    },
+    "expandedContentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для скрываемого контента"
+    },
+    "id": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор компонента в DOM"
+    },
+    "defaultExpanded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Начальное состояние uncontrolled компонента"
+    },
+    "onExpandedChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик смены состояний `expanded/collapsed`"
+    },
+    "onTransitionEnd": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события завершения анимации"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  }
+}

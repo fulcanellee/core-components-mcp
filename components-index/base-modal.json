@@ -1,0 +1,204 @@
+{
+  "componentName": "BaseModal",
+  "packageName": "base-modal",
+  "props": {
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Контент"
+    },
+    "Backdrop": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "({\n    className,\n    open = false,\n    invisible = false,\n    timeout = 200,\n    children,\n    onClose,\n    dataTestId,\n    transitionClassNames = styles,\n    transparent = false,\n    ...restProps\n}) => {\n    const nodeRef = useRef(null);\n\n    return (\n        <CSSTransition\n            timeout={timeout}\n            unmountOnExit={true}\n            classNames={transitionClassNames}\n            in={!invisible && open}\n            appear={true}\n            {...restProps}\n            nodeRef={nodeRef}\n        >\n            <div\n                ref={nodeRef}\n                aria-hidden={true}\n                onClick={onClose}\n                data-test-id={dataTestId}\n                className={cn(styles.backdrop, className, {\n                    [styles.transparent]: transparent,\n                })}\n            >\n                {children}\n            </div>\n        </CSSTransition>\n    );\n}",
+      "description": "Компонент бэкдропа"
+    },
+    "backdropProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Свойства для Бэкдропа"
+    },
+    "container": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Нода, компонент или функция возвращающая их\n\nКонтейнер к которому будут добавляться порталы"
+    },
+    "disableAutoFocus": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает автоматический перевод фокуса на модалку при открытии"
+    },
+    "disableFocusLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает ловушку фокуса"
+    },
+    "disableRestoreFocus": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает восстановление фокуса на предыдущем элементе после закрытия модалки"
+    },
+    "disableEscapeKeyDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при нажатии Escape"
+    },
+    "disableBackdropClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при клике на бэкдроп"
+    },
+    "disableBlockingScroll": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает блокировку скролла при открытии модального окна\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "scrollLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет блокировкой скролла/overscroll фона при открытой модалке."
+    },
+    "keepMounted": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Содержимое модалки всегда в DOM"
+    },
+    "open": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Управление видимостью модалки"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "wrapperProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на dialog wrapper"
+    },
+    "contentProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на обертку контента"
+    },
+    "componentDivProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на компонентную обертку контента"
+    },
+    "wrapperClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для обертки (Modal)"
+    },
+    "scrollHandler": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "wrapper",
+      "description": "Обработчик скролла контента"
+    },
+    "transitionProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Пропсы для анимации (CSSTransition)"
+    },
+    "usePortal": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Рендерить ли в контейнер через портал."
+    },
+    "onBackdropClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на бэкдроп"
+    },
+    "onEscapeKeyDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на Escape\n\nЕсли `disableEscapeKeyDown` - false и модальное окно в фокусе"
+    },
+    "onClose": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик закрытия"
+    },
+    "onMount": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onEntered компонента Transition"
+    },
+    "onUnmount": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onExited компонента Transition"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "zIndex": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "100",
+      "description": "z-index компонента"
+    },
+    "componentRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "null",
+      "description": "Реф, который должен быть установлен компонентной области"
+    },
+    "contentElementRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "null",
+      "description": "Реф контентной области"
+    },
+    "iOSLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Блокирует скролл когда модальное окно открыто. Работает только на iOS.\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "onWheel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Хэндлер события прокрутки колесиком"
+    }
+  }
+}

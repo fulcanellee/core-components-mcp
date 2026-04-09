@@ -1,0 +1,204 @@
+{
+  "componentName": "CalendarWithSkeleton",
+  "packageName": "calendar-with-skeleton",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "headerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс шапки десктопного календаря"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс контента десктопного календаря"
+    },
+    "defaultView": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид по умолчанию (выбор дней, месяцев, лет)"
+    },
+    "selectorView": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид шапки — месяц и год или только месяц"
+    },
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Выбранная дата (timestamp)"
+    },
+    "mode": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "single",
+      "description": "Режим выбора дат"
+    },
+    "rangeBehavior": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "clarification",
+      "description": "Тип выбора границ в календаре"
+    },
+    "month": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Открытый месяц (timestamp)"
+    },
+    "defaultMonth": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Месяц, открытый по умолчанию (timestamp)"
+    },
+    "minDate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Минимальная дата, доступная для выбора (timestamp)"
+    },
+    "maxDate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Максимальная дата, доступная для выбора (timestamp)"
+    },
+    "selectedFrom": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Начало выделенного периода (timestamp)\n@deprecated используйте value вместе с mode='range'"
+    },
+    "selectedTo": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Конец выделенного периода (timestamp)\n@deprecated используйте value вместе с mode='range'"
+    },
+    "rangeComplete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Индикатор, что выбран полный период"
+    },
+    "events": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список событий"
+    },
+    "offDays": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список отключенных для выбора дней."
+    },
+    "holidays": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список выходных"
+    },
+    "onMonthChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения месяца (или года)"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик выбора даты"
+    },
+    "onMonthClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку месяца"
+    },
+    "onYearClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку года"
+    },
+    "onPeriodClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на период"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "hasHeader": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Нужно ли рендерить шапку календаря"
+    },
+    "responsive": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Должен ли календарь подстраиваться под ширину родителя."
+    },
+    "dayAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный контент под числом"
+    },
+    "shape": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Форма ячейки дня"
+    },
+    "showCurrentYearSelector": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отображать ли текущий год, если selectorView 'month-only'"
+    },
+    "hideDisabledArrows": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Скрывает заблокированные кнопки в периоде, если selectorView 'month-only'"
+    },
+    "mobile": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "CalendarDesktop используется в мобильной и десктопной версии\nПропс позволяет определить платформу"
+    },
+    "animate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Флаг включения анимации скелета"
+    },
+    "calendarVisible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Флаг управлением видимостью календаря"
+    }
+  }
+}

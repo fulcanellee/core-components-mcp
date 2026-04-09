@@ -1,0 +1,108 @@
+{
+  "componentName": "NavigationBar",
+  "packageName": "navigation-bar",
+  "props": {
+    "title": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заголовок"
+    },
+    "subtitle": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Подзаголовок"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Контент шапки"
+    },
+    "align": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "center",
+      "description": "Выравнивание заголовка"
+    },
+    "backgroundColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "var(--color-light-base-bg-primary)",
+      "description": "Цвет фона"
+    },
+    "border": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Наличие бордера"
+    },
+    "sticky": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Фиксирует шапку"
+    },
+    "bottomAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот снизу"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    },
+    "rightAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот справа"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контента"
+    },
+    "contentWrapperClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для обертки контента"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "rightAddonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для правого аддона"
+    },
+    "leftAddonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для левого аддона"
+    },
+    "bottomAddonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для нижнего аддона"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования."
+    }
+  }
+}

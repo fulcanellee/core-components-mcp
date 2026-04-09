@@ -1,0 +1,60 @@
+{
+  "componentName": "Pagination",
+  "packageName": "pagination",
+  "props": {
+    "currentPageIndex": {
+      "type": "number",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Текущая страница (с нуля)"
+    },
+    "pagesCount": {
+      "type": "number",
+      "required": true,
+      "defaultValue": null,
+      "description": "Количество страниц"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "hideArrows": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Скрывает стрелки, если выбрана первая или последняя страница"
+    },
+    "sidePadding": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1",
+      "description": "Количество видимых страниц по бокам"
+    },
+    "activePadding": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "2",
+      "description": "Количество видимых страниц вокруг выбранной"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Режим пагинации"
+    },
+    "onPageChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "() => null",
+      "description": "Обработчик переключения страницы"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "componentName": "Space",
+  "packageName": "space",
+  "props": {
+    "align": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Выравнивание"
+    },
+    "direction": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Направление"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Размер отступов"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "children": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Дочерние компоненты"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "wrap": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Автоматический перенос строк, полезно при direction = 'horizontal'"
+    },
+    "divider": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Компонент разделителя"
+    },
+    "fullWidth": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивать ли компонент на всю ширину"
+    },
+    "useCssGaps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Использовать css gap\n@description Поддержка ограничена. см https://caniuse.com/?search=gap"
+    }
+  }
+}

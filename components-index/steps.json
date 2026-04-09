@@ -1,0 +1,126 @@
+{
+  "componentName": "Steps",
+  "packageName": "steps",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "defaultActiveStep": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1",
+      "description": "Активный шаг, указанный по умолчанию"
+    },
+    "activeStep": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Активный шаг"
+    },
+    "isMarkCompletedSteps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Управление возможностью отключения пометки пройденного шага"
+    },
+    "checkIsStepDisabled": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием disabled шага и\nвозможностью перехода на этот шаг\n@param stepNumber - номер шага\n@return Флаг состояния disabled"
+    },
+    "checkIsStepError": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием шага error\n@param stepNumber - номер шага\n@return Флаг состояния error"
+    },
+    "checkIsStepCriticalError": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием шага criticalError\n@param stepNumber - номер шага\n@return Флаг состояния error"
+    },
+    "checkIsStepWarning": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием шага warning\n@param stepNumber - номер шага\n@return Флаг состояния warning"
+    },
+    "checkIsStepWaiting": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием шага waiting\n@param stepNumber - номер шага\n@return Флаг состояния waiting"
+    },
+    "checkIsStepPositive": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для управления состоянием шага positive\n@param stepNumber - номер шага\n@return Флаг состояния positive"
+    },
+    "checkIsStepCustom": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный метод для установки кастомного индикатора шага\n@param stepNumber - номер шага\n@return Объект StepIndicatorProps { className, content, iconColor } или null"
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика на шаг\n@param stepNumber - номер активного шага"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "children": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "isVerticalAlign": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управление ориентацией компонента"
+    },
+    "ordered": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Управление отображением номера шага"
+    },
+    "interactive": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Включение / отключение интерактивности шагов"
+    },
+    "fullWidth": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Растягивание шагов на всю ширину блока для вертикальной ориентации"
+    },
+    "minSpaceBetweenSteps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "24",
+      "description": "Минимальное расстояние между шагами для горизонтального расположения компонента\n@description Значение 8 устарело и будет удалено в будущих версиях. Используйте 16, 24 или 32."
+    },
+    "completedDashColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет тире выполненного шага"
+    }
+  }
+}

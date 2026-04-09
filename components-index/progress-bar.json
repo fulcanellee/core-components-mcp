@@ -1,0 +1,42 @@
+{
+  "componentName": "ProgressBar",
+  "packageName": "progress-bar",
+  "props": {
+    "value": {
+      "type": "number",
+      "required": true,
+      "defaultValue": null,
+      "description": "Значение заполненной части 0-100"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Css-класс для стилизации"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "positive",
+      "description": "Цвет заполнения"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "8",
+      "description": "Размер компонента"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "colors": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  }
+}

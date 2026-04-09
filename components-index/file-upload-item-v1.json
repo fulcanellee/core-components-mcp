@@ -1,0 +1,132 @@
+{
+  "componentName": "FileUploadItemV1",
+  "packageName": "file-upload-item-v1",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "id": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Идентификатор элемента"
+    },
+    "name": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Имя файла с расширением"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Размер файла"
+    },
+    "uploadDate": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дата загрузки файла"
+    },
+    "downloadLink": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Ссылка на файл. Если прокидывается этот параметр, то появляется кнопка скачивания"
+    },
+    "download": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Рекомендует браузеру скачивать контент по ссылке.\nВ проп может быть передано рекомендуемое название скачиваемого файла."
+    },
+    "showDelete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение кнопки удаления"
+    },
+    "showRestore": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение кнопки восстановления"
+    },
+    "uploadPercent": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Процент загрузки файла"
+    },
+    "uploadStatus": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Статус загрузки файла"
+    },
+    "error": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Сообщение об ошибке"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "icon": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "fileIcon(name)",
+      "description": "Компонент кастомной иконки"
+    },
+    "onDownload": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик загрузки файла"
+    },
+    "onDelete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик удаления файла"
+    },
+    "onRestore": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик восстановления файла"
+    },
+    "disableButtons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление активностью кнопок"
+    },
+    "multiline": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Разрешить многострочное название файла"
+    },
+    "target": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Указывает, где открыть скачиваемый документ"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

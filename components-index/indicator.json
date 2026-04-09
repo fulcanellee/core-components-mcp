@@ -1,0 +1,48 @@
+{
+  "componentName": "Indicator",
+  "packageName": "indicator",
+  "props": {
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение индикатора"
+    },
+    "backgroundColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заливки"
+    },
+    "height": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Высота компонента, min = 16; max = 48"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "getSize(height, value)",
+      "description": "Размер компонента"
+    },
+    "border": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Настройки обводки"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пресет компонента"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

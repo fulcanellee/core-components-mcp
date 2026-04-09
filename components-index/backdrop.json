@@ -1,0 +1,48 @@
+{
+  "componentName": "Backdrop",
+  "packageName": "backdrop",
+  "props": {
+    "invisible": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Прозрачный бэкдроп\n@deprecated данное свойство больше не используется, временно оставлено для обратной совместимости\nИспользуйте свойство transparent"
+    },
+    "open": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет видимостью компонента"
+    },
+    "onClose": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по бэкдропу"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "transitionClassNames": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Классы анимации\n\nhttp://reactcommunity.org/react-transition-group/css-transition#CSSTransition-prop-classNames"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "transparent": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет прозрачностью бэкдроп"
+    }
+  }
+}

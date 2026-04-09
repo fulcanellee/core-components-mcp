@@ -1,0 +1,156 @@
+{
+  "componentName": "CircularProgressBar",
+  "packageName": "circular-progress-bar",
+  "props": {
+    "value": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Уровень прогресса, %"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "title": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "isObject(valueFromProps) ? null : `${valueFromProps}`",
+      "description": "Основной текст"
+    },
+    "contentColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "secondary",
+      "description": "Цвет контента"
+    },
+    "titleColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заголовка\nПриоритет выше чем у `contentColor`"
+    },
+    "subtitleColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет подзаголовка\nПриоритет выше чем у `contentColor`"
+    },
+    "subtitle": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный текст"
+    },
+    "titleComplete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Основной текст при 100%"
+    },
+    "subtitleComplete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный текст при 100%"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "positive",
+      "description": "Цвет заполнения"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "64",
+      "description": "Размер (144 — 144×144px, 128 — 128×128px, 80 — 80×80px, 64 — 64×64px, 48 — 48×48px, 24 — 24×24px)"
+    },
+    "stroke": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Наличие желоба"
+    },
+    "fillComplete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заливка при 100%"
+    },
+    "completeTextColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет текста при 100%"
+    },
+    "completeIconColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "tertiary",
+      "description": "Цвет иконки при 100%"
+    },
+    "icon": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Компонент иконки"
+    },
+    "iconComplete": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Компонент иконки при 100%"
+    },
+    "direction": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "clockwise",
+      "description": "Направление прогресса (clockwise - по часовой стрелке, counter-clockwise - против часовой стрелки)"
+    },
+    "height": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Высота компонента, min = 24; max = 144\nиспользовать совместно с size :\n144 от 144\n128 от 128 до 143\n80 от 80 до 127\n64 от 64 до 79\n48 от 48 до 63\n24 от 24 до 47"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "progressStrokeColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет прогресса"
+    },
+    "circleColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заливки внутри круга"
+    },
+    "strokeColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет желоба"
+    },
+    "directionType": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "asc",
+      "description": "Направление заполнения круга"
+    }
+  }
+}

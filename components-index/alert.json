@@ -1,0 +1,186 @@
+{
+  "componentName": "Alert",
+  "packageName": "alert",
+  "props": {
+    "onClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по плашке"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "title": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Заголовок компонента"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "breakpoint": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "1024",
+      "description": "Контрольная точка, с нее начинается desktop версия"
+    },
+    "client": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Версия, которая будет использоваться при серверном рендеринге"
+    },
+    "defaultMatchMediaValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид компонента"
+    },
+    "rowLimit": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Количество строк"
+    },
+    "rounded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Включить/выключить скругление"
+    },
+    "borderRadius": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный радиус скругления (px, rem, em и т.д.)"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контента"
+    },
+    "onClose": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по крестику"
+    },
+    "hasCloser": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление наличием закрывающего крестика"
+    },
+    "border": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Включить/Выключить обводку"
+    },
+    "closerAriaLabel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "закрыть",
+      "description": "Лейбл доступности для закрывающего крестика"
+    },
+    "folded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление видимостью контента (controlled)"
+    },
+    "subAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот для субаддонов (слева от крестика)"
+    },
+    "shadow": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Включить/выключить тени"
+    },
+    "limitContentWidth": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Включить/выключить ограничение максимальной ширины контента в 560px"
+    },
+    "titleView": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид заголовка"
+    },
+    "background": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Фон компонента при view=custom"
+    },
+    "borderColor": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет бордера у компонента при view=custom"
+    },
+    "buttons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Набор действий"
+    },
+    "buttonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для кнопок"
+    },
+    "buttonsContainerClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контейнера кнопок"
+    },
+    "subAddonsClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для субаддонов"
+    },
+    "onToggle": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик сворачивания"
+    },
+    "Plate": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": ""
+    }
+  }
+}

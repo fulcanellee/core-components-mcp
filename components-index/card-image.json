@@ -1,0 +1,72 @@
+{
+  "componentName": "CardImage",
+  "packageName": "card-image",
+  "props": {
+    "cardId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор карты\n(например: ER, GQ, SU)"
+    },
+    "layers": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "BACKGROUND,CARD_NUMBER,CARD_HOLDER,PAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE",
+      "description": "Какие слои показывать, через запятую без пробелов\n(полный набор: BACKGROUND,CARD_NUMBER,CARD_HOLDER,\nPAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE)"
+    },
+    "width": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "280",
+      "description": "Ширина изображения"
+    },
+    "rounded": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Скругление углов"
+    },
+    "baseUrl": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "https://online.alfabank.ru/cards-images/cards/",
+      "description": "Базовый URL сервиса с изображениями"
+    },
+    "onLoad": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Колбек, вызываемый при загрузке изображения"
+    },
+    "onError": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Колбек, вызываемый при ошибке загрузки изображения"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "alt": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Текстовое описание изображения"
+    },
+    "id": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Уникальный идентификатор блока"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}

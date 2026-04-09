@@ -1,0 +1,54 @@
+{
+  "componentName": "Gallery",
+  "packageName": "gallery",
+  "props": {
+    "open": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Управление видимостью"
+    },
+    "images": {
+      "type": "GalleryImage[]",
+      "required": true,
+      "defaultValue": null,
+      "description": "Массив изображений"
+    },
+    "loop": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Зациклить галерею"
+    },
+    "initialSlide": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "0",
+      "description": "Индекс открытого изображение"
+    },
+    "onClose": {
+      "type": "() => void",
+      "required": true,
+      "defaultValue": null,
+      "description": "Обработчик закрытия"
+    },
+    "slideIndex": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Индекс текущего изображения"
+    },
+    "onSlideIndexChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения текущего изображения"
+    },
+    "popupClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для попапа"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "componentName": "Comment",
+  "packageName": "comment",
+  "props": {
+    "rowLimit": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Количество строк"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Сss класс для стилизации общей обёртки"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    }
+  }
+}

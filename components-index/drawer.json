@@ -1,0 +1,216 @@
+{
+  "componentName": "Drawer",
+  "packageName": "drawer",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Контент"
+    },
+    "onWheel": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Хэндлер события прокрутки колесиком"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "contentClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "onClose": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик закрытия"
+    },
+    "Backdrop": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Компонент бэкдропа"
+    },
+    "backdropProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Свойства для Бэкдропа"
+    },
+    "disableAutoFocus": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает автоматический перевод фокуса на модалку при открытии"
+    },
+    "disableFocusLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает ловушку фокуса"
+    },
+    "disableRestoreFocus": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает восстановление фокуса на предыдущем элементе после закрытия модалки"
+    },
+    "disableEscapeKeyDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при нажатии Escape"
+    },
+    "disableBackdropClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при клике на бэкдроп"
+    },
+    "disableBlockingScroll": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает блокировку скролла при открытии модального окна\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "scrollLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет блокировкой скролла/overscroll фона при открытой модалке."
+    },
+    "keepMounted": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "false",
+      "description": "Содержимое модалки всегда в DOM"
+    },
+    "open": {
+      "type": "enum",
+      "required": true,
+      "defaultValue": null,
+      "description": "Управление видимостью модалки"
+    },
+    "wrapperProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на dialog wrapper"
+    },
+    "contentProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на обертку контента"
+    },
+    "componentDivProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на компонентную обертку контента"
+    },
+    "wrapperClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для обертки (Modal)"
+    },
+    "scrollHandler": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик скролла контента"
+    },
+    "transitionProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для анимации (CSSTransition)"
+    },
+    "usePortal": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Рендерить ли в контейнер через портал."
+    },
+    "onBackdropClick": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на бэкдроп"
+    },
+    "onEscapeKeyDown": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на Escape\n\nЕсли `disableEscapeKeyDown` - false и модальное окно в фокусе"
+    },
+    "onMount": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onEntered компонента Transition"
+    },
+    "onUnmount": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onExited компонента Transition"
+    },
+    "zIndex": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "z-index компонента"
+    },
+    "componentRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Реф, который должен быть установлен компонентной области"
+    },
+    "contentElementRef": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Реф контентной области"
+    },
+    "iOSLock": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Блокирует скролл когда модальное окно открыто. Работает только на iOS.\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "placement": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "right",
+      "description": "Край экрана, с которого может появиться Drawer."
+    },
+    "nativeScrollbar": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Нужно ли использовать нативный скроллбар"
+    },
+    "contentTransitionProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для анимации контента (CSSTransition)"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "componentName": "Divider",
+  "packageName": "divider",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомный класс"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    }
+  }
+}

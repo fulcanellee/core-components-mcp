@@ -1,0 +1,54 @@
+{
+  "componentName": "List",
+  "packageName": "list",
+  "props": {
+    "tag": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "ul",
+      "description": "HTML тег"
+    },
+    "marker": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "'–' for ul and 'decimal' for ol",
+      "description": "Маркер"
+    },
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Css-класс для стилизации"
+    },
+    "colorMarker": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет маркера"
+    },
+    "reversed": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Список обратного счета"
+    },
+    "start": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Начало отсчета элементов списка"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    }
+  }
+}

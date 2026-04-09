@@ -1,0 +1,36 @@
+{
+  "componentName": "Mq",
+  "packageName": "mq",
+  "props": {
+    "query": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Media выражение или кастомный запрос из `mq.json`, например `--mobile`."
+    },
+    "touch": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Запрос на поддержку тач-событий"
+    },
+    "defaultMatchMediaValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    },
+    "onMatchChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменений в совпадении запросов"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "componentName": "Status",
+  "packageName": "status",
+  "props": {
+    "className": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "view": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "muted-alt",
+      "description": "Вид компонента\n@description soft deprecated, используйте вместо него muted-alt"
+    },
+    "color": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "green",
+      "description": "Цветовое оформление компонента"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "children": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "20",
+      "description": "Размер компонента"
+    },
+    "shape": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "rectangular",
+      "description": "Форма компонента"
+    },
+    "uppercase": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "true",
+      "description": "Текст компонента в верхнем регистре"
+    },
+    "leftAddons": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева"
+    }
+  }
+}

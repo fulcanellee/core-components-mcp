@@ -1,0 +1,90 @@
+{
+  "componentName": "Attach",
+  "packageName": "attach",
+  "props": {
+    "buttonContent": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "Выберите файл",
+      "description": "Содержимое кнопки для выбора файла"
+    },
+    "buttonProps": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Свойства для кнопки"
+    },
+    "fileClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для блока с файлами"
+    },
+    "noFileClassName": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для блока с подсказкой, когда файл не загружен"
+    },
+    "maxFilenameLength": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Число символов, после которого имя файла будет обрезаться"
+    },
+    "noFileText": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "Нет файла",
+      "description": "Текст для случая, когда файл не загружен"
+    },
+    "progressBarPercent": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Процент выполнения загрузки файла"
+    },
+    "size": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": "48",
+      "description": "Размер компонента"
+    },
+    "multiple": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Возможность прикрепления нескольких файлов"
+    },
+    "value": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Содержимое поля ввода. Принимает массив объектов типа File или null."
+    },
+    "defaultValue": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Содержимое поля ввода, указанное по умолчанию. Принимает массив объектов типа File или null."
+    },
+    "onChange": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик поля ввода"
+    },
+    "onClear": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку очистки"
+    },
+    "dataTestId": {
+      "type": "enum",
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  }
+}
