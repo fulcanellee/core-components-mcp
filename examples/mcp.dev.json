@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "core-components-mcp-dev": {
+      "command": "npm",
+      "args": ["run", "dev"],
+      "cwd": "path/to/folder"
+    }
+  }
+}
