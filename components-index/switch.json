@@ -1,6 +1,15 @@
 {
   "componentName": "Switch",
   "packageName": "switch",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/switch",
+      "named": [
+        "Switch"
+      ]
+    }
+  ],
   "props": {
     "label": {
       "type": "enum",
@@ -74,5 +83,19 @@
       "defaultValue": "false",
       "description": "Показать скелетон"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Как использовать",
+      "description": "Если свитч нельзя использовать, его следует заблокировать. Валидация для свитчей не требуется.",
+      "desktop": "render(() => {\nconst [checked1, setChecked1] = React.useState(false);\nconst [checked2, setChecked2] = React.useState(false);\n\nreturn (\n<div style={{ width: document.body.clientWidth < 450 ? '100%' : 320 }}>\n<Switch\nblock={true}\nchecked={checked1}\nlabel='Сделать всё хорошо'\nhint='Бесплатно без СМС'\nonChange={() => setChecked1((prevState) => !prevState)}\n/>\n<Gap size={24} />\n<Switch\nblock={true}\nreversed={true}\nchecked={checked2}\nlabel='Сделать всё хорошо'\nhint='Бесплатно без СМС'\nonChange={() => setChecked2((prevState) => !prevState)}\n/>\n</div>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Состояния",
+      "description": "Свитч может находиться в выбранном и невыбранном состоянии. В редких кейсах его значение может быть недоступным для редактирования.",
+      "desktop": "render(() => {\nreturn (\n<>\n<Switch checked={true} label='Выбран' />\n<Gap size={16} />\n<Switch checked={true} label='Выбран и недоступен' disabled={true} />\n<Gap size={24} />\n<Switch checked={false} label='По умолчанию' />\n<Gap size={16} />\n<Switch checked={false} label='По умолчанию и недоступен' disabled={true} />\n</>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

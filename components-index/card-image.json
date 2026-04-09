@@ -1,6 +1,15 @@
 {
   "componentName": "CardImage",
   "packageName": "card-image",
+  "description": "Компонент изображения карты.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/card-image",
+      "named": [
+        "CardImage"
+      ]
+    }
+  ],
   "props": {
     "cardId": {
       "type": "enum",
@@ -68,5 +77,13 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<CardImage\ncardId='EG'\nwidth={isMobile() ? 320 : 380}\nbaseUrl='https://online.alfabank.ru/cards-images/cards/'\nclassName='some name'\nid='some id'\ndataTestId='test id'\n/>",
+      "mobile": null
+    }
+  ]
 }

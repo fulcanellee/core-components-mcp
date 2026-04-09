@@ -1,6 +1,15 @@
 {
   "componentName": "Popover",
   "packageName": "popover",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/popover",
+      "named": [
+        "Popover"
+      ]
+    }
+  ],
   "props": {
     "open": {
       "type": "enum",
@@ -140,5 +149,13 @@
       "defaultValue": "24",
       "description": "Минимальное расстояние стрелки до края поповера"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "Под капотом использует popper.js и react-transition-group.\nЕсли положение поповера не пересчитывается (например, при измененнии размера элемента-якоря), то можно воспользоваться методом update:",
+      "desktop": "render(() => {\nconst [count, setCount] = React.useState(0);\nconst [buttonElement, setButtonElement] = React.useState(null);\n\nconst label = {\n0: 'Показать поповер снизу',\n1: 'Показать поповер сверху',\n2: 'Показать слева',\n3: 'Показать справа',\n4: 'Скрыть',\n};\n\nconst position = {\n1: 'bottom',\n2: 'top',\n3: 'left',\n4: 'right',\n};\n\n// updatePopover - ref, который хранит функцию, с помощью которой можно обновить положение поповера\nconst updatePopover = React.useRef();\n\nconst onClick = () => {\nsetCount((count) => count + 1);\n\nif (updatePopover.current) {\n// Обновляем положение поповера\nupdatePopover.current();\n}\nif (count === 4) {\nsetCount(0);\n}\n};\n\nconst handleButtonRef = (node) => {\nif (count !== 0) {\nsetButtonElement(node);\n}\n};\nconst popoverChildren = (\n<>{count !== 0 && <div style={{ padding: '15px', width: '156px' }}>Popover</div>}</>\n);\n\nreturn (\n<div\nstyle={{\nwidth: '700px',\nheight: '300px',\ndisplay: 'flex',\njustifyContent: 'center',\nalignItems: 'center',\n}}\n>\n<Popover\nanchorElement={buttonElement}\nuseAnchorWidth={true}\nposition={position[count]}\nopen={count !== 0}\nupdate={updatePopover}\noffset={[0, 4]}\n>\n{popoverChildren}\n</Popover>\n\n<Button size={48} ref={handleButtonRef} onClick={onClick}>\n{label[count]}\n</Button>\n</div>\n);\n});",
+      "mobile": "render(() => {\nconst [count, setCount] = React.useState(0);\nconst [buttonElement, setButtonElement] = React.useState(null);\n\nconst label = {\n0: 'Показать поповер снизу',\n1: 'Показать поповер сверху',\n2: 'Показать слева',\n3: 'Показать справа',\n4: 'Скрыть',\n};\n\nconst position = {\n1: 'bottom',\n2: 'top',\n3: 'left',\n4: 'right',\n};\n\n// updatePopover - ref, который хранит функцию, с помощью которой можно обновить положение поповера\nconst updatePopover = React.useRef();\n\nconst onClick = () => {\nsetCount((count) => count + 1);\n\nif (updatePopover.current) {\n// Обновляем положение поповера\nupdatePopover.current();\n}\nif (count === 4) {\nsetCount(0);\n}\n};\n\nconst handleButtonRef = (node) => {\nif (count !== 0) {\nsetButtonElement(node);\n}\n};\nconst popoverChildren = (\n<>{count !== 0 && <div style={{ padding: '15px', width: '66px' }}>Popover</div>}</>\n);\n\nreturn (\n<div\nstyle={{\nwidth: '100%',\nheight: '300px',\ndisplay: 'flex',\njustifyContent: 'center',\nalignItems: 'center',\n}}\n>\n<Popover\nanchorElement={buttonElement}\nuseAnchorWidth={position[count] !== 'left'}\nposition={position[count]}\nopen={count !== 0}\nupdate={updatePopover}\noffset={[0, 4]}\n>\n{popoverChildren}\n</Popover>\n\n<Button size={48} ref={handleButtonRef} onClick={onClick}>\n{label[count]}\n</Button>\n</div>\n);\n});"
+    }
+  ]
 }

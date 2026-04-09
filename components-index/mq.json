@@ -1,6 +1,16 @@
 {
   "componentName": "Mq",
   "packageName": "mq",
+  "description": "Используется для имплементации поддержки медиа запросов.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/mq",
+      "named": [
+        "Mq",
+        "useMatchMedia"
+      ]
+    }
+  ],
   "props": {
     "query": {
       "type": "enum",
@@ -32,5 +42,13 @@
       "defaultValue": null,
       "description": "Обработчик изменений в совпадении запросов"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "В этом примере при изменении ширины окна браузера кнопка будет переключаться между мобильной и десктопной версией.",
+      "desktop": "<div>\n<Mq query='--mobile'>\n<Button breakpoint={BREAKPOINT} >Мобильная кнопка</Button>\n</Mq>\n<Mq query='--tablet-s'>\n<Button breakpoint={BREAKPOINT} >Десктопная кнопка</Button>\n</Mq>\n</div>",
+      "mobile": null
+    }
+  ]
 }

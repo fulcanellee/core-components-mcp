@@ -1,6 +1,15 @@
 {
   "componentName": "Badge",
   "packageName": "badge",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/badge",
+      "named": [
+        "Badge"
+      ]
+    }
+  ],
   "props": {
     "className": {
       "type": "enum",
@@ -68,5 +77,19 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Счётчик",
+      "description": "Подстраивает свой размер в зависимости от переданного параметра `height` и переданного `content`.\nВ качестве контента принимает целые положительные числа.\nЕсли контент не передан отображается точка, если передано значение больше 99, то отображается 99+.\nДоступно три цвета фона и возможность добавить белую внутреннюю обводку.",
+      "desktop": "const styles = {\ndisplay: 'flex',\njustifyContent: 'space-between',\nwidth: 233,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\n};\n\nrender(\n<Container>\n<div style={styles}>\n<Badge view='count' />\n<Badge view='count' content={1} />\n<Badge height={24} view='count' content={1} />\n<Badge height={24} view='count' content={99} />\n<Badge height={24} view='count' content={100} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Badge view='count' visibleIconOutline={true} />\n<Badge view='count' content={1} visibleIconOutline={true} />\n<Badge height={24} view='count' content={1} visibleIconOutline={true} />\n<Badge height={24} view='count' content={99} visibleIconOutline={true} />\n<Badge height={24} view='count' content={100} visibleIconOutline={true} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Badge view='count' color='specialbg-secondary-transparent' />\n<Badge view='count' content={1} color='specialbg-secondary-transparent' />\n<Badge height={24} view='count' content={1} color='specialbg-secondary-transparent' />\n<Badge height={24} view='count' content={99} color='specialbg-secondary-transparent' />\n<Badge height={24} view='count' content={100} color='specialbg-secondary-transparent' />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Badge view='count' color='primary' />\n<Badge view='count' content={1} color='primary' />\n<Badge height={24} view='count' content={1} color='primary' />\n<Badge height={24} view='count' content={99} color='primary' />\n<Badge height={24} view='count' content={100} color='primary' />\n</div>\n</Container>,\n);",
+      "mobile": null
+    },
+    {
+      "title": "Иконка статуса",
+      "description": "Компонент доступен в трёх размерах, при этом сама иконка имеет охранные области и занимает чуть меньший объем, чем сам контейнер.\nЧтобы заполнить отведённый объем полностью, используются пропсы с обводками `visibleIconOutline` и `visibleColorOutline`.\nРекомендуется использовать только представленные ниже пресеты.\nЭто полный список используемых в интерфейсах статусов, сконфигурированный для корректного отображения в light и dark режимах.",
+      "desktop": "const styles = {\ndisplay: 'flex',\njustifyContent: 'space-between',\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\n};\n\nrender(\n<Container>\n<div style={{ width: 372, ...styles }}>\n<Badge\nview='icon'\niconColor='positive'\nvisibleColorOutline='true'\ncontent={<CheckmarkCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='negative'\nvisibleColorOutline='true'\ncontent={<AlertCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='negative'\nvisibleColorOutline='true'\ncontent={<CrossCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='negative'\nvisibleColorOutline='true'\ncontent={<StopCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='attention'\nvisibleColorOutline='true'\ncontent={<AlertCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='secondary'\nvisibleColorOutline='true'\ncontent={<CrossCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='secondary'\nvisibleColorOutline='true'\ncontent={<InformationCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='secondary'\nvisibleColorOutline='true'\ncontent={<ClockMIcon />}\n/>\n</div>\n<Gap size={8} />\n<div style={{ width: 152, ...styles }}>\n<Badge\nview='icon'\niconColor='positive'\nvisibleColorOutline='true'\ncontent={<CheckmarkCircleMIcon />}\n/>\n<Badge\nview='icon'\niconColor='positive'\nvisibleIconOutline='true'\ncontent={<CheckmarkCircleMIcon />}\n/>\n<Badge view='icon' iconColor='positive' content={<CheckmarkCircleMIcon />} />\n</div>\n<Gap size={8} />\n<div style={{ width: 164, ...styles }}>\n<Badge\nview='icon'\nsize='xl'\niconColor='positive'\nvisibleColorOutline='true'\ncontent={<CheckmarkCircleMIcon />}\n/>\n<Badge\nview='icon'\nsize='m'\niconColor='positive'\nvisibleColorOutline='true'\ncontent={<CheckmarkCircleMIcon />}\n/>\n<Badge\nview='icon'\nsize='s'\niconColor='positive'\nvisibleColorOutline='true'\ncontent={<CheckmarkCircleSIcon />}\n/>\n</div>\n</Container>,\n);",
+      "mobile": null
+    }
+  ]
 }

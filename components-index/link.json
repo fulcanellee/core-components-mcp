@@ -1,6 +1,15 @@
 {
   "componentName": "Link",
   "packageName": "link",
+  "description": "Ссылка — элемент навигации, который обозначает возможность перехода на другую страницу или вызова нового информационного слоя.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/link",
+      "named": [
+        "Link"
+      ]
+    }
+  ],
   "props": {
     "view": {
       "type": "enum",
@@ -50,5 +59,37 @@
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Обычная ссылка",
+      "description": "Нестареющая классика. Ссылка может вести как на страницу внутри системы, так и на внешний ресурс.",
+      "desktop": "<Space>\n<Typography.Text view='primary-medium'>\n<Link\nview='default'\nrel='noopener'\ntarget='_blank'\nhref='https://alfabank.ru/get-money/credit-cards/100-days/'\n>\nDefault\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link\nview='primary'\nrel='noopener'\ntarget='_blank'\nhref='https://alfabank.ru/get-money/credit-cards/100-days/'\n>\nPrimary\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link\nview='secondary'\nrel='noopener'\ntarget='_blank'\nhref='https://alfabank.ru/get-money/credit-cards/100-days/'\n>\nSecondary\n</Link>\n</Typography.Text>\n</Space>",
+      "mobile": null
+    },
+    {
+      "title": "Псевдоссылка",
+      "description": "Вызывает информационный слой (collapse, dropdown, popup) без перехода на другую страницу.",
+      "desktop": "<Space>\n<Typography.Text view='primary-medium'>\n<Link pseudo={true} view='default'>\nDefault\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link pseudo={true} view='primary'>\nPrimary\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link pseudo={true} view='secondary'>\nSecondary\n</Link>\n</Typography.Text>\n</Space>",
+      "mobile": null
+    },
+    {
+      "title": "Подчёркивание ссылок",
+      "description": "Подчёркивание ссылок не является обязательным, но помогает пользователю определить их тип.",
+      "desktop": "<Space>\n<Typography.Text view='primary-medium'>\n<Link view='default'>Default link</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link pseudo={true} view='default'>\nPseudo link\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link underline={false} view='default'>\nLink without underline\n</Link>\n</Typography.Text>\n</Space>",
+      "mobile": null
+    },
+    {
+      "title": "Анатомия",
+      "description": "С помощью слотов `leftAddons` и `rightAddons` можно кастомизировать ссылку. Например, добавить иконку.\nПереданный контент будет отрисован слева или справа от текста ссылки.",
+      "desktop": "<Space>\n<Typography.Text view='primary-medium'>\n<Link view='default' leftAddons={<StarMIcon />}>\nDefault link\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link view='default' rightAddons={<StarMIcon />}>\nDefault link\n</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link view='default' leftAddons={<StarMIcon />} rightAddons={<StarMIcon />}>\nDefault link\n</Link>\n</Typography.Text>\n</Space>",
+      "mobile": null
+    },
+    {
+      "title": "Размеры",
+      "description": "Cсылка наследует текстовый стиль от родителя.",
+      "desktop": "<Space>\n<Typography.Text view='primary-large'>\n<Link view='default'>Paragraph primary large</Link>\n</Typography.Text>\n<Typography.Text view='primary-medium'>\n<Link view='default'>Paragraph primary medium</Link>\n</Typography.Text>\n<Typography.Text view='primary-small'>\n<Link view='default'>Paragraph primary small</Link>\n</Typography.Text>\n</Space>",
+      "mobile": null
+    }
+  ]
 }

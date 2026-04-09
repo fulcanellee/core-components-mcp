@@ -1,6 +1,15 @@
 {
   "componentName": "Space",
   "packageName": "space",
+  "description": "Используется для создания отступов между блоками.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/space",
+      "named": [
+        "Space"
+      ]
+    }
+  ],
   "props": {
     "align": {
       "type": "enum",
@@ -62,5 +71,37 @@
       "defaultValue": null,
       "description": "Использовать css gap\n@description Поддержка ограничена. см https://caniuse.com/?search=gap"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Фиксированное расстояние между блоками.",
+      "desktop": "render(() => {\nconst styleBlock = {\nwidth: '64px',\nheight: '64px',\nborderRadius: '8px',\nbackgroundColor: 'var(--color-light-neutral-translucent-200)',\n};\nreturn (\n<Space useCssGaps={true} direction='horizontal' align={isMobile() ? 'center' : 'start'}>\n{new Array(3).fill(null).map((_, idx) => (\n<div key={idx} style={styleBlock} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Использование разделителя между блоками.",
+      "desktop": "render(() => {\nconst styleBlock = {\nwidth: '64px',\nheight: '64px',\nborderRadius: '8px',\nbackgroundColor: 'var(--color-light-neutral-translucent-200)',\n};\nreturn (\n<Space useCssGaps={true} divider={<Divider />} align={isMobile() ? 'center' : 'start'}>\n{new Array(4).fill(null).map((_, idx) => (\n<div key={idx} style={styleBlock} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Автоперенос строки с заданными вертикальными и горизонтальными расстояниями между блоками.",
+      "desktop": "render(() => {\nconst styleBlock = {\nwidth: '64px',\nheight: '64px',\nborderRadius: '8px',\nbackgroundColor: 'var(--color-light-neutral-translucent-200)',\n};\nreturn (\n<Space useCssGaps={true} direction='horizontal' size={[16, 20]} wrap>\n{new Array(20).fill(null).map((_, idx) => (\n<div key={idx} style={styleBlock} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Пример блоков с FullWidth.",
+      "desktop": "render(() => {\nconst styleBlock = {\nwidth: '100%',\nheight: '32px',\nborderRadius: '8px',\nbackgroundColor: 'var(--color-light-neutral-translucent-200)',\n};\nreturn (\n<Space useCssGaps={true} direction='horizontal' size={12} fullWidth>\n{new Array(5).fill(null).map((_, idx) => (\n<div key={idx} style={styleBlock} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Пример блоков с выравниванием.",
+      "desktop": "render(() => {\nconst styleBlock = {\nwidth: '96px',\nheight: '32px',\nborderRadius: '8px',\nbackgroundColor: 'var(--color-light-neutral-translucent-200)',\n};\nreturn (\n<div style={{ display: 'flex', justifyContent: 'space-between' }}>\n<Space useCssGaps={true} align='start' size={8}>\n<div style={styleBlock} />\n<div style={{ ...styleBlock, width: '144px' }} />\n<div style={{ ...styleBlock, width: '176px' }} />\n</Space>\n<Space useCssGaps={true} align='center' size={8}>\n<div style={styleBlock} />\n<div style={{ ...styleBlock, width: '144px' }} />\n<div style={{ ...styleBlock, width: '176px' }} />\n</Space>\n<Space useCssGaps={true} align='end' size={8}>\n<div style={styleBlock} />\n<div style={{ ...styleBlock, width: '144px' }} />\n<div style={{ ...styleBlock, width: '176px' }} />\n</Space>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

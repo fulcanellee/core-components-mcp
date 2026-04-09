@@ -1,6 +1,15 @@
 {
   "componentName": "Checkbox",
   "packageName": "checkbox",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/checkbox",
+      "named": [
+        "Checkbox"
+      ]
+    }
+  ],
   "props": {
     "onChange": {
       "type": "enum",
@@ -128,5 +137,19 @@
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Размеры",
+      "description": "Компонент поддерживате два размера, 24 и 20 px",
+      "desktop": "render(() => {\nconst [checked, setChecked] = React.useState({\ncheckbox_24: true,\ncheckbox_20: true,\n});\n\nconst [switchChecked, setSwitchChecked] = React.useState(true);\nconst [error, setError] = React.useState(false);\nconst [disabled, setDisabled] = React.useState(false);\n\nconst handleChange = (name) => (event) => {\nsetChecked((prevState) => ({\n...prevState,\n[name]: event.target.checked,\n}));\n};\n\nreturn (\n<React.Fragment>\n<div\nstyle={{\nwidth: document.body.clientWidth < 450 ? '100%' : 320,\nminHeight: '108px',\n}}\n>\n<div style={{ minHeight: '46px' }}>\n<Checkbox\nblock={true}\nsize={24}\nonChange={handleChange('checkbox_24')}\nchecked={checked.checkbox_24}\ndisabled={disabled}\nlabel='Согласен с условиями'\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\n{...(error && { error: 'Error message' })}\n/>\n</div>\n<Gap size={20} />\n<div style={{ marginLeft: '8px' }}>\n<Checkbox\nblock={true}\nsize={20}\nonChange={handleChange('checkbox_20')}\nchecked={checked.checkbox_20}\ndisabled={disabled}\nlabel='Согласен с условиями'\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\n{...(error && { error: 'Error message' })}\n/>\n</div>\n</div>\n<Gap size={20} />\n<Divider />\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={switchChecked}\nlabel='Подпись под лейблом'\nonChange={() => setSwitchChecked((prevState) => !prevState)}\n/>\n<Gap size={20} />\n\n<Button view='secondary' size={32} onClick={() => setError((prevState) => !prevState)}>\nОшибка\n</Button>\n<span style={{ marginLeft: '8px' }}>\n<Button\nview='secondary'\nsize='32'\nonClick={() => setDisabled((prevState) => !prevState)}\n>\nЗаблокирован\n</Button>\n</span>\n</React.Fragment>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Состояния",
+      "description": "Чекбокс может находиться в выбранном и невыбранном состоянии. В редких кейсах его значение может быть неопределённым.\nЕсли чекбокс заблокирован, используется состояние «недоступен».",
+      "desktop": "render(() => {\nreturn (\n<div style={{ width: document.body.clientWidth < 450 ? '100%' : 320 }}>\n<Checkbox size={24} label='Неопределён' indeterminate={true} block={true} />\n<Gap size={20} />\n<Checkbox size={24} label='Выбран' checked={true} block={true} />\n<Gap size={20} />\n<Checkbox\nsize={24}\nlabel='Выбран и недоступен'\ndisabled={true}\nchecked={true}\nblock={true}\n/>\n<Gap size={20} />\n<Checkbox size={24} label='По умолчанию' checked={false} block={true} />\n<Gap size={20} />\n<Checkbox\nsize={24}\nlabel='По умолчанию и недоступен'\nchecked={false}\ndisabled={true}\nblock={true}\n/>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

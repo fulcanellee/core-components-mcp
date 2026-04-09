@@ -1,6 +1,15 @@
 {
   "componentName": "Steps",
   "packageName": "steps",
+  "description": "Используется для разделения сложной формы или анкеты на последовательные шаги.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/steps",
+      "named": [
+        "Steps"
+      ]
+    }
+  ],
   "props": {
     "className": {
       "type": "enum",
@@ -122,5 +131,25 @@
       "defaultValue": null,
       "description": "Цвет тире выполненного шага"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Горизонтальный.",
+      "desktop": "render(() => {\nconst [ordered, setOrdered] = React.useState(true);\nconst [error, setError] = React.useState(false);\nconst [step, setStep] = React.useState(2);\n\nconst handleStepsChange = (stepNumber) => setStep(stepNumber);\n\nconst handleOrderChange = () => setOrdered((prev) => !prev);\n\nconst handleErrorChange = () => {\nsetError((prev) => {\nif (!prev && step > 3) {\nsetStep(3);\n}\n\nreturn !prev;\n});\n};\n\nconst handleStepDisable = (stepNumber) => {\nif (error) {\nreturn stepNumber === 4 || stepNumber === 5;\n}\n\nreturn stepNumber === 4;\n};\n\nconst handleStepError = (stepNumber) => {\nif (error) {\nreturn stepNumber === 3;\n}\n};\n\nreturn (\n<Space size={24}>\n<Steps\nactiveStep={step}\ndefaultActiveStep={2}\nordered={ordered}\nonChange={handleStepsChange}\ncheckIsStepDisabled={handleStepDisable}\ncheckIsStepError={handleStepError}\n>\n{[1, 2, 3, 4, 5].map((item, key) => (\n<div key={key}>Шаг {item}</div>\n))}\n</Steps>\n<Typography.Text view='component-secondary' color='secondary'>\nВыбран шаг {step}\n</Typography.Text>\n<>\n<Switch checked={ordered} onChange={handleOrderChange} label='Номера шагов' />\n<Gap size={16} />\n<Switch\nchecked={error}\nonChange={handleErrorChange}\nlabel='Есть некорректно заполненный шаг'\n/>\n</>\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Вертикальный.",
+      "desktop": "render(() => {\nconst [ordered, setOrdered] = React.useState(true);\nconst [error, setError] = React.useState(false);\nconst [step, setStep] = React.useState(2);\n\nconst handleReset = () => setStep(1);\n\nconst handleStepsChange = (stepNumber) => setStep(stepNumber);\n\nconst handleOrderChange = () => setOrdered((prev) => !prev);\n\nconst handleErrorChange = () => {\nsetError((prev) => {\nif (!prev && step > 3) {\nsetStep(3);\n}\n\nreturn !prev;\n});\n};\n\nconst handleStepDisable = (stepNumber) => {\nif (error) {\nreturn stepNumber === 4 || stepNumber === 5;\n}\n\nreturn stepNumber === 4;\n};\n\nconst handleStepError = (stepNumber) => {\nif (error) {\nreturn stepNumber === 3;\n}\n};\n\nreturn (\n<Space size={24}>\n<Steps\nactiveStep={step}\ndefaultActiveStep={2}\nordered={ordered}\nonChange={handleStepsChange}\nisVerticalAlign={true}\ninteractive={false}\ncheckIsStepDisabled={handleStepDisable}\ncheckIsStepError={handleStepError}\n>\n{[1, 2, 3, 4, 5].map((item, key) => (\n<PureCell key={key} verticalPadding='none' horizontalPadding='none'>\n<PureCell.Content>\n<PureCell.Main>\n<PureCell.Text titleColor='primary' view='component-primary'>\nШаг {item}\n</PureCell.Text>\n<PureCell.Category categoryName='Subtitle' />\n</PureCell.Main>\n{item === 2 && (\n<PureCell.Footer>\n<div style={{ display: 'flex', gap: 12 }}>\n<PureCell.FooterButton view='primary'>\nLabel\n</PureCell.FooterButton>\n<PureCell.FooterButton view='secondary'>\nLabel\n</PureCell.FooterButton>\n</div>\n</PureCell.Footer>\n)}\n</PureCell.Content>\n</PureCell>\n))}\n</Steps>\n<Typography.Text view='component-secondary' color='secondary'>\nВыбран шаг {step}\n</Typography.Text>\n<>\n<Switch checked={ordered} onChange={handleOrderChange} label='Номера шагов' />\n<Gap size={16} />\n<Switch\nchecked={error}\nonChange={handleErrorChange}\nlabel='Есть некорректно заполненный шаг'\n/>\n</>\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Виды индикаторов.",
+      "desktop": "render(() => {\nconst styles = {\ndisplay: 'flex',\nalignItems: 'center',\ngap: '12px',\n};\n\nconst stylesCustom = {\nwidth: 24,\nheight: 24,\nbackground: 'rgba(55, 120, 251, 0.1)',\nborder: '1px dashed #3778FB',\nborderRadius: 8,\nboxSizing: 'border-box',\n};\n\nconst viewIndicators = [\n{\nview: 'positive-checkmark',\ncontent: 'Completed',\n},\n{\nview: 'positive-checkmark',\ncontent: 'Positive',\n},\n{\nview: 'negative-alert',\ncontent: 'Negative',\n},\n{\nview: 'negative-cross',\ncontent: 'CriticalError',\n},\n{\nview: 'attention-alert',\ncontent: 'Warning',\n},\n{\nview: 'neutral-operation',\ncontent: 'Warning',\nicon: <ClockMIcon />,\n},\n{\ncontent: 'Custom',\n},\n];\nreturn (\n<Space size={20}>\n{viewIndicators.map((indicator, key) => (\n<div key={key} style={styles}>\n{indicator.view ? (\n<StatusBadge view={indicator.view} />\n) : (\n<div style={stylesCustom} />\n)}\n<Typography.Text color='secondary' view='primary-small'>\n{indicator.content}\n</Typography.Text>\n</div>\n))}\n</Space>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

@@ -1,6 +1,27 @@
 {
   "componentName": "Alert",
   "packageName": "alert",
+  "description": "Информирует пользователя о текущем состоянии системы или сообщает какую-либо важную информацию.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/alert",
+      "named": [
+        "Alert"
+      ]
+    },
+    {
+      "from": "@alfalab/core-components/alert/desktop",
+      "named": [
+        "AlertDesktop"
+      ]
+    },
+    {
+      "from": "@alfalab/core-components/alert/mobile",
+      "named": [
+        "AlertMobile"
+      ]
+    }
+  ],
   "props": {
     "onClick": {
       "type": "enum",
@@ -182,5 +203,13 @@
       "defaultValue": null,
       "description": ""
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "Компонент с серой подложкой используется для «бесконечных списков». Например, для истории операций или списка писем.",
+      "desktop": "<Alert>Вам одобрено. Согласитесь на предложение</Alert>",
+      "mobile": null
+    }
+  ]
 }

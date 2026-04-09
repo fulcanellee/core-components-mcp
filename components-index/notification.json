@@ -1,6 +1,15 @@
 {
   "componentName": "Notification",
   "packageName": "notification",
+  "description": "Информирует пользователя о текущем состоянии операций или сообщает пользователю о результате выполнения его команды. Не имеет мобильной версии.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/notification",
+      "named": [
+        "Notification"
+      ]
+    }
+  ],
   "props": {
     "block": {
       "type": "enum",
@@ -152,5 +161,13 @@
       "defaultValue": null,
       "description": "Ссылка на контейнер компонента, к которому применяется анимация"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "",
+      "desktop": "render(() => {\nconst [isVisible, setIsVisible] = React.useState(false);\n\nconst toggleVisibility = React.useCallback(() => setIsVisible((prev) => !prev), []);\nconst hideNotification = React.useCallback(() => setIsVisible(false), []);\n\nreturn (\n<div>\n<Notification\nbadge='positive-checkmark'\ntitle='Пример уведомления'\nvisible={isVisible}\noffset={180}\nonClose={hideNotification}\nonCloseTimeout={hideNotification}\n>\nОписание уведомления\n</Notification>\n<Button onClick={toggleVisibility}>Показать уведомление</Button>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

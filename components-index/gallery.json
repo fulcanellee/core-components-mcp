@@ -1,6 +1,15 @@
 {
   "componentName": "Gallery",
   "packageName": "gallery",
+  "description": "Используется для просмотра изображений.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/gallery",
+      "named": [
+        "Gallery"
+      ]
+    }
+  ],
   "props": {
     "open": {
       "type": "enum",
@@ -50,5 +59,19 @@
       "defaultValue": null,
       "description": "Дополнительный класс для попапа"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "const images = [\n{\nname: 'Вертикальное изображение',\nsrc: './images/gallery_1.jpg',\n},\n{\nname: 'Горизонтальное  изображение',\nsrc: './images/gallery_2.jpg',\n},\n{\nname: 'Квадратное изображение',\nsrc: './images/gallery_3.jpg',\n},\n{\nname: 'Маленькое изображение',\nsrc: './images/gallery_4.jpg',\n},\n{\nname: 'Alfa promo.m3u8',\nsrc: 'https://alfavideo.servicecdn.ru/videos/101064_31s0hnwZaamhbwE/master.m3u8',\n},\n{\nname: 'Битое изображение.jpg',\nsrc: 'https://picsum.photos',\n},\n];\n\nconst video = [\n{\nname: 'Alfa promo.m3u8',\nsrc: 'https://alfavideo.servicecdn.ru/videos/101064_31s0hnwZaamhbwE/master.m3u8',\n},\n];\n\nconst imagesQuantityMapper = {\nsome: images,\none: [images[0]],\n'one video': video,\n};\n\nrender(() => {\nconst [open, setOpen] = React.useState(false);\nconst [imagesQuantity, setImagesQuantity] = React.useState('some');\n\nconst onImagesQuantityChange = (_, payload) => {\nsetImagesQuantity(payload.value);\n};\n\nreturn (\n<div style={{ width: 320 }}>\n<Button view='secondary' block={true} onClick={() => setOpen(true)}>\nОткрыть галерею\n</Button>\n<Gallery\nopen={open}\nonClose={() => {\nsetOpen(false);\n}}\nimages={imagesQuantityMapper[imagesQuantity]}\n/>\n<Gap size={24} />\n<RadioGroup\nlabel='Количество медиа'\ndirection='vertical'\nname='radioGroup'\nonChange={onImagesQuantityChange}\nvalue={imagesQuantity}\n>\n<Radio size={24} label='Несколько' value='some' />\n<Radio size={24} label='Одно изображение' value='one' />\n<Radio size={24} label='Одно видео' value='one video' />\n</RadioGroup>\n</div>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Галерея с предпросмотром",
+      "description": "",
+      "desktop": "const images = [\n{\nname: 'Вертикальное изображение',\nsrc: './images/gallery_1.jpg',\n},\n{\nname: 'Горизонтальное  изображение',\nsrc: './images/gallery_2.jpg',\n},\n{\nname: 'Квадратное изображение',\nsrc: './images/gallery_3.jpg',\n},\n{\nname: 'Маленькое изображение',\nsrc: './images/gallery_4.jpg',\n},\n];\n\nrender(() => {\nconst [open, setOpen] = React.useState(false);\nconst [slideIndex, setSlideIndex] = React.useState(0);\n\nconst openGallery = (slideIndex) => {\nsetSlideIndex(slideIndex);\nsetOpen(true);\n};\n\nconst closeGallery = () => setOpen(false);\n\nreturn (\n<div>\n<div\nstyle={{\ndisplay: 'flex',\nflexWrap: 'wrap',\njustifyContent: isMobile() ? 'center' : 'left',\n}}\n>\n{images.map((image, index) => (\n<div\nkey={image.src}\nonClick={() => {\nopenGallery(index);\n}}\nstyle={{\nwidth: '200px',\nheight: '200px',\ncursor: 'pointer',\nbackgroundSize: 'cover',\nbackgroundImage: `url(${image.src})`,\nmargin: '4px',\n}}\n/>\n))}\n</div>\n\n<Gallery\nopen={open}\nonClose={closeGallery}\nimages={images}\nslideIndex={slideIndex}\nonSlideIndexChange={setSlideIndex}\n/>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

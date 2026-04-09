@@ -1,6 +1,15 @@
 {
   "componentName": "Slider",
   "packageName": "slider",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/slider",
+      "named": [
+        "Slider"
+      ]
+    }
+  ],
   "props": {
     "min": {
       "type": "enum",
@@ -98,5 +107,37 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Сегменты и шаг слайдера",
+      "description": "Можно настроить количество сегментов и шаг внутри сегмента.",
+      "desktop": "render(() => {\nconst [value, setValue] = React.useState(0);\nconst [slider, setSlider] = React.useState(1);\n\nconst handleChange = ({ value }) => setValue(value);\nconst handleChangeSlider = ({ value }) => setSlider(value);\n\nreturn (\n<>\n<div>Value:{value}</div>\n<br />\n<Slider\nsize={4}\nvalue={value}\nonChange={handleChange}\npips={{\nmode: 'values',\nvalues: [0, 10, 100],\n}}\nrange={{\nmin: [0],\n'50%': [10, 10],\nmax: [100],\n}}\n/>\n<br />\n<br />\n<div>Value:{slider}</div>\n<br />\n<Slider\nsize={4}\nvalue={slider}\nonChange={handleChangeSlider}\nmin={1}\nmax={8}\npips={{\nmode: 'steps',\n}}\n/>\n</>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Сегменты и шаг слайдера",
+      "description": "Можно настроить слайдер с неравномерными шагами.",
+      "desktop": "render(() => {\nconst [value, setValue] = React.useState(0);\n\nconst handleChange = ({ value }) => setValue(value);\n\nreturn (\n<>\n<div>Value:{value}</div>\n<br />\n<Slider\nsize={4}\nvalue={0}\nonChange={handleChange}\nrange={{ min: 0, '10%': 1, '40%': 4, '50%': 5, max: 10 }}\nsnap={true}\npips={{\nmode: 'values',\nvalues: [0, 1, 4, 5, 10],\n}}\n/>\n</>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Диапазон",
+      "description": "С помощью слайдера можно указывать диапазон значений. Чтобы позволить ползункам пересекать друг друга установите `behaviour=unconstrained-tap`.",
+      "desktop": "render(() => {\nconst [sliderTap, setSliderTap] = React.useState({\nvalue: 4,\nvalueTo: 6,\n});\n\nconst [slider, setSlider] = React.useState({\nvalue: 4,\nvalueTo: 6,\n});\n\nconst handleChangeSliderTap = (payload) => {\nsetSliderTap(payload);\n};\n\nconst handleChangeSlider = (payload) => {\nsetSlider(payload);\n};\n\nreturn (\n<>\n<div style={{ display: 'flex', justifyContent: 'space-between' }}>\n<span>min: {sliderTap.value}</span>\n<span>max: {sliderTap.valueTo}</span>\n</div>\n<Gap size={12} />\n<Slider\nsize={4}\nvalue={sliderTap.value}\nvalueTo={sliderTap.valueTo}\nonChange={handleChangeSliderTap}\nmin={1}\nmax={8}\npips={{\nmode: 'steps',\n}}\n/>\n<Gap size={40} />\n<div style={{ display: 'flex', justifyContent: 'space-between' }}>\n<span>min: {slider.value}</span>\n<span>max: {slider.valueTo}</span>\n</div>\n<Gap size={12} />\n<Slider\nsize={4}\nvalue={slider.value}\nvalueTo={slider.valueTo}\nbehaviour='unconstrained-tap'\nonChange={handleChangeSlider}\nmin={1}\nmax={8}\npips={{\nmode: 'steps',\n}}\n/>\n</>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Подписи",
+      "description": "Слайдер может использоваться с подписями и без.",
+      "desktop": "render(() => {\nconst [value, setValue] = React.useState(0);\nconst [slider, setSlider] = React.useState(0);\n\nconst handleChange = ({ value }) => setValue(value);\nconst handleChangeSlider = ({ value }) => setSlider(value);\n\nreturn (\n<>\n<div>Value: {value}</div>\n<br />\n<Slider\nsize={4}\nvalue={value}\nonChange={handleChange}\npips={{\nmode: 'values',\nvalues: [0, 10, 100],\n}}\nrange={{\nmin: [0],\n'50%': [10, 10],\nmax: [100],\n}}\n/>\n<br />\n<br />\n<div>Value: {slider}</div>\n<br />\n<Slider size={4} value={slider} onChange={handleChangeSlider} />\n</>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Размеры",
+      "description": "Доступны 2 и 4 размеры компонента.",
+      "desktop": "render(() => {\nconst [value, setValue] = React.useState(0);\nconst [slider, setSlider] = React.useState(0);\n\nconst handleChange = ({ value }) => setValue(value);\nconst handleChangeSlider = ({ value }) => setSlider(value);\n\nreturn (\n<>\n<Slider size={4} value={value} onChange={handleChange} />\n<br />\n<br />\n<Slider size={2} value={slider} onChange={handleChangeSlider} />\n</>\n);\n});",
+      "mobile": "render(() => {\nconst [value, setValue] = React.useState(0);\nconst [slider, setSlider] = React.useState(0);\n\nconst handleChange = ({ value }) => setValue(value);\nconst handleChangeSlider = ({ value }) => setSlider(value);\n\nreturn (\n<>\n<div style={{ marginBottom: 80 }}>\n<Slider size={4} value={value} onChange={handleChange} />\n</div>\n<Slider size={2} value={slider} onChange={handleChangeSlider} />\n</>\n);\n});"
+    }
+  ]
 }

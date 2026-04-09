@@ -1,6 +1,15 @@
 {
   "componentName": "Attach",
   "packageName": "attach",
+  "description": "Используется для прикрепления файлов.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/attach",
+      "named": [
+        "Attach"
+      ]
+    }
+  ],
   "props": {
     "buttonContent": {
       "type": "enum",
@@ -86,5 +95,19 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Для компонента можно настроить текст-плейсхолдер, размер и лейбл кнопки. Рекомендуем прикреплять для тестов тяжелый файл, иначе загрузка будет мгновенной.",
+      "desktop": "render(() => {\nconst [multiple, setMultiple] = React.useState(false);\nconst [progress, setProgress] = React.useState(0);\n\nconst simulateProgress = () => {\nconst interval = setInterval(() => {\nsetProgress((prevProgress) => {\nif (prevProgress === 100) {\nclearInterval(interval);\nreturn 100;\n}\nreturn prevProgress + 1;\n});\n}, 100);\n  };\n  \nconst handleChange = () => {\nsimulateProgress()\n};\n\nreturn (\n<Space size={24} >\n<Attach \nsize={56} \nonChange={handleChange}\nmultiple={multiple} \nmaxFilenameLength={isMobile() ? 10 : undefined}\nprogressBarPercent={progress === 100 ? null : progress}\nbuttonProps={{\nbreakpoint: BREAKPOINT,\nnowrap: true,\n}}\n/>\n<Switch\nblock={true}\nchecked={multiple}\nlabel='Несколько файлов'\nonChange={() => setMultiple(!multiple)}\n/>\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "К сожалению, [контролируемое поведение](https://ru.reactjs.org/docs/uncontrolled-components.html#the-file-input-tag) можно только эмулировать.",
+      "desktop": "render(() => {\nconst [response, setResponse] = React.useState(null);\nconst [files, setFiles] = React.useState([]);\n\nconst handleChange = (event, payload) => {\nsetFiles([...files, ...payload.files]);\n};\n\nconst handleSubmit = () => {\nconst formData = new FormData();\n\nfiles.forEach((file, i) => {\nformData.append(`file${i}`, file);\n});\n\nfetch('https://httpbin.org/post', {\nmethod: 'POST',\nbody: formData,\n})\n.then((r) => r.json())\n.then((r) => setResponse(r));\n};\n\nreturn (\n<Space size={24}>\n<Attach\nvalue={files}\nonChange={handleChange}\nmultiple={true}\nname='file'\nonClear={() => setFiles([])}\nsize={56}\nmaxFilenameLength={isMobile() ? 10 : undefined}\nbuttonProps={{\nbreakpoint: BREAKPOINT,\nnowrap: true,\n}}\n/>\n<Button size={32} type='button' onClick={handleSubmit}>\nОтправить\n</Button>\n\n{response &&\nObject.entries(response.files).map(([fileName, base64]) => (\n<img src={base64} key={fileName} width={100} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

@@ -1,6 +1,15 @@
 {
   "componentName": "CalendarRange",
   "packageName": "calendar-range",
+  "description": "Используется для ввода диапазона дат.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/calendar-range",
+      "named": [
+        "CalendarRange"
+      ]
+    }
+  ],
   "props": {
     "className": {
       "type": "enum",
@@ -116,5 +125,13 @@
       "defaultValue": null,
       "description": "Дополнительный класс для контейнера календаря"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "// import { startOfDay, subMonths, addMonths, startOfMonth, startOfDay } from 'date-fns';\n// import { parseDateString } from '@alfalab/core-components/calendar-input';\n\nrender(() => {\nconst [calendarPosition, setCalendarPosition] = React.useState('static');\n\nconst defaultDate = parseDateString('10.03.2022');\nconst [valueFrom, setValueFrom] = React.useState({ value: '', date: null });\nconst [valueTo, setValueTo] = React.useState({ value: '', date: null });\n\nconst minDate = subMonths(startOfDay(defaultDate), 3).getTime();\nconst maxDate = addMonths(startOfDay(defaultDate), 3).getTime();\n\nreturn (\n<Space size={24}>\n<CalendarRange\nvalueFrom={valueFrom.value}\nvalueTo={valueTo.value}\nminDate={minDate}\nmaxDate={maxDate}\ndefaultMonth={startOfMonth(defaultDate)}\noffDays={[startOfDay(defaultDate)]}\ncalendarPosition={calendarPosition}\nonChange={({ valueFrom, valueTo, dateFrom, dateTo }) => {\nsetValueFrom({ value: valueFrom, date: dateFrom });\nsetValueTo({ value: valueTo, date: dateTo });\n}}\n/>\n<>\n<Typography.Text view='primary-medium' color='secondary'>\nValues: {valueFrom.value} — {valueTo.value}\n</Typography.Text>\n<Gap size={16}/>\n<Typography.Text view='primary-medium' color='secondary'>\nDates: {valueFrom.date && formatDate(valueFrom.date)} — {valueTo.date && formatDate(valueTo.date)}\n</Typography.Text>\n   </>\n<RadioGroup\nlabel='Конфигурация пикера'\ndirection='vertical'\nonChange={(_, { value }) => setCalendarPosition(value)}\nvalue={calendarPosition}\n>\n<Radio label='Доступен сразу' value='static' />\n<Radio label='Открывается в popover' value='popover' />\n</RadioGroup>\n</Space>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

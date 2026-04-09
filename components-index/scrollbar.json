@@ -1,6 +1,15 @@
 {
   "componentName": "Scrollbar",
   "packageName": "scrollbar",
+  "description": "Используется для управления контентм с помощью полосы прокрутки.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/scrollbar",
+      "named": [
+        "Scrollbar"
+      ]
+    }
+  ],
   "props": {
     "children": {
       "type": "enum",
@@ -98,5 +107,19 @@
       "defaultValue": null,
       "description": "Ref для вертикальной полосы прокрутки"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst getChildStyle = (bgColor) => ({\nheight: 80,\ntextAlign: 'center',\nlineHeight: '80px',\nfontSize: 40,\nfontWeight: 700,\ncolor: 'var(--color-light-text-tertiary)',\nbackground: `var(${bgColor})`,\n});\nreturn (\n<div style={{ height: 240, margin: 'var(--gap-20-neg)' }}>\n<Scrollbar style={{ height: '100%' }} autoHide={false}>\n{new Array(51).fill(null).map((_, idx) => {\nconst style = getChildStyle(\nidx % 2 === 0 ? '--color-light-neutral-200' : '--color-light-base-bg-secondary',\n);\nreturn (\n<div key={idx} style={style}>\n{idx + 1}\n</div>\n);\n})}\n</Scrollbar>\n</div>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst scrollbarStyle = {\nwhiteSpace: 'nowrap',\noverflow: 'auto',\nmargin: 'var(--gap-20-neg)',\n};\nconst getChildStyle = (bgColor) => ({\ndisplay: 'inline-block',\nwidth: 80,\nheight: 240,\ntextAlign: 'center',\nlineHeight: '200px',\nfontSize: 40,\nfontWeight: 700,\ncolor: 'var(--color-light-text-tertiary)',\nbackground: `var(${bgColor})`,\n});\nreturn (\n<Scrollbar style={scrollbarStyle} autoHide={false}>\n{new Array(51).fill(null).map((_, idx) => {\nconst style = getChildStyle(\nidx % 2 === 0 ? '--color-light-neutral-200' : '--color-light-base-bg-secondary',\n);\nreturn (\n<div key={idx} style={style}>\n{idx + 1}\n</div>\n);\n})}\n</Scrollbar>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

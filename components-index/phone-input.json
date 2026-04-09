@@ -1,6 +1,15 @@
 {
   "componentName": "PhoneInput",
   "packageName": "phone-input",
+  "description": "Используется для ввода мобильного номера в заданном формате.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/phone-input",
+      "named": [
+        "PhoneInput"
+      ]
+    }
+  ],
   "props": {
     "size": {
       "type": "enum",
@@ -230,5 +239,13 @@
       "defaultValue": "true",
       "description": ""
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "",
+      "desktop": "<div style={{ width: isMobile() ? '100%' : 320 }}>\n<PhoneInput\nplaceholder='+7 000 000 00 00'\nlabel='Телефонный номер'\nlabelView={isMobile() ? 'outer' : 'inner'}\nsize={isMobile() ? 48 : 56}\nbreakpoint={BREAKPOINT}\nblock={true}\n/>\n</div>",
+      "mobile": null
+    }
+  ]
 }

@@ -1,6 +1,15 @@
 {
   "componentName": "StatusBadge",
   "packageName": "status-badge",
+  "description": "Используется как индикатор состояния.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/status-badge",
+      "named": [
+        "StatusBadge"
+      ]
+    }
+  ],
   "props": {
     "className": {
       "type": "enum",
@@ -38,5 +47,19 @@
       "defaultValue": null,
       "description": "Кастомные иконки"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Виды статусов",
+      "description": "Компонент доступен в пяти размерах. Представленный ниже набор комбинаций иконки и цвета является единым для всех продуктов.\nЕсли нужной конфигурации нет, её придётся собрать на основе компонента [IconView](?path=/docs/iconview--docs).",
+      "desktop": "<div>\n{[\n'negative-cross',\n'negative-block',\n'negative-alert',\n'attention-alert',\n'positive-checkmark',\n'neutral-information',\n'neutral-cross',\n'neutral-operation',\n].map((view) => (\n<React.Fragment key={view}>\n<Space size={20} align='center' direction={isMobile() ? 'horizontal' : 'vertical'}>\n{[40, 32, 24, 20, 16].map((size) => (\n<StatusBadge key={size} view={view} size={size} />\n))}\n</Space>\n<Gap size={20} direction={isMobile() ? 'vertical' : 'horizontal'} />\n</React.Fragment>\n))}\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Кастомные иконки",
+      "description": "Статусы могут содержать кастомные иконки",
+      "desktop": "render(() => {\nconst sizes = [16, 20, 24, 32, 40];\nconst customIcons = {\n'positive-checkmark': {\n16: AScoresCircleMIcon,\n20: AScoresCircleMIcon,\n24: AScoresCircleMIcon,\n32: AScoresCircleMIcon,\n40: AScoresCircleMIcon,\n},\n};\nreturn (\n<React.Fragment>\n<Space size={20} align='center' direction={isMobile() ? 'horizontal' : 'vertical'}>\n{sizes.reverse().map((size) => {\nreturn (\n<StatusBadge\nkey={size}\nview={'positive-checkmark'}\nsize={size}\ncustomIcons={customIcons}\n/>\n);\n})}\n</Space>\n</React.Fragment>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

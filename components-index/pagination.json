@@ -1,6 +1,15 @@
 {
   "componentName": "Pagination",
   "packageName": "pagination",
+  "description": "Используется для переключения между страницами.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/pagination",
+      "named": [
+        "Pagination"
+      ]
+    }
+  ],
   "props": {
     "currentPageIndex": {
       "type": "number",
@@ -56,5 +65,25 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Пагинация с возможностью быстрого доступа к крайним страницам.",
+      "desktop": "render(() => {\nconst DATA_SIZE = isMobile() ? 5 : 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\n/>\n</Container>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Чтобы избежать скачка при переключении с первой на вторую страницу можно использовать проп `hideArrows`.",
+      "desktop": "render(() => {\nconst DATA_SIZE = isMobile() ? 5 : 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\nhideArrows={false}\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\n/>\n</Container>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Пагинация с постраничным переключением.",
+      "desktop": "render(() => {\nconst DATA_SIZE = 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\nview='per-page'\n/>\n</Container>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

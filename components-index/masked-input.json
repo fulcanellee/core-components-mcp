@@ -1,6 +1,15 @@
 {
   "componentName": "MaskedInput",
   "packageName": "masked-input",
+  "description": "Используется для ввода текста по указанной маске.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/masked-input",
+      "named": [
+        "MaskedInput"
+      ]
+    }
+  ],
   "props": {
     "size": {
       "type": "enum",
@@ -242,5 +251,13 @@
       "defaultValue": null,
       "description": "Дает возможность изменить значение поля перед рендером"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "",
+      "desktop": "const masksCard = [\n/\\d/,\n/\\d/,\n/\\d/,\n/\\d/,\n' ',\n/\\d/,\n/\\d/,\n/\\d/,\n/\\d/,\n' ',\n/\\d/,\n/\\d/,\n/\\d/,\n/\\d/,\n' ',\n/\\d/,\n/\\d/,\n/\\d/,\n/\\d/,\n];\n\nrender(\n<div style={{ width: '240px' }}>\n<MaskedInput\nmask={masksCard}\nlabel='Номер карты'\nplaceholder='0000 0000 0000 0000'\nlabelView={isMobile() ? 'outer' : 'inner'}\nsize={isMobile() ? 48 : 56}\nbreakpoint={BREAKPOINT}\nblock={true}\n/>\n</div>\n);",
+      "mobile": null
+    }
+  ]
 }

@@ -1,6 +1,15 @@
 {
   "componentName": "Radio",
   "packageName": "radio",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/radio",
+      "named": [
+        "Radio"
+      ]
+    }
+  ],
   "props": {
     "dataTestId": {
       "type": "enum",
@@ -98,5 +107,19 @@
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Размеры",
+      "description": "Компонент поддерживате два размера, 24 и 20 px",
+      "desktop": "render(() => {\nconst [selectedOptions, setSelectedOptions] = React.useState({\ngroup_1: 'checkbox24_1',\ngroup_2: 'checkbox20_1',\n});\nconst [switchChecked, setSwitchChecked] = React.useState(true);\nconst [disabled, setDisabled] = React.useState(false);\n\nconst handleChange = (group, name) => () => {\nsetSelectedOptions((prevOptions) => ({\n...prevOptions,\n[group]: name,\n}));\n};\n\nreturn (\n<React.Fragment>\n<div\nstyle={{\nwidth: document.body.clientWidth < 450 ? '100%' : 320,\n}}\n>\n<div style={{ minHeight: '46px' }}>\n<Radio\nsize={24}\nonChange={handleChange('group_1', 'checkbox24_1')}\nchecked={selectedOptions.group_1 === 'checkbox24_1'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n\n<Gap size={20} />\n<div style={{ minHeight: '46px' }}>\n<Radio\nsize={24}\nonChange={handleChange('group_1', 'checkbox24_2')}\nchecked={selectedOptions.group_1 === 'checkbox24_2'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n\n<Gap size={32} />\n<div style={{ marginLeft: '8px' }}>\n<div style={{ minHeight: '42px' }}>\n<Radio\nsize={20}\nonChange={handleChange('group_2', 'checkbox20_1')}\nchecked={selectedOptions.group_2 === 'checkbox20_1'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n<Gap size={12} />\n<div style={{ minHeight: '42px' }}>\n<Radio\nsize={20}\nonChange={handleChange('group_2', 'checkbox20_2')}\nchecked={selectedOptions.group_2 === 'checkbox20_2'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n</div>\n</div>\n<Gap size={32} />\n<Divider />\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={switchChecked}\nlabel='Подпись под лейблом'\nonChange={() => setSwitchChecked((prevState) => !prevState)}\n/>\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={disabled}\nlabel='Заблокирован'\nonClick={() => setDisabled((prevState) => !prevState)}\n/>\n</React.Fragment>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Состояния",
+      "description": "Радиокнопка может находиться в выбранном и невыбранном состоянии.\nЕсли радиокнопка заблокирована, используется состояние «недоступна».",
+      "desktop": "render(() => {\nreturn (\n<div style={{ width: document.body.clientWidth < 450 ? '100%' : 320 }}>\n<Radio size={24} label='Выбрана' checked={true} block={true} />\n<Gap size={20} />\n<Radio\nsize={24}\nlabel='Выбрана и недоступна'\ndisabled={true}\nchecked={true}\nblock={true}\n/>\n<Gap size={20} />\n<Radio size={24} label='По умолчанию' block={true} />\n<Gap size={20} />\n<Radio size={24} label='По умолчанию и недоступна' disabled={true} block={true} />\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

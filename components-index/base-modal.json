@@ -1,6 +1,15 @@
 {
   "componentName": "BaseModal",
   "packageName": "base-modal",
+  "description": "Используется для построения модальных сущностей.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/base-modal",
+      "named": [
+        "BaseModal"
+      ]
+    }
+  ],
   "props": {
     "children": {
       "type": "enum",
@@ -200,5 +209,13 @@
       "defaultValue": null,
       "description": "Хэндлер события прокрутки колесиком"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst [open, setOpen] = React.useState(false);\nconst handleModalOpen = () => setOpen(!open);\n\nreturn (\n<>\n<Button\nsize={56}\nonClick={handleModalOpen}\nblock={isMobile()}\nbreakpoint={BREAKPOINT}\n>\nПоказать BaseModal\n</Button>\n\n<BaseModal open={open} onClose={handleModalOpen}>\n<div style={{ padding: '100px' }}>BaseModal</div>\n</BaseModal>\n</>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

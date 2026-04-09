@@ -1,6 +1,15 @@
 {
   "componentName": "HatchingProgressBar",
   "packageName": "hatching-progress-bar",
+  "description": "Используется для отображения прогресса при заполнении формы.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/hatching-progress-bar",
+      "named": [
+        "HatchingProgressBar"
+      ]
+    }
+  ],
   "props": {
     "value": {
       "type": "number",
@@ -32,5 +41,13 @@
       "defaultValue": null,
       "description": "Id компонента для тестов"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "Заливкой обозначается текущий прогресс. \nШтриховкой обозначается прогресс, который будет достигнут при выполнении какого-либо условия.",
+      "desktop": "<HatchingProgressBar value={40} hatchValue={60} />",
+      "mobile": null
+    }
+  ]
 }

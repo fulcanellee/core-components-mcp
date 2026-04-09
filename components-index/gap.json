@@ -1,6 +1,15 @@
 {
   "componentName": "Gap",
   "packageName": "gap",
+  "description": "Используется для создания отступов между блоками.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/gap",
+      "named": [
+        "Gap"
+      ]
+    }
+  ],
   "props": {
     "size": {
       "type": "enum",
@@ -32,5 +41,13 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst [direction, setDirection] = React.useState('horizontal');\n\nconst stylesAddon={\nwidth: '64px',\nheight: '64px',\nborderRadius: '8px',\nbackgroundColor: 'rgba(38, 55, 88, 0.06)',\nboxSizing: 'border-box',\n}\n\nconst stylesWrapper = {\ndisplay: 'flex',\nflexDirection: direction === 'vertical' ? 'column' : 'row',\n}\n\nreturn (\n<div>\n<div style={stylesWrapper}>\n<div style={stylesAddon}/>\n<Gap size={16} direction={direction} />\n<div style={stylesAddon}/>\n<Gap size={16} direction={direction} />\n<div style={stylesAddon}/>\n</div>\n<Gap size={24} />\n<RadioGroup\nlabel='Лейаут'\ndirection='vertical'\nname='radioGroupFirst'\nonChange={(_, { value }) => setDirection(value)}\nvalue={direction}\n>\n<Radio label='Горизонтальный' value='horizontal' />\n<Radio label='Вертикальный' value='vertical' />\n</RadioGroup>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
 }

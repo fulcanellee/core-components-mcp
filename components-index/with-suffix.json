@@ -1,6 +1,15 @@
 {
   "componentName": "WithSuffix",
   "packageName": "with-suffix",
+  "description": "Используется чтобы расположить текст после значения инпута.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/with-suffix",
+      "named": [
+        "withSuffix"
+      ]
+    }
+  ],
   "props": {
     "apply": {
       "type": "{ <T, R>(this: (this: T) => R, thisArg: T): R; <T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R; }",
@@ -67,5 +76,13 @@
       "defaultValue": null,
       "description": ""
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "HOC добавляет в переданный инпут доп. пропсу `suffix?: ReactNode`.",
+      "desktop": "const SuffixInput = withSuffix(Input);\n\nrender(\n<div style={{ width: 320 }}>\n<SuffixInput\nblock={true}\nplaceholder='Введите число'\nlabel='Количество месяцев'\nlabelView={isMobile() ? 'outer' : 'inner'}\nsuffix={<Typography.Text view='component-primary' color='secondary'> мес</Typography.Text> }\nsize={isMobile() ? 48 : 56}\nbreakpoint={BREAKPOINT}/>\n</div>\n);",
+      "mobile": null
+    }
+  ]
 }

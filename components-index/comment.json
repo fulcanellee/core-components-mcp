@@ -1,6 +1,15 @@
 {
   "componentName": "Comment",
   "packageName": "comment",
+  "description": "Используется для отображаения комментариев.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/comment",
+      "named": [
+        "Comment"
+      ]
+    }
+  ],
   "props": {
     "rowLimit": {
       "type": "enum",
@@ -26,5 +35,13 @@
       "defaultValue": null,
       "description": "Дочерние элементы."
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<div style={{ width: 290 }}>\n<Comment>Короткий комментарий</Comment>\n<Gap size={16} />\n<Comment>Длинный комментарий без ограничения по количеству строк</Comment>\n<Gap size={16} />\n<Comment rowLimit={2}>Длинный комментарий с ограничением по количеству строк</Comment>\n</div>",
+      "mobile": null
+    }
+  ]
 }

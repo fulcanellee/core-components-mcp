@@ -1,6 +1,8 @@
 {
   "componentName": "SteppedProgressBar",
   "packageName": "stepped-progress-bar",
+  "description": "",
+  "imports": [],
   "props": {
     "maxStep": {
       "type": "number",
@@ -44,5 +46,19 @@
       "defaultValue": null,
       "description": "Дополнительный класс"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Пошаговый прогрессбар с описанием под шкалой",
+      "description": "",
+      "desktop": "<SteppedProgressBar\nstep={5}\nmaxStep={10}\ndescription={\"Название шага\"}\n/>",
+      "mobile": null
+    },
+    {
+      "title": "Пошаговый прогрессбар с выбором цветов отдельных сегментов",
+      "description": "",
+      "desktop": "<SteppedProgressBar\nstep={8}\nmaxStep={10}\nview={['positive', 'negative', 'attention', 'link', 'tertiary', 'secondary', 'primary', 'accent']}\n/>",
+      "mobile": null
+    }
+  ]
 }

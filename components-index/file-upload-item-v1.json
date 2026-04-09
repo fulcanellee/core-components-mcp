@@ -1,6 +1,15 @@
 {
   "componentName": "FileUploadItemV1",
   "packageName": "file-upload-item-v1",
+  "description": "Используется для отображения загружаемого файла.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/file-upload-item-v1",
+      "named": [
+        "FileUploadItemV1"
+      ]
+    }
+  ],
   "props": {
     "className": {
       "type": "enum",
@@ -128,5 +137,13 @@
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<>\n<FileUploadItemV1\nname='Довольно длинное название файла.pdf'\nuploadDate='22.01.2018'\nsize={500000000}\nshowDelete={false}\nshowRestore={true}\n/>\n<FileUploadItemV1\nname='Название файла.pdf'\nuploadDate='22.01.2018'\nsize={45000}\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='С кастомной иконкой.pdf'\nuploadDate='22.01.2018'\nsize={50000}\nshowDelete={true}\nicon={DiamondsMIcon}\n/>\n<FileUploadItemV1\nname='Название файла.pdf'\nuploadDate='22.01.2018'\nuploadPercent={23.5678}\nuploadStatus='UPLOADING'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.txt'\nuploadDate='22.01.2018'\nsize={157290000}\ndownloadLink='/link'\nuploadStatus='SUCCESS'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.jpg'\nuploadDate='22.01.2018'\nsize={45000}\nuploadStatus='ERROR'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.png'\nuploadDate='22.01.2018'\nsize={450000000}\nuploadStatus='ERROR'\nerror={\n<>\n<p style={{ margin: 0, marginBottom: '8px' }}>Размер больше 500 Кб</p>\n<p style={{ margin: 0 }}>\nНедопустимый формат файла. Загрузите файл в одном из этих форматов: .txt, .xml,\n.csv\n</p>\n</>\n}\nshowDelete={true}\n/>\n</>",
+      "mobile": null
+    }
+  ]
 }

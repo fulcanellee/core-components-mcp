@@ -1,6 +1,15 @@
 {
   "componentName": "ProgressBar",
   "packageName": "progress-bar",
+  "description": "Используется для отображения прогресса.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/progress-bar",
+      "named": [
+        "ProgressBar"
+      ]
+    }
+  ],
   "props": {
     "value": {
       "type": "number",
@@ -38,5 +47,13 @@
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<Space size={20} fullWidth>\n<ProgressBar value={40} />\n<ProgressBar view='link' size={4} value={20} />\n</Space>",
+      "mobile": null
+    }
+  ]
 }
