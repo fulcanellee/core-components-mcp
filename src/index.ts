@@ -2,7 +2,7 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { readdirSync, readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
 
@@ -181,6 +181,27 @@ const server = new McpServer({
   name: "core-components-mcp",
   version: "0.1.0"
 });
+
+server.registerTool(
+  "get_package_version",
+  {
+    description: "Returns the current version of the core-components-mcp package."
+  },
+  async () => {
+    const packageJsonPath = resolve(__dirname, "..", "package.json");
+    const raw = readFileSync(packageJsonPath, "utf8");
+    const pkg = JSON.parse(raw) as { version: string };
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: `core-components-mcp@${pkg.version}`
+        }
+      ]
+    };
+  }
+);
 
 server.registerTool(
   "list_components",
