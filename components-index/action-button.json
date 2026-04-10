@@ -12,61 +12,123 @@
   ],
   "props": {
     "icon": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Иконка кнопки"
     },
     "size": {
-      "type": "enum",
+      "type": "48",
+      "typeName": "enum",
+      "rawType": "48",
+      "enumValues": [
+        "48"
+      ],
       "required": false,
       "defaultValue": "48",
       "description": "Размер кнопки"
     },
     "view": {
-      "type": "enum",
+      "type": "\"secondary\" | \"primary\"",
+      "typeName": "enum",
+      "rawType": "\"secondary\" | \"primary\"",
+      "enumValues": [
+        "\"secondary\"",
+        "\"primary\""
+      ],
       "required": false,
       "defaultValue": "primary",
       "description": "Тип кнопки"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "iconWrapperClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для обертки иконки"
     },
     "href": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение href для ссылки"
     },
     "disabled": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Заблокировать кнопку"
     },
     "loading": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Показать лоадер"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования.\nДля спиннера используется модификатор -loader"
     },
     "colors": {
-      "type": "enum",
+      "type": "Colors",
+      "typeName": "enum",
+      "rawType": "Colors",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\"",
+        "\"static\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Палитра, в контексте которой используется кнопка"

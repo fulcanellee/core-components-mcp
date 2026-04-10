@@ -12,49 +12,87 @@
   ],
   "props": {
     "open": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Управление видимостью"
     },
     "images": {
       "type": "GalleryImage[]",
+      "typeName": "GalleryImage[]",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Массив изображений"
     },
     "loop": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Зациклить галерею"
     },
     "initialSlide": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "0",
       "description": "Индекс открытого изображение"
     },
     "onClose": {
       "type": "() => void",
+      "typeName": "() => void",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Обработчик закрытия"
     },
     "slideIndex": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Индекс текущего изображения"
     },
     "onSlideIndexChange": {
-      "type": "enum",
+      "type": "((index: number) => void)",
+      "typeName": "enum",
+      "rawType": "((index: number) => void)",
+      "enumValues": [
+        "(index: number) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения текущего изображения"
     },
     "popupClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для попапа"

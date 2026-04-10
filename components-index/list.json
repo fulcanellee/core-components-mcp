@@ -12,49 +12,115 @@
   ],
   "props": {
     "tag": {
-      "type": "enum",
+      "type": "\"ol\" | \"ul\"",
+      "typeName": "enum",
+      "rawType": "\"ol\" | \"ul\"",
+      "enumValues": [
+        "\"ol\"",
+        "\"ul\""
+      ],
       "required": false,
       "defaultValue": "ul",
       "description": "HTML тег"
     },
     "marker": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": "'–' for ul and 'decimal' for ol",
       "description": "Маркер"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Css-класс для стилизации"
     },
     "colorMarker": {
-      "type": "enum",
+      "type": "ColorMarkerType",
+      "typeName": "enum",
+      "rawType": "ColorMarkerType",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\"",
+        "\"tertiary-inverted\"",
+        "\"primary-inverted\"",
+        "\"secondary-inverted\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Цвет маркера"
     },
     "reversed": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список обратного счета"
     },
     "start": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Начало отсчета элементов списка"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Id компонента для тестов"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы"

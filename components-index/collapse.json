@@ -12,73 +12,143 @@
   ],
   "props": {
     "expanded": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Состояние компонента"
     },
     "collapsedLabel": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст ссылки в `expanded` состоянии"
     },
     "expandedLabel": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст ссылки в `collapsed` состоянии"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы `Collapse`"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс обертки"
     },
     "expandedContentClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для скрываемого контента"
     },
     "id": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор компонента в DOM"
     },
     "defaultExpanded": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Начальное состояние uncontrolled компонента"
     },
     "onExpandedChange": {
-      "type": "enum",
+      "type": "((expanded: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((expanded: boolean) => void)",
+      "enumValues": [
+        "(expanded: boolean) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик смены состояний `expanded/collapsed`"
     },
     "onTransitionEnd": {
-      "type": "enum",
+      "type": "((expanded: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((expanded: boolean) => void)",
+      "enumValues": [
+        "(expanded: boolean) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик события завершения анимации"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"

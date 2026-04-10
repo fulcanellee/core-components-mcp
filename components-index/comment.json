@@ -12,25 +12,53 @@
   ],
   "props": {
     "rowLimit": {
-      "type": "enum",
+      "type": "2 | 5",
+      "typeName": "enum",
+      "rawType": "2 | 5",
+      "enumValues": [
+        "2",
+        "5"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Количество строк"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Сss класс для стилизации общей обёртки"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Id компонента для тестов"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы."

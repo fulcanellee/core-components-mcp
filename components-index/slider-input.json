@@ -12,307 +12,623 @@
   ],
   "props": {
     "defaultValue": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Начальное значение поля"
     },
     "onClick": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик клика по полю"
     },
     "onMouseDown": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик MouseDown по полю"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "onMouseUp": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик MouseUp по полю"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивает компонент на ширину контейнера"
     },
     "clear": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Крестик для очистки поля"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Набор цветов для компонента"
     },
     "error": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение ошибки"
     },
     "success": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение иконки успеха"
     },
     "hint": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подсказки"
     },
     "label": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Лейбл компонента"
     },
     "labelView": {
-      "type": "enum",
+      "type": "\"inner\" | \"outer\"",
+      "typeName": "enum",
+      "rawType": "\"inner\" | \"outer\"",
+      "enumValues": [
+        "\"inner\"",
+        "\"outer\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вид лейбла внутри / снаружи"
     },
     "wrapperRef": {
-      "type": "enum",
+      "type": "Ref<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "Ref<HTMLDivElement>",
+      "enumValues": [
+        "null",
+        "(instance: HTMLDivElement | null) => void",
+        "RefObject<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Ref для обертки input"
     },
     "leftAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот слева"
     },
     "rightAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот справа"
     },
     "leftAddonsProps": {
-      "type": "enum",
+      "type": "HTMLAttributes<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "HTMLAttributes<HTMLDivElement>",
+      "enumValues": [
+        "HTMLAttributes<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойства для обертки левых аддонов"
     },
     "rightAddonsProps": {
-      "type": "enum",
+      "type": "HTMLAttributes<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "HTMLAttributes<HTMLDivElement>",
+      "enumValues": [
+        "HTMLAttributes<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойства для обертки правых аддонов"
     },
     "fieldClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для поля"
     },
     "inputClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс инпута\nКласс для инпута"
     },
     "labelClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для лейбла"
     },
     "addonsClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для аддонов"
     },
     "focusedClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс, который будет установлен при фокусе"
     },
     "filledClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс, который будет установлен, если в поле есть значение"
     },
     "onClear": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на кнопку очистки"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования.\nДля FormControl используется модификатор -form-control\nИдентификатор для систем автоматизированного тестирования"
     },
     "disableUserInput": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Запрещает ввод с клавиатуры"
     },
     "bold": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Жирный текст\nЖирность текста\n@deprecated Используйте {@link BaseInputProps.fontWeight }"
     },
     "fontWeight": {
-      "type": "enum",
+      "type": "\"bold\" | \"medium\" | \"regular\"",
+      "typeName": "enum",
+      "rawType": "\"bold\" | \"medium\" | \"regular\"",
+      "enumValues": [
+        "\"bold\"",
+        "\"medium\"",
+        "\"regular\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вес шрифта инпута, в том числе плейсхолдера"
     },
     "breakpoint": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "1024",
       "description": "Контрольная точка, с нее начинается desktop версия"
     },
     "client": {
-      "type": "enum",
+      "type": "\"desktop\" | \"mobile\"",
+      "typeName": "enum",
+      "rawType": "\"desktop\" | \"mobile\"",
+      "enumValues": [
+        "\"desktop\"",
+        "\"mobile\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Версия, которая будет использоваться при серверном рендеринге"
     },
     "defaultMatchMediaValue": {
-      "type": "enum",
+      "type": "boolean | (() => boolean)",
+      "typeName": "enum",
+      "rawType": "boolean | (() => boolean)",
+      "enumValues": [
+        "false",
+        "true",
+        "() => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
     },
     "size": {
-      "type": "enum",
+      "type": "48 | 56 | 64 | 72",
+      "typeName": "enum",
+      "rawType": "48 | 56 | 64 | 72",
+      "enumValues": [
+        "48",
+        "56",
+        "64",
+        "72"
+      ],
       "required": false,
       "defaultValue": "48",
       "description": "Размер компонента\n@description s, m, l, xl deprecated, используйте вместо них 48, 56, 64, 72 соответственно"
     },
     "min": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "0",
       "description": "Мин. допустимое число"
     },
     "max": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "100",
       "description": "Макс. допустимое число"
     },
     "steps": {
-      "type": "enum",
+      "type": "ReactNode[]",
+      "typeName": "enum",
+      "rawType": "ReactNode[]",
+      "enumValues": [
+        "ReactNode[]"
+      ],
       "required": false,
       "defaultValue": "[]",
       "description": "Массив подписей к слайдеру"
     },
     "step": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "1",
       "description": "Шаг (должен нацело делить отрезок между мин и макс)"
     },
     "pips": {
-      "type": "enum",
+      "type": "Pips",
+      "typeName": "enum",
+      "rawType": "Pips",
+      "enumValues": [
+        "Pips"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение подписей\nhttps://refreshless.com/nouislider/pips/"
     },
     "range": {
-      "type": "enum",
+      "type": "RangeOptions",
+      "typeName": "enum",
+      "rawType": "RangeOptions",
+      "enumValues": [
+        "RangeOptions"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Настройка шагов\nhttps://refreshless.com/nouislider/pips/#section-range"
     },
     "value": {
-      "type": "enum",
+      "type": "string | number",
+      "typeName": "enum",
+      "rawType": "string | number",
+      "enumValues": [
+        "string",
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение инпута"
     },
     "sliderValue": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "+value",
       "description": "Значение слайдера"
     },
     "info": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительная информация в правой части поля"
     },
     "Input": {
-      "type": "enum",
+      "type": "ComponentType<Omit<InputProps, \"value\" | \"defaultValue\" | \"onChange\">>",
+      "typeName": "enum",
+      "rawType": "ComponentType<Omit<InputProps, \"value\" | \"defaultValue\" | \"onChange\">>",
+      "enumValues": [
+        "ComponentClass<Omit<InputProps, \"value\" | \"defaultValue\" | \"onChange\">, any>",
+        "FunctionComponent<Omit<InputProps, \"value\" | \"defaultValue\" | \"onChange\">>"
+      ],
       "required": false,
       "defaultValue": "forwardRef<HTMLInputElement, InputProps>(\n    (\n        {\n            breakpoint,\n            client,\n            defaultMatchMediaValue = client === undefined ? undefined : client === 'desktop',\n            ...restProps\n        },\n        ref,\n    ) => {\n        const isDesktop = useIsDesktop(breakpoint, defaultMatchMediaValue);\n\n        const Component = isDesktop ? InputDesktop : InputMobile;\n\n        return <Component ref={ref} {...restProps} />;\n    },\n)",
       "description": "Компонент поля ввода"
     },
     "customInputProps": {
-      "type": "enum",
+      "type": "Record<string, unknown>",
+      "typeName": "enum",
+      "rawType": "Record<string, unknown>",
+      "enumValues": [
+        "Record<string, unknown>"
+      ],
       "required": false,
       "defaultValue": "{}",
       "description": "Кастомные пропсы для поля ввода"
     },
     "sliderClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс для слайдера"
     },
     "stepsClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс для шагов"
     },
     "onChange": {
-      "type": "enum",
+      "type": "OnChangeType",
+      "typeName": "enum",
+      "rawType": "OnChangeType",
+      "enumValues": [
+        "OnChangeType"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения значения через слайдер или поле ввода"
     },
     "onInputChange": {
-      "type": "enum",
+      "type": "OnInputChangeType",
+      "typeName": "enum",
+      "rawType": "OnInputChangeType",
+      "enumValues": [
+        "OnInputChangeType"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик ввода"
     },
     "onSliderChange": {
-      "type": "enum",
+      "type": "((payload: { value: number; }) => void)",
+      "typeName": "enum",
+      "rawType": "((payload: { value: number; }) => void)",
+      "enumValues": [
+        "(payload: { value: number; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения слайдера"
     },
     "onSliderStart": {
-      "type": "enum",
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик начала перетаскивания ползунка"
     },
     "onSliderEnd": {
-      "type": "enum",
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик окончания перетаскивания ползунка"

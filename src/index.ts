@@ -12,6 +12,9 @@ type ComponentImport = {
 
 type ComponentProp = {
   type: string;
+  typeName?: string | null;
+  rawType?: string | null;
+  enumValues?: string[];
   required: boolean;
   defaultValue: string | null;
   description: string;
@@ -87,6 +90,27 @@ function getRequiredProps(component: ComponentIndexEntry): string[] {
   return Object.entries(component.props)
     .filter(([, prop]) => prop.required)
     .map(([propName]) => propName);
+}
+
+function isNamedTypeReference(typeName: string | null | undefined): boolean {
+  return Boolean(typeName) && /^[A-Z][A-Za-z0-9_<>, ]*$/.test(typeName as string);
+}
+
+function formatExpandedPropType(prop: ComponentProp): string {
+  const enumValues = (prop.enumValues ?? []).filter((value) => value !== "undefined");
+  const rawType = prop.rawType?.trim() || null;
+
+  if (enumValues.length === 0) {
+    return prop.type;
+  }
+
+  const enumUnion = enumValues.join(" | ");
+
+  if (rawType && isNamedTypeReference(rawType)) {
+    return `type ${rawType} = ${enumUnion}`;
+  }
+
+  return rawType || enumUnion;
 }
 
 function scoreExample(example: ComponentExample, task: string): number {
@@ -215,8 +239,9 @@ server.registerTool(
       const required = prop.required ? "required" : "optional";
       const defaultValue = prop.defaultValue === null ? "null" : prop.defaultValue;
       const description = prop.description || "No description";
+      const typeDetails = formatExpandedPropType(prop);
 
-      return `- ${propName}: type=${prop.type}, ${required}, default=${defaultValue}, description=${description}`;
+      return `- ${propName}: type=${typeDetails}, ${required}, default=${defaultValue}, description=${description}`;
     });
 
     return {
@@ -286,7 +311,7 @@ server.registerTool(
     const importantProps = Object.entries(entry.props)
       .filter(([, prop]) => prop.required || /controlled|состояние|обработчик|значение|header|children/i.test(prop.description))
       .slice(0, 8)
-      .map(([propName, prop]) => `- ${propName}: ${prop.description || "No description"}`);
+      .map(([propName, prop]) => `- ${propName}: ${formatExpandedPropType(prop)}. ${prop.description || "No description"}`);
 
     if (!example || !code) {
       return {

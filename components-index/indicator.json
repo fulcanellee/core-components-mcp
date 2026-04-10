@@ -12,43 +12,88 @@
   ],
   "props": {
     "value": {
-      "type": "enum",
+      "type": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "typeName": "enum",
+      "rawType": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "enumValues": [
+        "number",
+        "ReactElement<any, string | JSXElementConstructor<any>>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение индикатора"
     },
     "backgroundColor": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Цвет заливки"
     },
     "height": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Высота компонента, min = 16; max = 48"
     },
     "size": {
-      "type": "enum",
+      "type": "40 | 8 | 16 | 24 | 32 | 20",
+      "typeName": "enum",
+      "rawType": "40 | 8 | 16 | 24 | 32 | 20",
+      "enumValues": [
+        "40",
+        "8",
+        "16",
+        "24",
+        "32",
+        "20"
+      ],
       "required": false,
       "defaultValue": "getSize(height, value)",
       "description": "Размер компонента"
     },
     "border": {
-      "type": "enum",
+      "type": "boolean | Border",
+      "typeName": "enum",
+      "rawType": "boolean | Border",
+      "enumValues": [
+        "false",
+        "true",
+        "Border"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Настройки обводки"
     },
     "view": {
-      "type": "enum",
+      "type": "\"red\" | \"grey\" | \"white\"",
+      "typeName": "enum",
+      "rawType": "\"red\" | \"grey\" | \"white\"",
+      "enumValues": [
+        "\"red\"",
+        "\"grey\"",
+        "\"white\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Пресет компонента"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

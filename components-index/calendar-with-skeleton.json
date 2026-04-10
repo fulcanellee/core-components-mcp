@@ -12,199 +12,379 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "headerClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс шапки десктопного календаря"
     },
     "contentClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс контента десктопного календаря"
     },
     "defaultView": {
-      "type": "enum",
+      "type": "View",
+      "typeName": "enum",
+      "rawType": "View",
+      "enumValues": [
+        "\"years\"",
+        "\"months\"",
+        "\"days\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вид по умолчанию (выбор дней, месяцев, лет)"
     },
     "selectorView": {
-      "type": "enum",
+      "type": "SelectorView",
+      "typeName": "enum",
+      "rawType": "SelectorView",
+      "enumValues": [
+        "\"month-only\"",
+        "\"full\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вид шапки — месяц и год или только месяц"
     },
     "value": {
-      "type": "enum",
+      "type": "number | { dateFrom?: number; dateTo?: number; }",
+      "typeName": "enum",
+      "rawType": "number | { dateFrom?: number; dateTo?: number; }",
+      "enumValues": [
+        "number",
+        "{ dateFrom?: number | undefined; dateTo?: number | undefined; }"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Выбранная дата (timestamp)"
     },
     "mode": {
-      "type": "enum",
+      "type": "\"range\" | \"single\"",
+      "typeName": "enum",
+      "rawType": "\"range\" | \"single\"",
+      "enumValues": [
+        "\"range\"",
+        "\"single\""
+      ],
       "required": false,
       "defaultValue": "single",
       "description": "Режим выбора дат"
     },
     "rangeBehavior": {
-      "type": "enum",
+      "type": "\"reset\" | \"clarification\"",
+      "typeName": "enum",
+      "rawType": "\"reset\" | \"clarification\"",
+      "enumValues": [
+        "\"reset\"",
+        "\"clarification\""
+      ],
       "required": false,
       "defaultValue": "clarification",
       "description": "Тип выбора границ в календаре"
     },
     "month": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Открытый месяц (timestamp)"
     },
     "defaultMonth": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Месяц, открытый по умолчанию (timestamp)"
     },
     "minDate": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Минимальная дата, доступная для выбора (timestamp)"
     },
     "maxDate": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Максимальная дата, доступная для выбора (timestamp)"
     },
     "selectedFrom": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Начало выделенного периода (timestamp)\n@deprecated используйте value вместе с mode='range'"
     },
     "selectedTo": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Конец выделенного периода (timestamp)\n@deprecated используйте value вместе с mode='range'"
     },
     "rangeComplete": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Индикатор, что выбран полный период"
     },
     "events": {
-      "type": "enum",
+      "type": "(number | Date)[]",
+      "typeName": "enum",
+      "rawType": "(number | Date)[]",
+      "enumValues": [
+        "(number | Date)[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список событий"
     },
     "offDays": {
-      "type": "enum",
+      "type": "(number | Date)[]",
+      "typeName": "enum",
+      "rawType": "(number | Date)[]",
+      "enumValues": [
+        "(number | Date)[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список отключенных для выбора дней."
     },
     "holidays": {
-      "type": "enum",
+      "type": "(number | Date)[]",
+      "typeName": "enum",
+      "rawType": "(number | Date)[]",
+      "enumValues": [
+        "(number | Date)[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список выходных"
     },
     "onMonthChange": {
-      "type": "enum",
+      "type": "((month: number) => void)",
+      "typeName": "enum",
+      "rawType": "((month: number) => void)",
+      "enumValues": [
+        "(month: number) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения месяца (или года)"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((date?: number, dateTo?: number) => void)",
+      "typeName": "enum",
+      "rawType": "((date?: number, dateTo?: number) => void)",
+      "enumValues": [
+        "(date?: number | undefined, dateTo?: number | undefined) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик выбора даты"
     },
     "onMonthClick": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на кнопку месяца"
     },
     "onYearClick": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на кнопку года"
     },
     "onPeriodClick": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLAnchorElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLAnchorElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLAnchorElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на период"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "hasHeader": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Нужно ли рендерить шапку календаря"
     },
     "responsive": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Должен ли календарь подстраиваться под ширину родителя."
     },
     "dayAddons": {
-      "type": "enum",
+      "type": "DayAddons[]",
+      "typeName": "enum",
+      "rawType": "DayAddons[]",
+      "enumValues": [
+        "DayAddons[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный контент под числом"
     },
     "shape": {
-      "type": "enum",
+      "type": "\"rounded\" | \"rectangular\"",
+      "typeName": "enum",
+      "rawType": "\"rounded\" | \"rectangular\"",
+      "enumValues": [
+        "\"rounded\"",
+        "\"rectangular\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Форма ячейки дня"
     },
     "showCurrentYearSelector": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Отображать ли текущий год, если selectorView 'month-only'"
     },
     "hideDisabledArrows": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Скрывает заблокированные кнопки в периоде, если selectorView 'month-only'"
     },
     "mobile": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "CalendarDesktop используется в мобильной и десктопной версии\nПропс позволяет определить платформу"
     },
     "animate": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Флаг включения анимации скелета"
     },
     "calendarVisible": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Флаг управлением видимостью календаря"

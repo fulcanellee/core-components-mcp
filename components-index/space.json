@@ -12,61 +12,135 @@
   ],
   "props": {
     "align": {
-      "type": "enum",
+      "type": "Align",
+      "typeName": "enum",
+      "rawType": "Align",
+      "enumValues": [
+        "\"center\"",
+        "\"start\"",
+        "\"end\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Выравнивание"
     },
     "direction": {
-      "type": "enum",
+      "type": "Direction",
+      "typeName": "enum",
+      "rawType": "Direction",
+      "enumValues": [
+        "\"horizontal\"",
+        "\"vertical\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Направление"
     },
     "size": {
-      "type": "enum",
+      "type": "Size | [Size, Size]",
+      "typeName": "enum",
+      "rawType": "Size | [Size, Size]",
+      "enumValues": [
+        "number",
+        "\"s\"",
+        "\"m\"",
+        "\"l\"",
+        "[Size, Size]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Размер отступов"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Дочерние компоненты"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "wrap": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Автоматический перенос строк, полезно при direction = 'horizontal'"
     },
     "divider": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Компонент разделителя"
     },
     "fullWidth": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивать ли компонент на всю ширину"
     },
     "useCssGaps": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Использовать css gap\n@description Поддержка ограничена. см https://caniuse.com/?search=gap"

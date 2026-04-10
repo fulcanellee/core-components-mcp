@@ -12,43 +12,82 @@
   ],
   "props": {
     "invisible": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Прозрачный бэкдроп\n@deprecated данное свойство больше не используется, временно оставлено для обратной совместимости\nИспользуйте свойство transparent"
     },
     "open": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управляет видимостью компонента"
     },
     "onClose": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик клика по бэкдропу"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "transitionClassNames": {
-      "type": "enum",
+      "type": "string | CSSTransitionClassNames",
+      "typeName": "enum",
+      "rawType": "string | CSSTransitionClassNames",
+      "enumValues": [
+        "string",
+        "CSSTransitionClassNames"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Классы анимации\n\nhttp://reactcommunity.org/react-transition-group/css-transition#CSSTransition-prop-classNames"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "transparent": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управляет прозрачностью бэкдроп"

@@ -12,115 +12,213 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "valueFrom": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение инпута (используется и для календаря)"
     },
     "valueTo": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение инпута (используется и для календаря)"
     },
     "defaultMonth": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Месяц в календаре по умолчанию"
     },
     "minDate": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Минимальная дата, доступная для выбора (timestamp)"
     },
     "maxDate": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Максимальная дата, доступная для выбора (timestamp)"
     },
     "onDateFromChange": {
-      "type": "enum",
+      "type": "((payload: { date: number | null; value: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((payload: { date: number | null; value: string; }) => void)",
+      "enumValues": [
+        "(payload: { date: number | null; value: string; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения даты от"
     },
     "onDateToChange": {
-      "type": "enum",
+      "type": "((payload: { date: number | null; value: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((payload: { date: number | null; value: string; }) => void)",
+      "enumValues": [
+        "(payload: { date: number | null; value: string; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения даты до"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((payload: { dateFrom: number | null; valueFrom: string; dateTo: number | null; valueTo: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((payload: { dateFrom: number | null; valueFrom: string; dateTo: number | null; valueTo: string; }) => void)",
+      "enumValues": [
+        "(payload: { dateFrom: number | null; valueFrom: string; dateTo: number | null; valueTo: string; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменения"
     },
     "onError": {
-      "type": "enum",
+      "type": "((hasError: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((hasError: boolean) => void)",
+      "enumValues": [
+        "(hasError: boolean) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Коллбэк, срабатывающий при возникновении ошибок валидации дат внутри компонента."
     },
     "events": {
-      "type": "enum",
+      "type": "(number | Date)[]",
+      "typeName": "enum",
+      "rawType": "(number | Date)[]",
+      "enumValues": [
+        "(number | Date)[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список событий"
     },
     "offDays": {
-      "type": "enum",
+      "type": "(number | Date)[]",
+      "typeName": "enum",
+      "rawType": "(number | Date)[]",
+      "enumValues": [
+        "(number | Date)[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Список выходных"
     },
     "inputFromProps": {
-      "type": "enum",
+      "type": "CalendarInputResponsiveProps",
+      "typeName": "enum",
+      "rawType": "CalendarInputResponsiveProps",
+      "enumValues": [
+        "CalendarInputResponsiveProps"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Пропсы для инпута даты от"
     },
     "inputToProps": {
-      "type": "enum",
+      "type": "CalendarInputResponsiveProps",
+      "typeName": "enum",
+      "rawType": "CalendarInputResponsiveProps",
+      "enumValues": [
+        "CalendarInputResponsiveProps"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Пропсы для инпута даты до"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "calendarPosition": {
-      "type": "enum",
+      "type": "\"static\" | \"popover\"",
+      "typeName": "enum",
+      "rawType": "\"static\" | \"popover\"",
+      "enumValues": [
+        "\"static\"",
+        "\"popover\""
+      ],
       "required": false,
       "defaultValue": "static",
       "description": "Определяет, как рендерить календарь — в поповере или снизу инпута"
     },
     "defaultMonthPosition": {
-      "type": "enum",
+      "type": "\"left\" | \"right\"",
+      "typeName": "enum",
+      "rawType": "\"left\" | \"right\"",
+      "enumValues": [
+        "\"left\"",
+        "\"right\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "calendarPosition = static\nОтображать начальный месяц слева или справа (влияет только на начальный рендер)"
     },
     "returnInvalidDates": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Возвращать невалидную дату для кастомной валидации"
     },
     "calendarContainerClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для контейнера календаря"

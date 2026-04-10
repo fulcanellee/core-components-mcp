@@ -13,31 +13,66 @@
   ],
   "props": {
     "query": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Media выражение или кастомный запрос из `mq.json`, например `--mobile`."
     },
     "touch": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Запрос на поддержку тач-событий"
     },
     "defaultMatchMediaValue": {
-      "type": "enum",
+      "type": "boolean | (() => boolean)",
+      "typeName": "enum",
+      "rawType": "boolean | (() => boolean)",
+      "enumValues": [
+        "false",
+        "true",
+        "() => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение по-умолчанию для хука useMatchMedia"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы."
     },
     "onMatchChange": {
-      "type": "enum",
+      "type": "((isMatched: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((isMatched: boolean) => void)",
+      "enumValues": [
+        "(isMatched: boolean) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик изменений в совпадении запросов"

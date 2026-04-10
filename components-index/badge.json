@@ -12,67 +12,138 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "view": {
-      "type": "enum",
+      "type": "\"icon\" | \"count\"",
+      "typeName": "enum",
+      "rawType": "\"icon\" | \"count\"",
+      "enumValues": [
+        "\"icon\"",
+        "\"count\""
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Вид компонента"
     },
     "size": {
-      "type": "enum",
+      "type": "\"s\" | \"m\" | \"l\" | \"xl\"",
+      "typeName": "enum",
+      "rawType": "\"s\" | \"m\" | \"l\" | \"xl\"",
+      "enumValues": [
+        "\"s\"",
+        "\"m\"",
+        "\"l\"",
+        "\"xl\""
+      ],
       "required": false,
       "defaultValue": "m",
       "description": "Размер компонента (только для view=icon)\n//deprecated(используйте height для view=count )"
     },
     "visibleIconOutline": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Видимость белой обводки вокруг иконки"
     },
     "visibleColorOutline": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Видимость цветной обводки вокруг иконки (только для view=icon)"
     },
     "content": {
-      "type": "enum",
+      "type": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "typeName": "enum",
+      "rawType": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "enumValues": [
+        "number",
+        "ReactElement<any, string | JSXElementConstructor<any>>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Контент компонента"
     },
     "height": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "16",
       "description": "Высота компонента, min = 16; max = 48 (только для view=count)"
     },
     "color": {
-      "type": "enum",
+      "type": "\"primary\" | \"accent\" | \"specialbg-secondary-transparent\"",
+      "typeName": "enum",
+      "rawType": "\"primary\" | \"accent\" | \"specialbg-secondary-transparent\"",
+      "enumValues": [
+        "\"primary\"",
+        "\"accent\"",
+        "\"specialbg-secondary-transparent\""
+      ],
       "required": false,
       "defaultValue": "accent",
       "description": "Цветовое оформление бейджа при view='count'"
     },
     "iconColor": {
-      "type": "enum",
+      "type": "IconColorType",
+      "typeName": "enum",
+      "rawType": "IconColorType",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Цветовое оформление бейджа при view='icon'"
     },
     "iconUnderlayColor": {
-      "type": "enum",
+      "type": "\"primary\" | \"static-light\"",
+      "typeName": "enum",
+      "rawType": "\"primary\" | \"static-light\"",
+      "enumValues": [
+        "\"primary\"",
+        "\"static-light\""
+      ],
       "required": false,
       "defaultValue": "static-light",
       "description": "Цвет подложки под иконкой"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

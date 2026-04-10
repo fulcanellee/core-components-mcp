@@ -12,37 +12,79 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "size": {
-      "type": "enum",
+      "type": "StatusBadgeSizes",
+      "typeName": "enum",
+      "rawType": "StatusBadgeSizes",
+      "enumValues": [
+        "40",
+        "16",
+        "24",
+        "32",
+        "20"
+      ],
       "required": false,
       "defaultValue": "24",
       "description": "Размер компонента"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     },
     "view": {
-      "type": "enum",
+      "type": "StatusBadgeViews",
+      "typeName": "enum",
+      "rawType": "StatusBadgeViews",
+      "enumValues": [
+        "\"positive-checkmark\"",
+        "\"negative-cross\"",
+        "\"negative-alert\"",
+        "\"negative-block\"",
+        "\"attention-alert\"",
+        "\"neutral-information\"",
+        "\"neutral-operation\"",
+        "\"neutral-cross\""
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Вид бейджа."
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "customIcons": {
-      "type": "enum",
+      "type": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "typeName": "enum",
+      "rawType": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "enumValues": [
+        "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомные иконки"

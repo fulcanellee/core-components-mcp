@@ -13,54 +13,97 @@
   "props": {
     "currentPageIndex": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": false,
       "defaultValue": "0",
       "description": "Текущая страница (с нуля)"
     },
     "pagesCount": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Количество страниц"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "hideArrows": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Скрывает стрелки, если выбрана первая или последняя страница"
     },
     "sidePadding": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "1",
       "description": "Количество видимых страниц по бокам"
     },
     "activePadding": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "2",
       "description": "Количество видимых страниц вокруг выбранной"
     },
     "view": {
-      "type": "enum",
+      "type": "\"default\" | \"per-page\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"per-page\"",
+      "enumValues": [
+        "\"default\"",
+        "\"per-page\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Режим пагинации"
     },
     "onPageChange": {
-      "type": "enum",
+      "type": "((pageIndex: number) => void)",
+      "typeName": "enum",
+      "rawType": "((pageIndex: number) => void)",
+      "enumValues": [
+        "(pageIndex: number) => void"
+      ],
       "required": false,
       "defaultValue": "() => null",
       "description": "Обработчик переключения страницы"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

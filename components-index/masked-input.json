@@ -12,241 +12,508 @@
   ],
   "props": {
     "size": {
-      "type": "enum",
+      "type": "40 | 48 | 56 | 64 | 72",
+      "typeName": "enum",
+      "rawType": "40 | 48 | 56 | 64 | 72",
+      "enumValues": [
+        "40",
+        "48",
+        "56",
+        "64",
+        "72"
+      ],
       "required": false,
       "defaultValue": "48",
       "description": "Размер компонента"
     },
     "type": {
-      "type": "enum",
+      "type": "\"number\" | \"email\" | \"money\" | \"password\" | \"tel\" | \"text\"",
+      "typeName": "enum",
+      "rawType": "\"number\" | \"email\" | \"money\" | \"password\" | \"tel\" | \"text\"",
+      "enumValues": [
+        "\"number\"",
+        "\"email\"",
+        "\"money\"",
+        "\"password\"",
+        "\"tel\"",
+        "\"text\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Атрибут type"
     },
     "value": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение поля ввода"
     },
     "defaultValue": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Начальное значение поля"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик поля ввода"
     },
     "onClick": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик клика по полю"
     },
     "onMouseDown": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик MouseDown по полю"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "onMouseUp": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLDivElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLDivElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик MouseUp по полю"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивает компонент на ширину контейнера"
     },
     "clear": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Крестик для очистки поля"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Набор цветов для компонента"
     },
     "error": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение ошибки"
     },
     "success": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение иконки успеха"
     },
     "hint": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подсказки"
     },
     "label": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Лейбл компонента"
     },
     "labelView": {
-      "type": "enum",
+      "type": "\"inner\" | \"outer\"",
+      "typeName": "enum",
+      "rawType": "\"inner\" | \"outer\"",
+      "enumValues": [
+        "\"inner\"",
+        "\"outer\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вид лейбла внутри / снаружи"
     },
     "wrapperRef": {
-      "type": "enum",
+      "type": "Ref<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "Ref<HTMLDivElement>",
+      "enumValues": [
+        "null",
+        "(instance: HTMLDivElement | null) => void",
+        "RefObject<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Ref для обертки input"
     },
     "leftAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот слева"
     },
     "rightAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот справа"
     },
     "leftAddonsProps": {
-      "type": "enum",
+      "type": "HTMLAttributes<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "HTMLAttributes<HTMLDivElement>",
+      "enumValues": [
+        "HTMLAttributes<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойства для обертки левых аддонов"
     },
     "rightAddonsProps": {
-      "type": "enum",
+      "type": "HTMLAttributes<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "HTMLAttributes<HTMLDivElement>",
+      "enumValues": [
+        "HTMLAttributes<HTMLDivElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойства для обертки правых аддонов"
     },
     "bottomAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот под инпутом"
     },
     "fieldClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для поля"
     },
     "inputClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс инпута"
     },
     "labelClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для лейбла"
     },
     "addonsClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для аддонов"
     },
     "focusedClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс, который будет установлен при фокусе"
     },
     "filledClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс, который будет установлен, если в поле есть значение"
     },
     "onClear": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на кнопку очистки"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования.\nДля FormControl используется модификатор -form-control"
     },
     "disableUserInput": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Запрещает ввод с клавиатуры"
     },
     "bold": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Жирный текст\n@deprecated Используйте {@link BaseInputProps.fontWeight }"
     },
     "fontWeight": {
-      "type": "enum",
+      "type": "\"bold\" | \"medium\" | \"regular\"",
+      "typeName": "enum",
+      "rawType": "\"bold\" | \"medium\" | \"regular\"",
+      "enumValues": [
+        "\"bold\"",
+        "\"medium\"",
+        "\"regular\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Вес шрифта инпута, в том числе плейсхолдера"
     },
     "breakpoint": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "1024",
       "description": "Контрольная точка, с нее начинается desktop версия"
     },
     "client": {
-      "type": "enum",
+      "type": "\"desktop\" | \"mobile\"",
+      "typeName": "enum",
+      "rawType": "\"desktop\" | \"mobile\"",
+      "enumValues": [
+        "\"desktop\"",
+        "\"mobile\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Версия, которая будет использоваться при серверном рендеринге"
     },
     "defaultMatchMediaValue": {
-      "type": "enum",
+      "type": "boolean | (() => boolean)",
+      "typeName": "enum",
+      "rawType": "boolean | (() => boolean)",
+      "enumValues": [
+        "false",
+        "true",
+        "() => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение по-умолчанию для хука useMatchMedia\n@deprecated Используйте client"
     },
     "mask": {
-      "type": "enum",
+      "type": "Mask | ((rawValue: string) => Mask)",
+      "typeName": "enum",
+      "rawType": "Mask | ((rawValue: string) => Mask)",
+      "enumValues": [
+        "Mask",
+        "(rawValue: string) => Mask"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Маска для поля ввода\nhttps://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#mask-array"
     },
     "keepCharPositions": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управляет поведением компонента при удалении символов"
     },
     "onBeforeDisplay": {
-      "type": "enum",
+      "type": "((conformedValue: string, config: TextMaskConfig) => string | false | { value: string; indexesOfPipedChars: number[]; })",
+      "typeName": "enum",
+      "rawType": "((conformedValue: string, config: TextMaskConfig) => string | false | { value: string; indexesOfPipedChars: number[]; })",
+      "enumValues": [
+        "(conformedValue: string, config: TextMaskConfig) => string | false | { value: string; indexesOfPipedChars: number[]; }"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дает возможность изменить значение поля перед рендером"

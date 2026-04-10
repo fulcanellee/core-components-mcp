@@ -12,73 +12,167 @@
   ],
   "props": {
     "label": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подписи к переключателю"
     },
     "hint": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подсказки снизу"
     },
     "reversed": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Переключатель будет отрисован справа от контента"
     },
     "align": {
-      "type": "enum",
+      "type": "Align",
+      "typeName": "enum",
+      "rawType": "Align",
+      "enumValues": [
+        "\"center\"",
+        "\"start\""
+      ],
       "required": false,
       "defaultValue": "start",
       "description": "Выравнивание"
     },
     "addons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный слот"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивать ли компонент на всю ширину"
     },
     "disabled": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Управление состоянием включен / выключен"
     },
     "error": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение ошибки"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name: string | undefined; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик переключения компонента"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "colors": {
-      "type": "enum",
+      "type": "Colors",
+      "typeName": "enum",
+      "rawType": "Colors",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     },
     "showSkeleton": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Показать скелетон"

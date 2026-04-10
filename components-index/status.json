@@ -12,55 +12,128 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "view": {
-      "type": "enum",
+      "type": "\"contrast\" | \"soft\" | \"muted\" | \"muted-alt\"",
+      "typeName": "enum",
+      "rawType": "\"contrast\" | \"soft\" | \"muted\" | \"muted-alt\"",
+      "enumValues": [
+        "\"contrast\"",
+        "\"soft\"",
+        "\"muted\"",
+        "\"muted-alt\""
+      ],
       "required": false,
       "defaultValue": "muted-alt",
       "description": "Вид компонента\n@description soft deprecated, используйте вместо него muted-alt"
     },
     "color": {
-      "type": "enum",
+      "type": "\"green\" | \"orange\" | \"red\" | \"blue\" | \"grey\" | \"teal\" | \"purple\"",
+      "typeName": "enum",
+      "rawType": "\"green\" | \"orange\" | \"red\" | \"blue\" | \"grey\" | \"teal\" | \"purple\"",
+      "enumValues": [
+        "\"green\"",
+        "\"orange\"",
+        "\"red\"",
+        "\"blue\"",
+        "\"grey\"",
+        "\"teal\"",
+        "\"purple\""
+      ],
       "required": false,
       "defaultValue": "green",
       "description": "Цветовое оформление компонента"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы."
     },
     "size": {
-      "type": "enum",
+      "type": "40 | 24 | 32 | 20",
+      "typeName": "enum",
+      "rawType": "40 | 24 | 32 | 20",
+      "enumValues": [
+        "40",
+        "24",
+        "32",
+        "20"
+      ],
       "required": false,
       "defaultValue": "20",
       "description": "Размер компонента"
     },
     "shape": {
-      "type": "enum",
+      "type": "\"rounded\" | \"rectangular\"",
+      "typeName": "enum",
+      "rawType": "\"rounded\" | \"rectangular\"",
+      "enumValues": [
+        "\"rounded\"",
+        "\"rectangular\""
+      ],
       "required": false,
       "defaultValue": "rectangular",
       "description": "Форма компонента"
     },
     "uppercase": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Текст компонента в верхнем регистре"
     },
     "leftAddons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Слот слева"

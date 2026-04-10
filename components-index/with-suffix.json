@@ -13,65 +13,101 @@
   "props": {
     "apply": {
       "type": "{ <T, R>(this: (this: T) => R, thisArg: T): R; <T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R; }",
+      "typeName": "{ <T, R>(this: (this: T) => R, thisArg: T): R; <T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R; }",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Calls the function with the specified object as the this value and the elements of specified array as the arguments.\n@param thisArg The object to be used as the this object.\n@param thisArg The object to be used as the this object.\n@param args An array of argument values to be passed to the function."
     },
     "call": {
       "type": "<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R",
+      "typeName": "<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Calls the function with the specified object as the this value and the specified rest arguments as the arguments.\n@param thisArg The object to be used as the this object.\n@param args Argument values to be passed to the function."
     },
     "bind": {
       "type": "{ <T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>; <T, A extends any[], B extends any[], R>(this: (this: T, ...args: [...A, ...B]) => R, thisArg: T, ...args: A): (...args: B) => R; }",
+      "typeName": "{ <T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>; <T, A extends any[], B extends any[], R>(this: (this: T, ...args: [...A, ...B]) => R, thisArg: T, ...args: A): (...args: B) => R; }",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "For a given function, creates a bound function that has the same body as the original function.\nThe this object of the bound function is associated with the specified object, and has the specified initial parameters.\n@param thisArg The object to be used as the this object.\n@param thisArg The object to be used as the this object.\n@param args Arguments to bind to the parameters of the function."
     },
     "toString": {
       "type": "() => string",
+      "typeName": "() => string",
+      "rawType": null,
+      "enumValues": [],
       "required": false,
       "description": "Returns a string representation of a function."
     },
     "prototype": {
       "type": "any",
+      "typeName": "any",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": ""
     },
     "length": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": ""
     },
     "arguments": {
       "type": "any",
+      "typeName": "any",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": ""
     },
     "caller": {
       "type": "Function",
+      "typeName": "Function",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": ""
     },
     "name": {
       "type": "string",
+      "typeName": "string",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Returns the name of the function. Function names are read-only and can not be changed."
     },
     "__@hasInstance@388": {
       "type": "(value: any) => boolean",
+      "typeName": "(value: any) => boolean",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Determines whether the given value inherits from this function if this function was used\nas a constructor function.\n\nA constructor function can control which objects are recognized as its instances by\n'instanceof' by overriding this method."
     },
     "__@metadata@390": {
-      "type": "enum",
+      "type": "DecoratorMetadataObject | null",
+      "typeName": "enum",
+      "rawType": "DecoratorMetadataObject | null",
+      "enumValues": [
+        "null",
+        "DecoratorMetadataObject"
+      ],
       "required": true,
       "defaultValue": null,
       "description": ""

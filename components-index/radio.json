@@ -12,97 +12,204 @@
   ],
   "props": {
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "hint": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подсказки снизу"
     },
     "label": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подписи"
     },
     "size": {
-      "type": "enum",
+      "type": "24 | 20",
+      "typeName": "enum",
+      "rawType": "24 | 20",
+      "enumValues": [
+        "24",
+        "20"
+      ],
       "required": false,
       "defaultValue": "20",
       "description": "Размер компонента"
     },
     "checked": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Управление состоянием отмечен/не отмечен"
     },
     "disabled": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Управление состоянием включен / выключен"
     },
     "name": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Html аттрибут name инпута"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Класс компонента"
     },
     "circleClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс радио кнопки"
     },
     "contentClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс контента"
     },
     "align": {
-      "type": "enum",
+      "type": "Align",
+      "typeName": "enum",
+      "rawType": "Align",
+      "enumValues": [
+        "\"center\"",
+        "\"start\""
+      ],
       "required": false,
       "defaultValue": "start",
       "description": "Выравнивание"
     },
     "addons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный слот"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивать ли компонент на всю ширину"
     },
     "labelProps": {
-      "type": "enum",
+      "type": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "enumValues": [
+        "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Пропсы для label"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string | undefined; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик на выбор элемента"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"

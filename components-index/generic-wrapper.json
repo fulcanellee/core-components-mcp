@@ -12,43 +12,105 @@
   ],
   "props": {
     "column": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Свойство управляет направлением основной оси внутри флекс-контейнера"
     },
     "padding": {
-      "type": "enum",
+      "type": "PaddingPropType",
+      "typeName": "enum",
+      "rawType": "PaddingPropType",
+      "enumValues": [
+        "PaddingPropType"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Внутренние отступы\n@description 3xs, 2xs, xs, s, m, l, xl deprecated,\nиспользуйте 0, 2, 4, 8, 12, 16, 20, 24"
     },
     "alignItems": {
-      "type": "enum",
+      "type": "\"center\" | \"start\" | \"end\" | \"stretch\" | \"baseline\"",
+      "typeName": "enum",
+      "rawType": "\"center\" | \"start\" | \"end\" | \"stretch\" | \"baseline\"",
+      "enumValues": [
+        "\"center\"",
+        "\"start\"",
+        "\"end\"",
+        "\"stretch\"",
+        "\"baseline\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойство для выравнивания элементов внутри контейнера по поперечной оси."
     },
     "justifyContent": {
-      "type": "enum",
+      "type": "\"center\" | \"start\" | \"end\" | \"between\" | \"around\" | \"evenly\"",
+      "typeName": "enum",
+      "rawType": "\"center\" | \"start\" | \"end\" | \"between\" | \"around\" | \"evenly\"",
+      "enumValues": [
+        "\"center\"",
+        "\"start\"",
+        "\"end\"",
+        "\"between\"",
+        "\"around\"",
+        "\"evenly\""
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Свойство выравнивает флекс-элементы внутри флекс-контейнера по основной оси."
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "grow": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Позволяет заполнить всё доступное пространство родительского элемента."
     },
     "gap": {
-      "type": "enum",
+      "type": "GapType",
+      "typeName": "enum",
+      "rawType": "GapType",
+      "enumValues": [
+        "0",
+        "40",
+        "48",
+        "56",
+        "64",
+        "72",
+        "2",
+        "8",
+        "16",
+        "24",
+        "32",
+        "20",
+        "4",
+        "12",
+        "80",
+        "96",
+        "128"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отступы между элементами флекс-контейнера"

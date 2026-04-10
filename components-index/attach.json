@@ -12,85 +12,170 @@
   ],
   "props": {
     "buttonContent": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": "Выберите файл",
       "description": "Содержимое кнопки для выбора файла"
     },
     "buttonProps": {
-      "type": "enum",
+      "type": "(ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>)",
+      "typeName": "enum",
+      "rawType": "(ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>)",
+      "enumValues": [
+        "ComponentProps & Partial<ButtonHTMLAttributes<HTMLButtonElement>> & { breakpoint?: number | undefined; client?: \"desktop\" | ... 1 more ... | undefined; defaultMatchMediaValue?: boolean | ... 1 more ... | undefined; } & ButtonHTMLAttributes<...>",
+        "ComponentProps & Partial<AnchorHTMLAttributes<HTMLAnchorElement>> & { breakpoint?: number | undefined; client?: \"desktop\" | ... 1 more ... | undefined; defaultMatchMediaValue?: boolean | ... 1 more ... | undefined; } & ButtonHTMLAttributes<...>"
+      ],
       "required": false,
       "defaultValue": "{}",
       "description": "Свойства для кнопки"
     },
     "fileClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для блока с файлами"
     },
     "noFileClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для блока с подсказкой, когда файл не загружен"
     },
     "maxFilenameLength": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Число символов, после которого имя файла будет обрезаться"
     },
     "noFileText": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "Нет файла",
       "description": "Текст для случая, когда файл не загружен"
     },
     "progressBarPercent": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Процент выполнения загрузки файла"
     },
     "size": {
-      "type": "enum",
+      "type": "40 | 48 | 56 | 64 | 32",
+      "typeName": "enum",
+      "rawType": "40 | 48 | 56 | 64 | 32",
+      "enumValues": [
+        "40",
+        "48",
+        "56",
+        "64",
+        "32"
+      ],
       "required": false,
       "defaultValue": "48",
       "description": "Размер компонента"
     },
     "multiple": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Возможность прикрепления нескольких файлов"
     },
     "value": {
-      "type": "enum",
+      "type": "File[] | null",
+      "typeName": "enum",
+      "rawType": "File[] | null",
+      "enumValues": [
+        "null",
+        "File[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Содержимое поля ввода. Принимает массив объектов типа File или null."
     },
     "defaultValue": {
-      "type": "enum",
+      "type": "File[] | null",
+      "typeName": "enum",
+      "rawType": "File[] | null",
+      "enumValues": [
+        "null",
+        "File[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Содержимое поля ввода, указанное по умолчанию. Принимает массив объектов типа File или null."
     },
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик поля ввода"
     },
     "onClear": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик нажатия на кнопку очистки"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

@@ -12,121 +12,236 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "defaultActiveStep": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "1",
       "description": "Активный шаг, указанный по умолчанию"
     },
     "activeStep": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Активный шаг"
     },
     "isMarkCompletedSteps": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Управление возможностью отключения пометки пройденного шага"
     },
     "checkIsStepDisabled": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием disabled шага и\nвозможностью перехода на этот шаг\n@param stepNumber - номер шага\n@return Флаг состояния disabled"
     },
     "checkIsStepError": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием шага error\n@param stepNumber - номер шага\n@return Флаг состояния error"
     },
     "checkIsStepCriticalError": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием шага criticalError\n@param stepNumber - номер шага\n@return Флаг состояния error"
     },
     "checkIsStepWarning": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием шага warning\n@param stepNumber - номер шага\n@return Флаг состояния warning"
     },
     "checkIsStepWaiting": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием шага waiting\n@param stepNumber - номер шага\n@return Флаг состояния waiting"
     },
     "checkIsStepPositive": {
-      "type": "enum",
+      "type": "((stepNumber: number) => boolean)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => boolean)",
+      "enumValues": [
+        "(stepNumber: number) => boolean"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для управления состоянием шага positive\n@param stepNumber - номер шага\n@return Флаг состояния positive"
     },
     "checkIsStepCustom": {
-      "type": "enum",
+      "type": "((stepNumber: number) => StepIndicatorProps | null)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => StepIndicatorProps | null)",
+      "enumValues": [
+        "(stepNumber: number) => StepIndicatorProps | null"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Кастомный метод для установки кастомного индикатора шага\n@param stepNumber - номер шага\n@return Объект StepIndicatorProps { className, content, iconColor } или null"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((stepNumber: number) => void)",
+      "typeName": "enum",
+      "rawType": "((stepNumber: number) => void)",
+      "enumValues": [
+        "(stepNumber: number) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик клика на шаг\n@param stepNumber - номер активного шага"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Дочерние элементы"
     },
     "isVerticalAlign": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управление ориентацией компонента"
     },
     "ordered": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Управление отображением номера шага"
     },
     "interactive": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Включение / отключение интерактивности шагов"
     },
     "fullWidth": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Растягивание шагов на всю ширину блока для вертикальной ориентации"
     },
     "minSpaceBetweenSteps": {
-      "type": "enum",
+      "type": "8 | 16 | 24 | 32",
+      "typeName": "enum",
+      "rawType": "8 | 16 | 24 | 32",
+      "enumValues": [
+        "8",
+        "16",
+        "24",
+        "32"
+      ],
       "required": false,
       "defaultValue": "24",
       "description": "Минимальное расстояние между шагами для горизонтального расположения компонента\n@description Значение 8 устарело и будет удалено в будущих версиях. Используйте 16, 24 или 32."
     },
     "completedDashColor": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Цвет тире выполненного шага"

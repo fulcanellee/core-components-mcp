@@ -12,55 +12,109 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "backgroundColor": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "#EF3124",
       "description": "Цвет фона карты"
     },
     "bankLogo": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": "<AlfaBankSignMIcon width={30} height={40} />",
       "description": "Иконка логотипа банка (размер L)"
     },
     "inputLabel": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "getDefaultInputLabel(maskType)",
       "description": "Лэйбл поля ввода"
     },
     "value": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Значение поля ввода"
     },
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик ввода"
     },
     "onUsePhoto": {
-      "type": "enum",
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик вызова камеры"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "maskType": {
-      "type": "enum",
+      "type": "MaskType",
+      "typeName": "enum",
+      "rawType": "MaskType",
+      "enumValues": [
+        "\"default\"",
+        "\"card\"",
+        "\"account-number\""
+      ],
       "required": false,
       "defaultValue": "MaskTypeEnum.Default",
       "description": "Тип вводимой маски. Позволяет устанавливать необходимый тип номера (номер карты или номер счёта)\nЕсли параметр не передавать - работает с обоими типами номеров"

@@ -12,67 +12,123 @@
   ],
   "props": {
     "cardId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор карты\n(например: ER, GQ, SU)"
     },
     "layers": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "BACKGROUND,CARD_NUMBER,CARD_HOLDER,PAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE",
       "description": "Какие слои показывать, через запятую без пробелов\n(полный набор: BACKGROUND,CARD_NUMBER,CARD_HOLDER,\nPAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE)"
     },
     "width": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "280",
       "description": "Ширина изображения"
     },
     "rounded": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Скругление углов"
     },
     "baseUrl": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "https://online.alfabank.ru/cards-images/cards/",
       "description": "Базовый URL сервиса с изображениями"
     },
     "onLoad": {
-      "type": "enum",
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Колбек, вызываемый при загрузке изображения"
     },
     "onError": {
-      "type": "enum",
+      "type": "ReactEventHandler<HTMLImageElement>",
+      "typeName": "enum",
+      "rawType": "ReactEventHandler<HTMLImageElement>",
+      "enumValues": [
+        "ReactEventHandler<HTMLImageElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Колбек, вызываемый при ошибке загрузки изображения"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "alt": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текстовое описание изображения"
     },
     "id": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Уникальный идентификатор блока"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

@@ -5,55 +5,100 @@
   "imports": [],
   "props": {
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Палитра, в контексте которой используется спиннер"
     },
     "visible": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управление видимостью компонента"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "id": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор компонента в DOM"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "style": {
-      "type": "enum",
+      "type": "CSSProperties",
+      "typeName": "enum",
+      "rawType": "CSSProperties",
+      "enumValues": [
+        "CSSProperties"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительные инлайн стили для cпиннера"
     },
     "size": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Размер спиннера (кольца)"
     },
     "lineWidth": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Толщина линии спинера (кольца)"
     },
     "preset": {
-      "type": "enum",
+      "type": "48 | 16 | 24",
+      "typeName": "enum",
+      "rawType": "48 | 16 | 24",
+      "enumValues": [
+        "48",
+        "16",
+        "24"
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Преднастроенный вариант"

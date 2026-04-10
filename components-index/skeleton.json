@@ -12,55 +12,124 @@
   ],
   "props": {
     "visible": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Флаг, явно задающий состояние, при котором контент закрывается прелоадером"
     },
     "animate": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "true",
       "description": "Флаг явного включения анимации скелета"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "style": {
-      "type": "enum",
+      "type": "CSSProperties",
+      "typeName": "enum",
+      "rawType": "CSSProperties",
+      "enumValues": [
+        "CSSProperties"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительные инлайн стили"
     },
     "allowBackdropBlur": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Включает размытие фона"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы."
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     },
     "borderRadius": {
-      "type": "enum",
+      "type": "BorderRadiusSize",
+      "typeName": "enum",
+      "rawType": "BorderRadiusSize",
+      "enumValues": [
+        "0",
+        "64",
+        "2",
+        "8",
+        "16",
+        "24",
+        "32",
+        "20",
+        "4",
+        "6",
+        "10",
+        "12",
+        "36",
+        "\"pill\""
+      ],
       "required": false,
       "defaultValue": "8",
       "description": "Скругление углов"

@@ -12,31 +12,76 @@
   ],
   "props": {
     "size": {
-      "type": "enum",
+      "type": "Size",
+      "typeName": "enum",
+      "rawType": "Size",
+      "enumValues": [
+        "0",
+        "40",
+        "48",
+        "64",
+        "72",
+        "1",
+        "2",
+        "8",
+        "16",
+        "24",
+        "32",
+        "20",
+        "4",
+        "12",
+        "96",
+        "128",
+        "26",
+        "28",
+        "256"
+      ],
       "required": true,
       "defaultValue": null,
       "description": "Размер отступа"
     },
     "direction": {
-      "type": "enum",
+      "type": "\"horizontal\" | \"vertical\"",
+      "typeName": "enum",
+      "rawType": "\"horizontal\" | \"vertical\"",
+      "enumValues": [
+        "\"horizontal\"",
+        "\"vertical\""
+      ],
       "required": false,
       "defaultValue": "vertical",
       "description": "Вид отступа (вертикальный или горизонтальный)"
     },
     "tag": {
-      "type": "enum",
+      "type": "\"span\" | \"div\"",
+      "typeName": "enum",
+      "rawType": "\"span\" | \"div\"",
+      "enumValues": [
+        "\"span\"",
+        "\"div\""
+      ],
       "required": false,
       "defaultValue": "div",
       "description": "HTML тег"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"

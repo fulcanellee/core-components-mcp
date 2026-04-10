@@ -6,42 +6,85 @@
   "props": {
     "maxStep": {
       "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
       "required": true,
       "defaultValue": null,
       "description": "Общее количество шагов"
     },
     "description": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Постфикс описание под прогрессбаром"
     },
     "step": {
-      "type": "enum",
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
       "required": false,
       "defaultValue": "0",
       "description": "Количество пройденных шагов"
     },
     "view": {
-      "type": "enum",
+      "type": "SteppedProgressBarViewValue | SteppedProgressBarViewValue[]",
+      "typeName": "enum",
+      "rawType": "SteppedProgressBarViewValue | SteppedProgressBarViewValue[]",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\"",
+        "CustomProgressBarView",
+        "SteppedProgressBarViewValue[]"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Цвет заполнения"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"
     },
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"

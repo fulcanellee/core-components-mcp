@@ -12,127 +12,267 @@
   ],
   "props": {
     "onChange": {
-      "type": "enum",
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string | undefined; }) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик переключения чекбокса"
     },
     "label": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подписи к чекбоксу"
     },
     "hint": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Текст подсказки снизу"
     },
     "size": {
-      "type": "enum",
+      "type": "24 | 20",
+      "typeName": "enum",
+      "rawType": "24 | 20",
+      "enumValues": [
+        "24",
+        "20"
+      ],
       "required": false,
       "defaultValue": "20",
       "description": "Размер компонента"
     },
     "boxClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс чекбокса"
     },
     "contentClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс контента"
     },
     "labelClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс лейбла"
     },
     "hintClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс подсказки"
     },
     "errorClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс ошибки"
     },
     "addonsClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Доп. класс дополнительного слота"
     },
     "align": {
-      "type": "enum",
+      "type": "Align",
+      "typeName": "enum",
+      "rawType": "Align",
+      "enumValues": [
+        "\"center\"",
+        "\"start\""
+      ],
       "required": false,
       "defaultValue": "start",
       "description": "Выравнивание"
     },
     "addons": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный слот"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Растягивать ли компонент на всю ширину"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "indeterminate": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Управление неопределенным состоянием чекбокса"
     },
     "error": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Отображение ошибки"
     },
     "position": {
-      "type": "enum",
+      "type": "\"before\" | \"after\"",
+      "typeName": "enum",
+      "rawType": "\"before\" | \"after\"",
+      "enumValues": [
+        "\"before\"",
+        "\"after\""
+      ],
       "required": false,
       "defaultValue": "before",
       "description": "Позиция чекбокса относительно контента"
     },
     "hiddenInput": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Флаг для скрытия нативного инпута."
     },
     "inputRef": {
-      "type": "enum",
+      "type": "RefObject<HTMLInputElement>",
+      "typeName": "enum",
+      "rawType": "RefObject<HTMLInputElement>",
+      "enumValues": [
+        "RefObject<HTMLInputElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Реф на инпут"
     },
     "labelProps": {
-      "type": "enum",
+      "type": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "enumValues": [
+        "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Пропсы для label"
     },
     "colors": {
-      "type": "enum",
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
       "required": false,
       "defaultValue": "default",
       "description": "Набор цветов для компонента"

@@ -25,6 +25,13 @@ interface ImportInfo {
   named: string[];
 }
 
+interface SerializedPropType {
+  type: string;
+  typeName: string | null;
+  rawType: string | null;
+  enumValues: string[];
+}
+
 /**
  * Извлекает название пакета из пути файла.
  */
@@ -87,6 +94,45 @@ function isInheritedFromExternalTypes(prop: any): boolean {
   if (parentFile.includes('node_modules/@types/react')) return true;
   if (parentFile.includes('node_modules/@types/react-dom')) return true;
   return false;
+}
+
+function stripUndefinedFromType(rawType: string | undefined): string | null {
+  if (!rawType) return null;
+
+  const normalized = rawType
+    .replace(/\s*\|\s*undefined\b/g, '')
+    .replace(/\bundefined\s*\|\s*/g, '')
+    .trim();
+
+  return normalized.length > 0 ? normalized : null;
+}
+
+function extractEnumValues(typeValue: unknown): string[] {
+  if (!Array.isArray(typeValue)) return [];
+
+  return typeValue
+    .map((entry: any) => entry?.value)
+    .filter((value: unknown): value is string => typeof value === 'string' && value !== 'undefined');
+}
+
+function serializePropType(prop: any): SerializedPropType {
+  const typeName = typeof prop.type?.name === 'string' ? prop.type.name : null;
+  const rawType = stripUndefinedFromType(prop.type?.raw);
+  const enumValues = extractEnumValues(prop.type?.value);
+
+  const fallbackEnumType = enumValues.length > 0 ? enumValues.join(' | ') : null;
+  const resolvedType =
+    rawType ||
+    (typeName && typeName !== 'enum' ? typeName : null) ||
+    fallbackEnumType ||
+    'unknown';
+
+  return {
+    type: resolvedType,
+    typeName,
+    rawType,
+    enumValues,
+  };
 }
 
 /**
@@ -309,8 +355,10 @@ async function main() {
       Object.entries(doc.props || {}).forEach(([key, prop]: [string, any]) => {
         if (isInheritedFromExternalTypes(prop)) return;
 
+        const serializedType = serializePropType(prop);
+
         props[key] = {
-          type: prop.type?.name || prop.type?.raw || 'unknown',
+          ...serializedType,
           required: prop.required || false,
           defaultValue: prop.defaultValue?.value || null,
           description: prop.description || '',

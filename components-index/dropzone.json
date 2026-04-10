@@ -12,79 +12,155 @@
   ],
   "props": {
     "className": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс"
     },
     "contentClassName": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дополнительный класс для контента"
     },
     "text": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": "Перетащите файлы",
       "description": "Подпись для заглушки"
     },
     "disabled": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Заблокированное состояние"
     },
     "error": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Состояние ошибки"
     },
     "block": {
-      "type": "enum",
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
       "required": false,
       "defaultValue": "false",
       "description": "Растягивать ли компонент на всю ширину"
     },
     "Overlay": {
-      "type": "enum",
+      "type": "ComponentType<OverlayProps>",
+      "typeName": "enum",
+      "rawType": "ComponentType<OverlayProps>",
+      "enumValues": [
+        "ComponentClass<OverlayProps, any>",
+        "FunctionComponent<OverlayProps>"
+      ],
       "required": false,
       "defaultValue": "({ text = 'Перетащите файлы', visible = false }) => (\n    <div\n        className={cn(styles.overlay, {\n            [styles.visible]: visible,\n        })}\n    >\n        <ContainerMIcon />\n        <span className={styles.text}>{text}</span>\n    </div>\n)",
       "description": "Компонент оверлея"
     },
     "onDrop": {
-      "type": "enum",
+      "type": "((files: File[]) => void)",
+      "typeName": "enum",
+      "rawType": "((files: File[]) => void)",
+      "enumValues": [
+        "(files: File[]) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик события 'drop'"
     },
     "onDragOver": {
-      "type": "enum",
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик события 'dragover'"
     },
     "onDragLeave": {
-      "type": "enum",
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик события 'dragleave'"
     },
     "onDragEnter": {
-      "type": "enum",
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Обработчик события 'dragenter'"
     },
     "dataTestId": {
-      "type": "enum",
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Идентификатор для систем автоматизированного тестирования"
     },
     "children": {
-      "type": "enum",
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
       "required": false,
       "defaultValue": null,
       "description": "Дочерние элементы."
