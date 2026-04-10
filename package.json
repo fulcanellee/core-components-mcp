@@ -1,6 +1,6 @@
 {
   "name": "core-components-mcp",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "private": false,
   "description": "MCP server providing component information for core UI components.",
   "type": "module",
