@@ -1,8 +1,13 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { z } from "zod";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 type ComponentImport = {
   from: string;
@@ -36,7 +41,7 @@ type ComponentIndexEntry = {
   examples?: ComponentExample[];
 };
 
-const COMPONENTS_INDEX_DIR = join(process.cwd(), "components-index");
+const COMPONENTS_INDEX_DIR = join(__dirname, "components-index");
 
 function loadComponentIndex(): ComponentIndexEntry[] {
   const files = readdirSync(COMPONENTS_INDEX_DIR)

@@ -1,11 +1,14 @@
-# Minimal MCP Server
+# core-components-mcp
 
-Минимальный MCP сервер на официальном TypeScript SDK.
+MCP-сервер, предоставляющий информацию о компонентах core UI библиотеки через три инструмента.
 
-## Что внутри
+## Инструменты
 
-- transport: `stdio`
-- 1 tool: `hello_world`
+| Инструмент | Описание |
+|------------|----------|
+| `list_components` | Возвращает список всех доступных компонентов |
+| `get_component` | Возвращает детали компонента (props, типы, описания) по имени пакета или компонента |
+| `generate_component_usage` | Помогает написать код использования компонента с примерами, импортами и props |
 
 ## Установка
 
@@ -19,30 +22,18 @@ npm install
 npm run dev
 ```
 
-## Что делает tool
+## Сборка и prod-запуск
 
-`hello_world` принимает необязательный параметр `name` и возвращает текстовое приветствие.
-
-Пример логики:
-
-- без аргументов: `Hello, world! This response came from your MCP server.`
-- c `name: "John"`: `Hello, John! This response came from your MCP server.`
-
-## Следующий шаг
-
-Подключить сервер к MCP-клиенту, который умеет запускать локальные `stdio` серверы.
+```bash
+npm run build
+npm start
+```
 
 ## Конфиг подключения
 
-Ниже универсальные примеры в формате `mcpServers`, без привязки к конкретному клиенту.
-
-Готовые файлы примеров:
-
-- `examples/mcp.dev.json`
+Примеры файлов конфигурации: `examples/mcp.dev.json`
 
 ### Dev-режим
-
-Когда сервер запускается напрямую из TypeScript:
 
 ```json
 {
@@ -51,6 +42,19 @@ npm run dev
       "command": "npm",
       "args": ["run", "dev"],
       "cwd": "path/to/folder"
+    }
+  }
+}
+```
+
+### Из установленного npm-пакета
+
+```json
+{
+  "mcpServers": {
+    "core-components-mcp": {
+      "command": "npx",
+      "args": ["-y", "core-components-mcp"]
     }
   }
 }
