@@ -1,0 +1,143 @@
+{
+  "componentName": "List",
+  "packageName": "list",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/list",
+      "named": [
+        "List"
+      ]
+    }
+  ],
+  "props": {
+    "tag": {
+      "type": "\"ol\" | \"ul\"",
+      "typeName": "enum",
+      "rawType": "\"ol\" | \"ul\"",
+      "enumValues": [
+        "\"ol\"",
+        "\"ul\""
+      ],
+      "required": false,
+      "defaultValue": "ul",
+      "description": "HTML тег"
+    },
+    "marker": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": "'–' for ul and 'decimal' for ol",
+      "description": "Маркер"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Css-класс для стилизации"
+    },
+    "colorMarker": {
+      "type": "ColorMarkerType",
+      "typeName": "enum",
+      "rawType": "ColorMarkerType",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\"",
+        "\"tertiary-inverted\"",
+        "\"primary-inverted\"",
+        "\"secondary-inverted\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет маркера"
+    },
+    "reversed": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Список обратного счета"
+    },
+    "start": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Начало отсчета элементов списка"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    }
+  },
+  "examples": [
+    {
+      "title": "Анатомия",
+      "description": "Компонент состоит из кастомизируемого слота под маркер и текстовой части.",
+      "desktop": "render(() => {\nconst styleContent = {\nwidth: '24px',\nheight: '24px',\nborderRadius: '8px',\nbackgroundColor: 'rgba(55, 120, 251, 0.1)',\nborder: '1px dashed rgb(55, 120, 251)',\nboxSizing: 'border-box',\n};\n\nreturn (\n<Container>\n<Row align='middle'>\n<div style={styleContent}></div>\n<Typography.Text view='primary-medium'>Пример текстовой части</Typography.Text>\n</Row>\n</Container>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Доступны нумерованные и маркированные виды списков.\nПри необходимости, цвет маркера можно изменить. Каждому пункту можно добавить подпись.",
+      "desktop": "<Space>\n<Typography.Text view='primary-medium'>Пример маркированного списка:</Typography.Text>\n<List tag='ul' marker='–'>\n<List.Item>Пример элемента списка</List.Item>\n<List.Item>Пример элемента списка</List.Item>\n<List.Item>Пример элемента списка</List.Item>\n<List.Item>Пример элемента списка</List.Item>\n<List.Item>Пример элемента списка</List.Item>\n</List>\n<Typography.Text view='primary-medium'>Пример нумерованного списка:</Typography.Text>\n\n<List tag='ol' colorMarker='tertiary'>\n<List.Item caption='Пример подписи'>Пример элемента списка</List.Item>\n<List.Item caption='Пример подписи'>Пример элемента списка</List.Item>\n<List.Item caption='Пример подписи'>Пример элемента списка</List.Item>\n<List.Item caption='Пример подписи'>Пример элемента списка</List.Item>\n<List.Item caption='Пример подписи'>Пример элемента списка</List.Item>\n</List>\n</Space>",
+      "mobile": null
+    }
+  ]
+}

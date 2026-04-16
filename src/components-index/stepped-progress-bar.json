@@ -1,0 +1,107 @@
+{
+  "componentName": "SteppedProgressBar",
+  "packageName": "stepped-progress-bar",
+  "description": "",
+  "imports": [],
+  "props": {
+    "maxStep": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Общее количество шагов"
+    },
+    "description": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Постфикс описание под прогрессбаром"
+    },
+    "step": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "0",
+      "description": "Количество пройденных шагов"
+    },
+    "view": {
+      "type": "SteppedProgressBarViewValue | SteppedProgressBarViewValue[]",
+      "typeName": "enum",
+      "rawType": "SteppedProgressBarViewValue | SteppedProgressBarViewValue[]",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\"",
+        "CustomProgressBarView",
+        "SteppedProgressBarViewValue[]"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заполнения"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    }
+  },
+  "examples": [
+    {
+      "title": "Пошаговый прогрессбар с описанием под шкалой",
+      "description": "",
+      "desktop": "<SteppedProgressBar\nstep={5}\nmaxStep={10}\ndescription={\"Название шага\"}\n/>",
+      "mobile": null
+    },
+    {
+      "title": "Пошаговый прогрессбар с выбором цветов отдельных сегментов",
+      "description": "",
+      "desktop": "<SteppedProgressBar\nstep={8}\nmaxStep={10}\nview={['positive', 'negative', 'attention', 'link', 'tertiary', 'secondary', 'primary', 'accent']}\n/>",
+      "mobile": null
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "componentName": "Dropzone",
+  "packageName": "dropzone",
+  "description": "Используется для прикрепления файлов.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/dropzone",
+      "named": [
+        "Dropzone"
+      ]
+    }
+  ],
+  "props": {
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "contentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контента"
+    },
+    "text": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "Перетащите файлы",
+      "description": "Подпись для заглушки"
+    },
+    "disabled": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Заблокированное состояние"
+    },
+    "error": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Состояние ошибки"
+    },
+    "block": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Растягивать ли компонент на всю ширину"
+    },
+    "Overlay": {
+      "type": "ComponentType<OverlayProps>",
+      "typeName": "enum",
+      "rawType": "ComponentType<OverlayProps>",
+      "enumValues": [
+        "ComponentClass<OverlayProps, any>",
+        "FunctionComponent<OverlayProps>"
+      ],
+      "required": false,
+      "defaultValue": "({ text = 'Перетащите файлы', visible = false }) => (\n    <div\n        className={cn(styles.overlay, {\n            [styles.visible]: visible,\n        })}\n    >\n        <ContainerMIcon />\n        <span className={styles.text}>{text}</span>\n    </div>\n)",
+      "description": "Компонент оверлея"
+    },
+    "onDrop": {
+      "type": "((files: File[]) => void)",
+      "typeName": "enum",
+      "rawType": "((files: File[]) => void)",
+      "enumValues": [
+        "(files: File[]) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'drop'"
+    },
+    "onDragOver": {
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragover'"
+    },
+    "onDragLeave": {
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragleave'"
+    },
+    "onDragEnter": {
+      "type": "((event: DragEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: DragEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(event: DragEvent<HTMLElement>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события 'dragenter'"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst [filesList, setFilesList] = React.useState([]);\nconst [ downloadStatus, setDownloadStatus] = React.useState('success');\n\nconst handleDrop = files => {\nsetFilesList(\nArray.from(files)\n.map(file => file.name)\n.filter(Boolean),\n);\n};\nconst onDownloadStatusChange = (_, payload) => {\nsetDownloadStatus(payload.value);\nsetFilesList([])\n};\n\nconst stylesStatus = {\ndisplay: 'flex',\nflexDirection: 'column',\nalignItems: 'center',\njustifyContent: 'center',\nwidth: 724,\nheight: 200,\n}\n\nconst stylesText = {\nlineHeight: '24px',\nmarginTop: 8,\n}\n\nconst isError = filesList.length && downloadStatus === 'error';\n\nconst statusDropzone = (text, Icon)=> (\n<div style={stylesStatus}>\n<Icon />\n<span style={stylesText}>{text}</span>\n</div>\n)\n\nreturn (\n<Space size={24}>\n<Dropzone\nerror={isError}\nonDrop={handleDrop}\n>\n{filesList.length > 0 ? (\ndownloadStatus === 'success' ?\nstatusDropzone('Успех',CheckmarkMIcon ) :\nstatusDropzone('Ошибка',CrossMIcon )\n) : (\nstatusDropzone('Перетащите файлы',ContainerMIcon )\n)}\n</Dropzone>\n<RadioGroup\nlabel='Состояние после загрузки'\ndirection='vertical'\nname='radioGroup'\nonChange={onDownloadStatusChange}\nvalue={downloadStatus}\n>\n<Radio size={24} label='Успех' value='success' />\n<Radio size={24} label='Ошибка' value='error' />\n</RadioGroup>\n</Space>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

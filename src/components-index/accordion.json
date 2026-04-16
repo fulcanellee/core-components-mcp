@@ -1,0 +1,213 @@
+{
+  "componentName": "Accordion",
+  "packageName": "accordion",
+  "description": "Используется для отображения скрытого контента по клику.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/accordion",
+      "named": [
+        "Accordion"
+      ]
+    }
+  ],
+  "props": {
+    "expanded": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Состояние компонента"
+    },
+    "header": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": true,
+      "defaultValue": null,
+      "description": "Элемент заголовка"
+    },
+    "control": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот для элемента управления"
+    },
+    "controlPosition": {
+      "type": "ControlPosition",
+      "typeName": "enum",
+      "rawType": "ControlPosition",
+      "enumValues": [
+        "\"start\"",
+        "\"end\""
+      ],
+      "required": false,
+      "defaultValue": "end",
+      "description": "Указывает компоненту - где будет размещен control"
+    },
+    "defaultExpanded": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Начальное состояние uncontrolled компонента"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Основной элемент для отображения содержимого"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс обертки"
+    },
+    "containerClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контейнера с заголовком"
+    },
+    "headerClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для header"
+    },
+    "controlClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для control"
+    },
+    "bodyClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для body"
+    },
+    "bodyContentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для body content"
+    },
+    "onExpandedChange": {
+      "type": "((expanded: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((expanded: boolean) => void)",
+      "enumValues": [
+        "(expanded: boolean) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик смены состояний `expanded`"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Анатомия",
+      "description": "Компонент состоит из только 3 слотов: Control - элемента управления, Header - основной элемент для отображения содержимого и Body - содержимое.\nСлоты могут принимать в себя как готовые компоненты, так и кастомную вёрстку.",
+      "desktop": "<Accordion\nclassName='accordion-wrapper'\nheader={<div className='accordion-header' />}\ncontrol={<div className='accordion-control' />}\n>\n<div className='accordion-body' />\n</Accordion>",
+      "mobile": null
+    },
+    {
+      "title": "Контрол",
+      "description": "Control может быть в виде кнопки, иконки или любым другим интерактивным элементом, который инициирует раскрытие или сворачивание секции.\nПо умолчанию Control размещается сбоку справа от Header, но может располагаться и слева, что больше напоминает дерево.",
+      "desktop": "render(() => {\nconst [controlPosition, setControlPosition] = React.useState('end');\n\nconst handleControlPositionChange = React.useCallback((_, payload) => {\nsetControlPosition(payload.value);\n}, []);\n\nreturn <Space>\n<Accordion\nclassName='accordion-wrapper'\nheader={<div className='accordion-header' />}\ncontrolPosition={controlPosition}\n>\n<div className='accordion-body' />\n</Accordion>\n\n<Accordion\nclassName='accordion-wrapper'\nheader={<div className='accordion-header' />}\ncontrolPosition={controlPosition}\n>\n<div className='accordion-body' />\n</Accordion>\n\n<Accordion\nclassName='accordion-wrapper'\nheader={<div className='accordion-header' />}\ncontrolPosition={controlPosition}\n>\n<div className='accordion-body' />\n</Accordion>\n\n<RadioGroup\nlabel='Расположение контрола'\ndirection='vertical'\nname='radioGroup'\nonChange={handleControlPositionChange}\nvalue={controlPosition}\n>\n<Radio size={24} label='Справа' value='end' />\n<Radio size={24} label='Слева' value='start' />\n</RadioGroup>\n</Space>\n})",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "В качестве пресетов в компонент заложены текстовые контейнеры, как самый распространённый вариант использования.",
+      "desktop": "render(() => {\nreturn <Space>\n<Accordion\nheader='Зачем нужен аккордeон?'\nclassName='accordion-container'\n>\nИспользуется для создания интерактивных списков,\nкоторые можно разворачивать и сворачивать для\nотображения дополнительной информации.\n</Accordion>\n\n<Accordion\nheader='Когда лучше использовать аккордeон?'\nclassName='accordion-container'\n>\nПодходит для организации сложной информации в ограниченном пространстве,\nпредставления большого объема данных, иерархической структуры с\nвозможностью скрытия и открытия разделов,\nудовлетворения потребностей пользователей в доступе к информации\nпо запросу и просмотра нескольких связанных разделов контента.\n</Accordion>\n</Space>\n})",
+      "mobile": null
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "componentName": "StatusBadge",
+  "packageName": "status-badge",
+  "description": "Используется как индикатор состояния.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/status-badge",
+      "named": [
+        "StatusBadge"
+      ]
+    }
+  ],
+  "props": {
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "size": {
+      "type": "StatusBadgeSizes",
+      "typeName": "enum",
+      "rawType": "StatusBadgeSizes",
+      "enumValues": [
+        "40",
+        "16",
+        "24",
+        "32",
+        "20"
+      ],
+      "required": false,
+      "defaultValue": "24",
+      "description": "Размер компонента"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "view": {
+      "type": "StatusBadgeViews",
+      "typeName": "enum",
+      "rawType": "StatusBadgeViews",
+      "enumValues": [
+        "\"positive-checkmark\"",
+        "\"negative-cross\"",
+        "\"negative-alert\"",
+        "\"negative-block\"",
+        "\"attention-alert\"",
+        "\"neutral-information\"",
+        "\"neutral-operation\"",
+        "\"neutral-cross\""
+      ],
+      "required": true,
+      "defaultValue": null,
+      "description": "Вид бейджа."
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "customIcons": {
+      "type": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "typeName": "enum",
+      "rawType": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "enumValues": [
+        "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Кастомные иконки"
+    }
+  },
+  "examples": [
+    {
+      "title": "Виды статусов",
+      "description": "Компонент доступен в пяти размерах. Представленный ниже набор комбинаций иконки и цвета является единым для всех продуктов.\nЕсли нужной конфигурации нет, её придётся собрать на основе компонента [IconView](?path=/docs/iconview--docs).",
+      "desktop": "<div>\n{[\n'negative-cross',\n'negative-block',\n'negative-alert',\n'attention-alert',\n'positive-checkmark',\n'neutral-information',\n'neutral-cross',\n'neutral-operation',\n].map((view) => (\n<React.Fragment key={view}>\n<Space size={20} align='center' direction={isMobile() ? 'horizontal' : 'vertical'}>\n{[40, 32, 24, 20, 16].map((size) => (\n<StatusBadge key={size} view={view} size={size} />\n))}\n</Space>\n<Gap size={20} direction={isMobile() ? 'vertical' : 'horizontal'} />\n</React.Fragment>\n))}\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Кастомные иконки",
+      "description": "Статусы могут содержать кастомные иконки",
+      "desktop": "render(() => {\nconst sizes = [16, 20, 24, 32, 40];\nconst customIcons = {\n'positive-checkmark': {\n16: AScoresCircleMIcon,\n20: AScoresCircleMIcon,\n24: AScoresCircleMIcon,\n32: AScoresCircleMIcon,\n40: AScoresCircleMIcon,\n},\n};\nreturn (\n<React.Fragment>\n<Space size={20} align='center' direction={isMobile() ? 'horizontal' : 'vertical'}>\n{sizes.reverse().map((size) => {\nreturn (\n<StatusBadge\nkey={size}\nview={'positive-checkmark'}\nsize={size}\ncustomIcons={customIcons}\n/>\n);\n})}\n</Space>\n</React.Fragment>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

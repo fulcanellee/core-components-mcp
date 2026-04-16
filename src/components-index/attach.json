@@ -1,0 +1,198 @@
+{
+  "componentName": "Attach",
+  "packageName": "attach",
+  "description": "Используется для прикрепления файлов.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/attach",
+      "named": [
+        "Attach"
+      ]
+    }
+  ],
+  "props": {
+    "buttonContent": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": "Выберите файл",
+      "description": "Содержимое кнопки для выбора файла"
+    },
+    "buttonProps": {
+      "type": "(ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>)",
+      "typeName": "enum",
+      "rawType": "(ButtonProps & ButtonHTMLAttributes<HTMLButtonElement>)",
+      "enumValues": [
+        "ComponentProps & Partial<ButtonHTMLAttributes<HTMLButtonElement>> & { breakpoint?: number | undefined; client?: \"desktop\" | ... 1 more ... | undefined; defaultMatchMediaValue?: boolean | ... 1 more ... | undefined; } & ButtonHTMLAttributes<...>",
+        "ComponentProps & Partial<AnchorHTMLAttributes<HTMLAnchorElement>> & { breakpoint?: number | undefined; client?: \"desktop\" | ... 1 more ... | undefined; defaultMatchMediaValue?: boolean | ... 1 more ... | undefined; } & ButtonHTMLAttributes<...>"
+      ],
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Свойства для кнопки"
+    },
+    "fileClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для блока с файлами"
+    },
+    "noFileClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для блока с подсказкой, когда файл не загружен"
+    },
+    "maxFilenameLength": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Число символов, после которого имя файла будет обрезаться"
+    },
+    "noFileText": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "Нет файла",
+      "description": "Текст для случая, когда файл не загружен"
+    },
+    "progressBarPercent": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Процент выполнения загрузки файла"
+    },
+    "size": {
+      "type": "40 | 48 | 56 | 64 | 32",
+      "typeName": "enum",
+      "rawType": "40 | 48 | 56 | 64 | 32",
+      "enumValues": [
+        "40",
+        "48",
+        "56",
+        "64",
+        "32"
+      ],
+      "required": false,
+      "defaultValue": "48",
+      "description": "Размер компонента"
+    },
+    "multiple": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Возможность прикрепления нескольких файлов"
+    },
+    "value": {
+      "type": "File[] | null",
+      "typeName": "enum",
+      "rawType": "File[] | null",
+      "enumValues": [
+        "null",
+        "File[]"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Содержимое поля ввода. Принимает массив объектов типа File или null."
+    },
+    "defaultValue": {
+      "type": "File[] | null",
+      "typeName": "enum",
+      "rawType": "File[] | null",
+      "enumValues": [
+        "null",
+        "File[]"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Содержимое поля ввода, указанное по умолчанию. Принимает массив объектов типа File или null."
+    },
+    "onChange": {
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { files: File[]; }) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик поля ввода"
+    },
+    "onClear": {
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик нажатия на кнопку очистки"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Для компонента можно настроить текст-плейсхолдер, размер и лейбл кнопки. Рекомендуем прикреплять для тестов тяжелый файл, иначе загрузка будет мгновенной.",
+      "desktop": "render(() => {\nconst [multiple, setMultiple] = React.useState(false);\nconst [progress, setProgress] = React.useState(0);\n\nconst simulateProgress = () => {\nconst interval = setInterval(() => {\nsetProgress((prevProgress) => {\nif (prevProgress === 100) {\nclearInterval(interval);\nreturn 100;\n}\nreturn prevProgress + 1;\n});\n}, 100);\n  };\n  \nconst handleChange = () => {\nsimulateProgress()\n};\n\nreturn (\n<Space size={24} >\n<Attach \nsize={56} \nonChange={handleChange}\nmultiple={multiple} \nmaxFilenameLength={isMobile() ? 10 : undefined}\nprogressBarPercent={progress === 100 ? null : progress}\nbuttonProps={{\nbreakpoint: BREAKPOINT,\nnowrap: true,\n}}\n/>\n<Switch\nblock={true}\nchecked={multiple}\nlabel='Несколько файлов'\nonChange={() => setMultiple(!multiple)}\n/>\n</Space>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "К сожалению, [контролируемое поведение](https://ru.reactjs.org/docs/uncontrolled-components.html#the-file-input-tag) можно только эмулировать.",
+      "desktop": "render(() => {\nconst [response, setResponse] = React.useState(null);\nconst [files, setFiles] = React.useState([]);\n\nconst handleChange = (event, payload) => {\nsetFiles([...files, ...payload.files]);\n};\n\nconst handleSubmit = () => {\nconst formData = new FormData();\n\nfiles.forEach((file, i) => {\nformData.append(`file${i}`, file);\n});\n\nfetch('https://httpbin.org/post', {\nmethod: 'POST',\nbody: formData,\n})\n.then((r) => r.json())\n.then((r) => setResponse(r));\n};\n\nreturn (\n<Space size={24}>\n<Attach\nvalue={files}\nonChange={handleChange}\nmultiple={true}\nname='file'\nonClear={() => setFiles([])}\nsize={56}\nmaxFilenameLength={isMobile() ? 10 : undefined}\nbuttonProps={{\nbreakpoint: BREAKPOINT,\nnowrap: true,\n}}\n/>\n<Button size={32} type='button' onClick={handleSubmit}>\nОтправить\n</Button>\n\n{response &&\nObject.entries(response.files).map(([fileName, base64]) => (\n<img src={base64} key={fileName} width={100} />\n))}\n</Space>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

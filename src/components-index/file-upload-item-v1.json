@@ -1,0 +1,460 @@
+{
+  "componentName": "FileUploadItemV1",
+  "packageName": "file-upload-item-v1",
+  "description": "Используется для отображения загружаемого файла.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/file-upload-item-v1",
+      "named": [
+        "FileUploadItemV1"
+      ]
+    }
+  ],
+  "props": {
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "id": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "0",
+      "description": "Идентификатор элемента"
+    },
+    "name": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Имя файла с расширением"
+    },
+    "size": {
+      "type": "string | number",
+      "typeName": "enum",
+      "rawType": "string | number",
+      "enumValues": [
+        "string",
+        "number"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Размер файла"
+    },
+    "uploadDate": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дата загрузки файла"
+    },
+    "downloadLink": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Ссылка на файл. Если прокидывается этот параметр, то появляется кнопка скачивания"
+    },
+    "download": {
+      "type": "string | true",
+      "typeName": "enum",
+      "rawType": "string | true",
+      "enumValues": [
+        "string",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Рекомендует браузеру скачивать контент по ссылке.\nВ проп может быть передано рекомендуемое название скачиваемого файла."
+    },
+    "showDelete": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение кнопки удаления"
+    },
+    "showRestore": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Отображение кнопки восстановления"
+    },
+    "uploadPercent": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "0",
+      "description": "Процент загрузки файла"
+    },
+    "uploadStatus": {
+      "type": "FileStatuses",
+      "typeName": "enum",
+      "rawType": "FileStatuses",
+      "enumValues": [
+        "\"ERROR\"",
+        "\"SUCCESS\"",
+        "\"LOADING\"",
+        "\"UPLOADING\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Статус загрузки файла"
+    },
+    "error": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Сообщение об ошибке"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "icon": {
+      "type": "ElementType<{ className?: string; }>",
+      "typeName": "enum",
+      "rawType": "ElementType<{ className?: string; }>",
+      "enumValues": [
+        "\"symbol\"",
+        "\"object\"",
+        "\"form\"",
+        "\"pattern\"",
+        "\"slot\"",
+        "\"style\"",
+        "\"title\"",
+        "\"label\"",
+        "\"text\"",
+        "\"article\"",
+        "\"button\"",
+        "\"dialog\"",
+        "\"figure\"",
+        "\"img\"",
+        "\"link\"",
+        "\"main\"",
+        "\"menu\"",
+        "\"menuitem\"",
+        "\"option\"",
+        "\"search\"",
+        "\"switch\"",
+        "\"table\"",
+        "\"time\"",
+        "\"view\"",
+        "\"span\"",
+        "\"p\"",
+        "\"div\"",
+        "\"h1\"",
+        "\"h2\"",
+        "\"h3\"",
+        "\"h4\"",
+        "\"h5\"",
+        "\"h6\"",
+        "\"center\"",
+        "\"s\"",
+        "\"map\"",
+        "\"filter\"",
+        "\"animate\"",
+        "\"a\"",
+        "\"abbr\"",
+        "\"address\"",
+        "\"area\"",
+        "\"aside\"",
+        "\"audio\"",
+        "\"b\"",
+        "\"base\"",
+        "\"bdi\"",
+        "\"bdo\"",
+        "\"big\"",
+        "\"blockquote\"",
+        "\"body\"",
+        "\"br\"",
+        "\"canvas\"",
+        "\"caption\"",
+        "\"cite\"",
+        "\"code\"",
+        "\"col\"",
+        "\"colgroup\"",
+        "\"data\"",
+        "\"datalist\"",
+        "\"dd\"",
+        "\"del\"",
+        "\"details\"",
+        "\"dfn\"",
+        "\"dl\"",
+        "\"dt\"",
+        "\"em\"",
+        "\"embed\"",
+        "\"fieldset\"",
+        "\"figcaption\"",
+        "\"footer\"",
+        "\"head\"",
+        "\"header\"",
+        "\"hgroup\"",
+        "\"hr\"",
+        "\"html\"",
+        "\"i\"",
+        "\"iframe\"",
+        "\"input\"",
+        "\"ins\"",
+        "\"kbd\"",
+        "\"keygen\"",
+        "\"legend\"",
+        "\"li\"",
+        "\"mark\"",
+        "\"meta\"",
+        "\"meter\"",
+        "\"nav\"",
+        "\"noindex\"",
+        "\"noscript\"",
+        "\"ol\"",
+        "\"optgroup\"",
+        "\"output\"",
+        "\"param\"",
+        "\"picture\"",
+        "\"pre\"",
+        "\"progress\"",
+        "\"q\"",
+        "\"rp\"",
+        "\"rt\"",
+        "\"ruby\"",
+        "\"samp\"",
+        "\"script\"",
+        "\"section\"",
+        "\"select\"",
+        "\"small\"",
+        "\"source\"",
+        "\"strong\"",
+        "\"sub\"",
+        "\"summary\"",
+        "\"sup\"",
+        "\"template\"",
+        "\"tbody\"",
+        "\"td\"",
+        "\"textarea\"",
+        "\"tfoot\"",
+        "\"th\"",
+        "\"thead\"",
+        "\"tr\"",
+        "\"track\"",
+        "\"u\"",
+        "\"ul\"",
+        "\"var\"",
+        "\"video\"",
+        "\"wbr\"",
+        "\"webview\"",
+        "\"svg\"",
+        "\"animateMotion\"",
+        "\"animateTransform\"",
+        "\"circle\"",
+        "\"clipPath\"",
+        "\"defs\"",
+        "\"desc\"",
+        "\"ellipse\"",
+        "\"feBlend\"",
+        "\"feColorMatrix\"",
+        "\"feComponentTransfer\"",
+        "\"feComposite\"",
+        "\"feConvolveMatrix\"",
+        "\"feDiffuseLighting\"",
+        "\"feDisplacementMap\"",
+        "\"feDistantLight\"",
+        "\"feDropShadow\"",
+        "\"feFlood\"",
+        "\"feFuncA\"",
+        "\"feFuncB\"",
+        "\"feFuncG\"",
+        "\"feFuncR\"",
+        "\"feGaussianBlur\"",
+        "\"feImage\"",
+        "\"feMerge\"",
+        "\"feMergeNode\"",
+        "\"feMorphology\"",
+        "\"feOffset\"",
+        "\"fePointLight\"",
+        "\"feSpecularLighting\"",
+        "\"feSpotLight\"",
+        "\"feTile\"",
+        "\"feTurbulence\"",
+        "\"foreignObject\"",
+        "\"g\"",
+        "\"image\"",
+        "\"line\"",
+        "\"linearGradient\"",
+        "\"marker\"",
+        "\"mask\"",
+        "\"metadata\"",
+        "\"mpath\"",
+        "\"path\"",
+        "\"polygon\"",
+        "\"polyline\"",
+        "\"radialGradient\"",
+        "\"rect\"",
+        "\"set\"",
+        "\"stop\"",
+        "\"textPath\"",
+        "\"tspan\"",
+        "\"use\"",
+        "ComponentClass<{ className?: string | undefined; }, any>",
+        "FunctionComponent<{ className?: string | undefined; }>"
+      ],
+      "required": false,
+      "defaultValue": "fileIcon(name)",
+      "description": "Компонент кастомной иконки"
+    },
+    "onDownload": {
+      "type": "((id: string) => void)",
+      "typeName": "enum",
+      "rawType": "((id: string) => void)",
+      "enumValues": [
+        "(id: string) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик загрузки файла"
+    },
+    "onDelete": {
+      "type": "((id: string, event?: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((id: string, event?: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(id: string, event?: MouseEvent<HTMLElement, MouseEvent> | undefined) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик удаления файла"
+    },
+    "onRestore": {
+      "type": "((id: string) => void)",
+      "typeName": "enum",
+      "rawType": "((id: string) => void)",
+      "enumValues": [
+        "(id: string) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик восстановления файла"
+    },
+    "disableButtons": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление активностью кнопок"
+    },
+    "multiline": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Разрешить многострочное название файла"
+    },
+    "target": {
+      "type": "HTMLAttributeAnchorTarget",
+      "typeName": "enum",
+      "rawType": "HTMLAttributeAnchorTarget",
+      "enumValues": [
+        "string & {}",
+        "\"_self\"",
+        "\"_blank\"",
+        "\"_parent\"",
+        "\"_top\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Указывает, где открыть скачиваемый документ"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<>\n<FileUploadItemV1\nname='Довольно длинное название файла.pdf'\nuploadDate='22.01.2018'\nsize={500000000}\nshowDelete={false}\nshowRestore={true}\n/>\n<FileUploadItemV1\nname='Название файла.pdf'\nuploadDate='22.01.2018'\nsize={45000}\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='С кастомной иконкой.pdf'\nuploadDate='22.01.2018'\nsize={50000}\nshowDelete={true}\nicon={DiamondsMIcon}\n/>\n<FileUploadItemV1\nname='Название файла.pdf'\nuploadDate='22.01.2018'\nuploadPercent={23.5678}\nuploadStatus='UPLOADING'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.txt'\nuploadDate='22.01.2018'\nsize={157290000}\ndownloadLink='/link'\nuploadStatus='SUCCESS'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.jpg'\nuploadDate='22.01.2018'\nsize={45000}\nuploadStatus='ERROR'\nshowDelete={true}\n/>\n<FileUploadItemV1\nname='Название файла.png'\nuploadDate='22.01.2018'\nsize={450000000}\nuploadStatus='ERROR'\nerror={\n<>\n<p style={{ margin: 0, marginBottom: '8px' }}>Размер больше 500 Кб</p>\n<p style={{ margin: 0 }}>\nНедопустимый формат файла. Загрузите файл в одном из этих форматов: .txt, .xml,\n.csv\n</p>\n</>\n}\nshowDelete={true}\n/>\n</>",
+      "mobile": null
+    }
+  ]
+}

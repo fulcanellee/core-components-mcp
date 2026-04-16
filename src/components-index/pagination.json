@@ -1,0 +1,132 @@
+{
+  "componentName": "Pagination",
+  "packageName": "pagination",
+  "description": "Используется для переключения между страницами.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/pagination",
+      "named": [
+        "Pagination"
+      ]
+    }
+  ],
+  "props": {
+    "currentPageIndex": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": false,
+      "defaultValue": "0",
+      "description": "Текущая страница (с нуля)"
+    },
+    "pagesCount": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Количество страниц"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "hideArrows": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Скрывает стрелки, если выбрана первая или последняя страница"
+    },
+    "sidePadding": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "1",
+      "description": "Количество видимых страниц по бокам"
+    },
+    "activePadding": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "2",
+      "description": "Количество видимых страниц вокруг выбранной"
+    },
+    "view": {
+      "type": "\"default\" | \"per-page\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"per-page\"",
+      "enumValues": [
+        "\"default\"",
+        "\"per-page\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Режим пагинации"
+    },
+    "onPageChange": {
+      "type": "((pageIndex: number) => void)",
+      "typeName": "enum",
+      "rawType": "((pageIndex: number) => void)",
+      "enumValues": [
+        "(pageIndex: number) => void"
+      ],
+      "required": false,
+      "defaultValue": "() => null",
+      "description": "Обработчик переключения страницы"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Пагинация с возможностью быстрого доступа к крайним страницам.",
+      "desktop": "render(() => {\nconst DATA_SIZE = isMobile() ? 5 : 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\n/>\n</Container>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Чтобы избежать скачка при переключении с первой на вторую страницу можно использовать проп `hideArrows`.",
+      "desktop": "render(() => {\nconst DATA_SIZE = isMobile() ? 5 : 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\nhideArrows={false}\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\n/>\n</Container>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Пагинация с постраничным переключением.",
+      "desktop": "render(() => {\nconst DATA_SIZE = 20;\nconst PER_PAGE = 1;\n\nconst [page, setPage] = React.useState(0);\n\nconst handlePageChange = pageIndex => setPage(pageIndex);\n\nconst pagesCount = Math.ceil(DATA_SIZE / PER_PAGE);\n\nreturn (\n<Container align='center'>\n<Pagination\ncurrentPageIndex={page}\npagesCount={pagesCount}\nonPageChange={handlePageChange}\nview='per-page'\n/>\n</Container>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

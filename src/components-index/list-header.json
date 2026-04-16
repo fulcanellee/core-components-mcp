@@ -1,0 +1,83 @@
+{
+  "componentName": "ListHeader",
+  "packageName": "list-header",
+  "description": "Используется для разделения ячеек списка по смысловым группам.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/list-header",
+      "named": [
+        "ListHeader"
+      ]
+    }
+  ],
+  "props": {
+    "title": {
+      "type": "string",
+      "typeName": "string",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Заголовок"
+    },
+    "description": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительное описание"
+    },
+    "filled": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Наличие фоновой подложки"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Компонент с серой подложкой используется для «бесконечных списков». Например, для истории операций или списка писем.",
+      "desktop": "<div>\n<ListHeader title='Сегодня' />\n<div>\nВ Санкт-Петербурге ожидаются дожди, ливни с грозой, градом и шквалистым ветром до 20 м/с.\n</div>\n<ListHeader title='23 мая' description='среда' />\n<div>Ясно, без осадков.</div>\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Компонент без подложки используется для «фиксированных списков».",
+      "desktop": "<div>\n<ListHeader title='Сегодня' filled={false} />\n<div>\nВ Санкт-Петербурге ожидаются дожди, ливни с грозой, градом и шквалистым ветром до 20 м/с.\n</div>\n<ListHeader title='23 мая' description='среда' filled={false} />\n<div>Ясно, без осадков.</div>\n</div>",
+      "mobile": null
+    }
+  ]
+}

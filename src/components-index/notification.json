@@ -1,0 +1,325 @@
+{
+  "componentName": "Notification",
+  "packageName": "notification",
+  "description": "Информирует пользователя о текущем состоянии операций или сообщает пользователю о результате выполнения его команды. Не имеет мобильной версии.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/notification",
+      "named": [
+        "Notification"
+      ]
+    }
+  ],
+  "props": {
+    "block": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивает компонент на ширину контейнера"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Набор цветов для компонента"
+    },
+    "leftAddons": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Слот слева, заменяет стандартную иконку"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "contentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для контентной области"
+    },
+    "onClose": {
+      "type": "((event?: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event?: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event?: MouseEvent<HTMLButtonElement, MouseEvent> | undefined) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по крестику"
+    },
+    "hasCloser": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Управляет отображением кнопки закрытия уведомления\n@deprecated Используйте пропс `closerProps`"
+    },
+    "closerProps": {
+      "type": "{Object}",
+      "typeName": "{Object}",
+      "rawType": null,
+      "enumValues": [],
+      "required": false,
+      "defaultValue": "{ hasCloser: true }",
+      "description": "Параметры кнопки закрытия\n@property {boolean} [hasCloser] - Управляет отображением кнопки закрытия уведомления\n@property {string} [closerWrapperClassName] - Дополнительный класс враппера кнопки \"закрыть\"\n@property {string} [closerClassName] - Дополнительный класс кнопки \"закрыть\"\n@property {boolean} [divider] - Показывать разделитель\n@property {import('@alfalab/core-components-icon-button').IconButtonProps['view']} [view] - Вид кнопки закрытия"
+    },
+    "titleClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для заголовка"
+    },
+    "actionSectionClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для области с кнопкой действия"
+    },
+    "boldTitle": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Жирный заголовок"
+    },
+    "badge": {
+      "type": "StatusBadgeViews",
+      "typeName": "enum",
+      "rawType": "StatusBadgeViews",
+      "enumValues": [
+        "\"positive-checkmark\"",
+        "\"negative-cross\"",
+        "\"negative-alert\"",
+        "\"negative-block\"",
+        "\"attention-alert\"",
+        "\"neutral-information\"",
+        "\"neutral-operation\"",
+        "\"neutral-cross\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Вид бэйджа"
+    },
+    "actionButton": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Кнопка действия"
+    },
+    "closerWrapperClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс враппера кнопки \"закрыть\".\n@deprecated Используйте пропс `closerProps`"
+    },
+    "closerClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс кнопки \"закрыть\".\n@deprecated Используйте пропс `closerProps`"
+    },
+    "getBadgeIcons": {
+      "type": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "typeName": "enum",
+      "rawType": "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>",
+      "enumValues": [
+        "Partial<Record<StatusBadgeViews, Partial<Record<StatusBadgeSizes, StatusBadgeIcon>>>>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Функция, с помощью которой можно переопределить иконки в StatusBadge"
+    },
+    "visible": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление видимостью компонента"
+    },
+    "offset": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "108",
+      "description": "Отступ от верхнего края"
+    },
+    "autoCloseDelay": {
+      "type": "number | null",
+      "typeName": "enum",
+      "rawType": "number | null",
+      "enumValues": [
+        "null",
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "5000",
+      "description": "Время до закрытия компонента"
+    },
+    "usePortal": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Использовать портал"
+    },
+    "zIndex": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "1000",
+      "description": "z-index компонента"
+    },
+    "position": {
+      "type": "\"top\" | \"bottom\"",
+      "typeName": "enum",
+      "rawType": "\"top\" | \"bottom\"",
+      "enumValues": [
+        "\"top\"",
+        "\"bottom\""
+      ],
+      "required": false,
+      "defaultValue": "top",
+      "description": "Позиционирование компонента от верхнего или нижнего края экрана"
+    },
+    "onCloseTimeout": {
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события истечения времени до закрытия компонента"
+    },
+    "onClickOutside": {
+      "type": "((event?: MouseEvent<any, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event?: MouseEvent<any, MouseEvent>) => void)",
+      "enumValues": [
+        "(event?: MouseEvent<any, MouseEvent> | undefined) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика вне компонента"
+    },
+    "containerRef": {
+      "type": "RefObject<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "RefObject<HTMLDivElement>",
+      "enumValues": [
+        "RefObject<HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Ссылка на контейнер компонента, к которому применяется анимация"
+    }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "",
+      "desktop": "render(() => {\nconst [isVisible, setIsVisible] = React.useState(false);\n\nconst toggleVisibility = React.useCallback(() => setIsVisible((prev) => !prev), []);\nconst hideNotification = React.useCallback(() => setIsVisible(false), []);\n\nreturn (\n<div>\n<Notification\nbadge='positive-checkmark'\ntitle='Пример уведомления'\nvisible={isVisible}\noffset={180}\nonClose={hideNotification}\nonCloseTimeout={hideNotification}\n>\nОписание уведомления\n</Notification>\n<Button onClick={toggleVisibility}>Показать уведомление</Button>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

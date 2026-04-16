@@ -1,0 +1,171 @@
+{
+  "componentName": "Collapse",
+  "packageName": "collapse",
+  "description": "Используется для скрытия части объемного текста.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/collapse",
+      "named": [
+        "Collapse"
+      ]
+    }
+  ],
+  "props": {
+    "expanded": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Состояние компонента"
+    },
+    "collapsedLabel": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст ссылки в `expanded` состоянии"
+    },
+    "expandedLabel": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст ссылки в `collapsed` состоянии"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы `Collapse`"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс обертки"
+    },
+    "expandedContentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для скрываемого контента"
+    },
+    "id": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор компонента в DOM"
+    },
+    "defaultExpanded": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Начальное состояние uncontrolled компонента"
+    },
+    "onExpandedChange": {
+      "type": "((expanded: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((expanded: boolean) => void)",
+      "enumValues": [
+        "(expanded: boolean) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик смены состояний `expanded/collapsed`"
+    },
+    "onTransitionEnd": {
+      "type": "((expanded: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((expanded: boolean) => void)",
+      "enumValues": [
+        "(expanded: boolean) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события завершения анимации"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Стандартный вид компонента.",
+      "desktop": "<div style={{ width: isMobile() ? 320 : 460 }}>\n<Typography.TitleResponsive font='system' view='medium'>\nПочему банк проверяет мои операции?\n</Typography.TitleResponsive>\n<Gap size={16} />\n<Typography.Text font='system' view='primary-medium'>\nВ 2001 году в России начал действовать Федеральный закон №115 «О противодействии легализации\nдоходов, полученных преступным путём, и финансированию терроризма». В рамках закона банки\nмогут блокировать карты, отказывать в проведении сомнительных операций, ограничить доступ в\nинтернет-банк или запрашивать документы, если по операции клиента возникли подозрения.\n</Typography.Text>\n<Gap size={16} />\n<Collapse collapsedLabel='Подробнее' expandedLabel='Скрыть'>\n<Typography.Text font='system' view='primary-medium'>\nТребования 115-ФЗ и связанных с ним документов Банка России часто меняются,\nпредприниматели не всегда успевают за ними следить. Последствия нарушений\n«антиотмывочного» законодательства всегда неприятны: приходится остановить\nбизнес-процессы и доказать банку законность операций. Специалисты «Альфа-банка» собрали\nпонятные рекомендации, как сэкономить время на объяснения и предотвратить блокировки.\n</Typography.Text>\n</Collapse>\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Контент может быть динамическим.\nУправлять состоянием компонента можно снаружи, используя любой контрол и передавая текущее значение состояния через проп expanded.",
+      "desktop": "render(() => {\nconst [expanded, setExpanded] = React.useState(false);\nconst [loaded, setLoaded] = React.useState(false);\n\nconst handleToggle = () => {\nif (!expanded) {\nsetLoaded(true);\nsetTimeout(() => setLoaded(false), 2000);\n}\nsetExpanded(!expanded);\n};\n\nreturn (\n<div style={{ width: isMobile() ? 320 : 460 }}>\n<Typography.TitleResponsive font='system' view='medium'>\nПочему банк проверяет мои операции?\n</Typography.TitleResponsive>\n<Gap size={16} />\n<Typography.Text font='system' view='primary-medium'>\nВ 2001 году в России начал действовать Федеральный закон №115 «О противодействии\nлегализации доходов, полученных преступным путём, и финансированию терроризма». В\nрамках закона банки могут блокировать карты, отказывать в проведении сомнительных\nопераций, ограничить доступ в интернет-банк или запрашивать документы, если по\nоперации клиента возникли подозрения.\n</Typography.Text>\n<Gap size={16} />\n<Collapse expanded={expanded}>\n<Typography.Text font='system' view='primary-medium' showSkeleton={loaded}>\nТребования 115-ФЗ и связанных с ним документов Банка России часто меняются,\nпредприниматели не всегда успевают за ними следить. Последствия нарушений\n«антиотмывочного» законодательства всегда неприятны: приходится остановить\nбизнес-процессы и доказать банку законность операций. Специалисты «Альфа-банка»\nсобрали понятные рекомендации, как сэкономить время на объяснения и\nпредотвратить блокировки.\n</Typography.Text>\n<Gap size={16} />\n</Collapse>\n<Typography.Text view='primary-medium'>\n<Link pseudo={true} view='secondary' onClick={handleToggle}>\n{expanded ? 'Скрыть' : 'Подробнее'}\n</Link>\n</Typography.Text>\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

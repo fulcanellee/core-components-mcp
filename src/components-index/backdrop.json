@@ -1,0 +1,104 @@
+{
+  "componentName": "Backdrop",
+  "packageName": "backdrop",
+  "description": "Используется для затемнения фона при вызове модального слоя.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/backdrop",
+      "named": [
+        "Backdrop"
+      ]
+    }
+  ],
+  "props": {
+    "invisible": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Прозрачный бэкдроп\n@deprecated данное свойство больше не используется, временно оставлено для обратной совместимости\nИспользуйте свойство transparent"
+    },
+    "open": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет видимостью компонента"
+    },
+    "onClose": {
+      "type": "((event: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLElement, MouseEvent>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик клика по бэкдропу"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "transitionClassNames": {
+      "type": "string | CSSTransitionClassNames",
+      "typeName": "enum",
+      "rawType": "string | CSSTransitionClassNames",
+      "enumValues": [
+        "string",
+        "CSSTransitionClassNames"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Классы анимации\n\nhttp://reactcommunity.org/react-transition-group/css-transition#CSSTransition-prop-classNames"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "transparent": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет прозрачностью бэкдроп"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "Компонент поддерживает все параметры из [CSSTransition](http://reactcommunity.org/react-transition-group/css-transition).",
+      "desktop": "render(() => {\nconst [open, setOpen] = React.useState(false);\n\nreturn (\n<div style={{ zIndex: 1, position: 'relative' }}>\n<Button\nonClick={() => setOpen(!open)}\nsize={56}\nblock={isMobile()}\nbreakpoint={BREAKPOINT}\n>\n{open ? 'Закрыть Backdrop' : 'Показать Backdrop'}\n</Button>\n<Backdrop open={open} onClick={() => setOpen(false)} />\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

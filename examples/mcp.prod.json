@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "core-components-mcp": {
+      "command": "npx",
+      "args": ["-y", "core-components-mcp@latest"]
+    }
+  }
+}

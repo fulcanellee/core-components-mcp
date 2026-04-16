@@ -1,0 +1,221 @@
+{
+  "componentName": "Scrollbar",
+  "packageName": "scrollbar",
+  "description": "Используется для управления контентм с помощью полосы прокрутки.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/scrollbar",
+      "named": [
+        "Scrollbar"
+      ]
+    }
+  ],
+  "props": {
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Оборачиваемый элемент."
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс на корневой элемент."
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    },
+    "horizontalAutoStretch": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Растягивать контент по горизонтали по ширине содержимого."
+    },
+    "widthPropName": {
+      "type": "\"width\" | \"minWidth\" | \"maxWidth\"",
+      "typeName": "enum",
+      "rawType": "\"width\" | \"minWidth\" | \"maxWidth\"",
+      "enumValues": [
+        "\"width\"",
+        "\"minWidth\"",
+        "\"maxWidth\""
+      ],
+      "required": false,
+      "defaultValue": "minWidth",
+      "description": "Название css свойства, которое устанавливается на контейнер при horizontalAutoStretch."
+    },
+    "autoHide": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Включает автоскрытие ползунка."
+    },
+    "autoHideTimeout": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "1000",
+      "description": "Время в мс, определяющее задержку до исчезновения полосы прокрутки (при включенной опции autoHide)."
+    },
+    "forceVisible": {
+      "type": "boolean | \"x\" | \"y\"",
+      "typeName": "enum",
+      "rawType": "boolean | \"x\" | \"y\"",
+      "enumValues": [
+        "false",
+        "true",
+        "\"x\"",
+        "\"y\""
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Принудительное отображение полосы прокрутки."
+    },
+    "clickOnTrack": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Управление поведением клика по треку.\nЕсли true, то будет выполняться прокрутка к месту клика."
+    },
+    "scrollableNodeProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": "{ ref: null }",
+      "description": "HTML-aтрибуты на прокручиваемый узел."
+    },
+    "contentNodeProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": "{ ref: null }",
+      "description": "HTML-aтрибуты на узел с контентом."
+    },
+    "maskProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "HTML-aтрибуты маски."
+    },
+    "verticalBarClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс контейнера вертикальной полосы прокрутки"
+    },
+    "horizontalBarClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс контейнера горизонтальной полосы прокрутки"
+    },
+    "onContentScroll": {
+      "type": "((e: Event) => void)",
+      "typeName": "enum",
+      "rawType": "((e: Event) => void)",
+      "enumValues": [
+        "(e: Event) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменения скролла"
+    },
+    "verticalBarRef": {
+      "type": "RefObject<HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "RefObject<HTMLDivElement>",
+      "enumValues": [
+        "RefObject<HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Ref для вертикальной полосы прокрутки"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst getChildStyle = (bgColor) => ({\nheight: 80,\ntextAlign: 'center',\nlineHeight: '80px',\nfontSize: 40,\nfontWeight: 700,\ncolor: 'var(--color-light-text-tertiary)',\nbackground: `var(${bgColor})`,\n});\nreturn (\n<div style={{ height: 240, margin: 'var(--gap-20-neg)' }}>\n<Scrollbar style={{ height: '100%' }} autoHide={false}>\n{new Array(51).fill(null).map((_, idx) => {\nconst style = getChildStyle(\nidx % 2 === 0 ? '--color-light-neutral-200' : '--color-light-base-bg-secondary',\n);\nreturn (\n<div key={idx} style={style}>\n{idx + 1}\n</div>\n);\n})}\n</Scrollbar>\n</div>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst scrollbarStyle = {\nwhiteSpace: 'nowrap',\noverflow: 'auto',\nmargin: 'var(--gap-20-neg)',\n};\nconst getChildStyle = (bgColor) => ({\ndisplay: 'inline-block',\nwidth: 80,\nheight: 240,\ntextAlign: 'center',\nlineHeight: '200px',\nfontSize: 40,\nfontWeight: 700,\ncolor: 'var(--color-light-text-tertiary)',\nbackground: `var(${bgColor})`,\n});\nreturn (\n<Scrollbar style={scrollbarStyle} autoHide={false}>\n{new Array(51).fill(null).map((_, idx) => {\nconst style = getChildStyle(\nidx % 2 === 0 ? '--color-light-neutral-200' : '--color-light-base-bg-secondary',\n);\nreturn (\n<div key={idx} style={style}>\n{idx + 1}\n</div>\n);\n})}\n</Scrollbar>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

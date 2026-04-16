@@ -1,0 +1,127 @@
+{
+  "componentName": "Spinner",
+  "packageName": "spinner",
+  "description": "",
+  "imports": [],
+  "props": {
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Палитра, в контексте которой используется спиннер"
+    },
+    "visible": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управление видимостью компонента"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "id": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор компонента в DOM"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "style": {
+      "type": "CSSProperties",
+      "typeName": "enum",
+      "rawType": "CSSProperties",
+      "enumValues": [
+        "CSSProperties"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные инлайн стили для cпиннера"
+    },
+    "size": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Размер спиннера (кольца)"
+    },
+    "lineWidth": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Толщина линии спинера (кольца)"
+    },
+    "preset": {
+      "type": "48 | 16 | 24",
+      "typeName": "enum",
+      "rawType": "48 | 16 | 24",
+      "enumValues": [
+        "48",
+        "16",
+        "24"
+      ],
+      "required": true,
+      "defaultValue": null,
+      "description": "Преднастроенный вариант"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "У компонента есть стандартные размеры: 16, 24 и 48px.",
+      "desktop": "const PRESETS = [16, 24, 48];\n\nrender(\n<Container>\n<Row align='middle'>\n{PRESETS.map((preset) => (\n<div key={preset} style={{ marginRight: 20 }}>\n<Spinner visible={true} preset={preset} />\n</div>\n))}\n</Row>\n</Container>,\n);",
+      "mobile": null
+    },
+    {
+      "title": "Кастомизация",
+      "description": "Спиннеру можно задать кастомную высоту, цвет, толщину линии и отступы внутри контейнера.",
+      "desktop": "render(\n<Container>\n<Row align='middle'>\n<div style={{ marginRight: 20 }}>\n<Spinner visible={true} size={28} lineWidth={4} style={{ padding: \"var(--gap-2)\", color: \"var(--color-light-decorative-text-red)\" }} />\n</div>\n<div style={{ marginRight: 20 }}>\n<Spinner visible={true} size={24} lineWidth={2} style={{ padding: \"var(--gap-4)\", color: \"var(--color-light-decorative-text-blue)\" }} />\n</div>\n</Row>\n</Container>,\n);",
+      "mobile": null
+    },
+    {
+      "title": "Использование в других компонентах",
+      "description": "Часто используется в [Button](?path=/docs/button--docs).",
+      "desktop": "<Container>\n<div style={{marginBottom: 20}}>\n<Button view=\"primary\" loading={true} size={56}>\n   Label\n</Button>\n</div>\n<div>\n<Button leftAddons={<Spinner visible={true} preset={24} />} size={56}>\nДела делаются\n</Button>\n</div>\n</Container>",
+      "mobile": "<Container>\n<Button view=\"primary\" block={true} loading={true} size={56}>\nLabel\n</Button>\n<br/>\n<Button block={true} leftAddons={<Spinner visible={true} preset={24} />} size={56}>\nДела делаются\n</Button>\n</Container>"
+    }
+  ]
+}

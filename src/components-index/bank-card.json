@@ -1,0 +1,137 @@
+{
+  "componentName": "BankCard",
+  "packageName": "bank-card",
+  "description": "Используется для ввода номера карты или банковского счета.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/bank-card",
+      "named": [
+        "BankCard"
+      ]
+    }
+  ],
+  "props": {
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "#EF3124",
+      "description": "Цвет фона карты"
+    },
+    "bankLogo": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": "<AlfaBankSignMIcon width={30} height={40} />",
+      "description": "Иконка логотипа банка (размер L)"
+    },
+    "inputLabel": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "getDefaultInputLabel(maskType)",
+      "description": "Лэйбл поля ввода"
+    },
+    "value": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение поля ввода"
+    },
+    "onChange": {
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { value: string; }) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик ввода"
+    },
+    "onUsePhoto": {
+      "type": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLButtonElement, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLButtonElement, MouseEvent>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик вызова камеры"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "maskType": {
+      "type": "MaskType",
+      "typeName": "enum",
+      "rawType": "MaskType",
+      "enumValues": [
+        "\"default\"",
+        "\"card\"",
+        "\"account-number\""
+      ],
+      "required": false,
+      "defaultValue": "MaskTypeEnum.Default",
+      "description": "Тип вводимой маски. Позволяет устанавливать необходимый тип номера (номер карты или номер счёта)\nЕсли параметр не передавать - работает с обоими типами номеров"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "При необходимости можно изменить логотип и цвет карты.",
+      "desktop": "render(() => {\nconst [value, setValue] = React.useState('2201382000000013');\n\nconst handleChange = (event, payload) => setValue(payload.value);\n\nreturn (\n<>\n<BankCard value={value} onChange={handleChange} />\n<Gap size={24} />\n<Button size={32} onClick={() => setValue('2201382000000013')}>\nВставить номер карты\n</Button>\n<Gap size={12} direction='horizontal' />\n<Button size={32} onClick={() => setValue('')}>\nОчистить\n</Button>\n</>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Примеры",
+      "description": "Можно устанавливать тип вводимого счёта:\n- Номер карты\n- Номер счёта",
+      "desktop": "render(() => {\nconst [value1, setValue1] = React.useState('2201382000000013');\nconst handleChange1 = (event, payload) => setValue1(payload.value);\n\nconst [value2, setValue2] = React.useState('22013820000000131234');\nconst handleChange2 = (event, payload) => setValue2(payload.value);\n\nreturn (\n<>\n<div>\n<BankCard value={value1} maskType={'card'} onChange={handleChange1} />\n<Gap size={24} />\n<Button size={32} onClick={() => setValue1('2201382000000013')}>\nВставить номер карты\n</Button>\n<Gap size={12} direction='horizontal' />\n<Button size={32} onClick={() => setValue1('')}>\nОчистить\n</Button>\n</div>\n<br/>\n<div>\n<BankCard value={value2} maskType={'account-number'} onChange={handleChange2} />\n<Gap size={24} />\n<Button size={32} onClick={() => setValue2('22013820000000131234')}>\nВставить номер карты\n</Button>\n<Gap size={12} direction='horizontal' />\n<Button size={32} onClick={() => setValue2('')}>\nОчистить\n</Button>\n</div>\n</>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

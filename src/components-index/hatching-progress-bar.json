@@ -1,0 +1,81 @@
+{
+  "componentName": "HatchingProgressBar",
+  "packageName": "hatching-progress-bar",
+  "description": "Используется для отображения прогресса при заполнении формы.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/hatching-progress-bar",
+      "named": [
+        "HatchingProgressBar"
+      ]
+    }
+  ],
+  "props": {
+    "value": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Значение заполненной части 0-100"
+    },
+    "hatchValue": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Значение будущей заполненной части 0-100"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Css-класс для стилизации"
+    },
+    "view": {
+      "type": "\"link\" | \"positive\" | \"negative\" | \"attention\" | \"tertiary\" | \"secondary\" | \"primary\" | \"accent\"",
+      "typeName": "enum",
+      "rawType": "\"link\" | \"positive\" | \"negative\" | \"attention\" | \"tertiary\" | \"secondary\" | \"primary\" | \"accent\"",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\""
+      ],
+      "required": false,
+      "defaultValue": "positive",
+      "description": "Цвет заполнения"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "Заливкой обозначается текущий прогресс. \nШтриховкой обозначается прогресс, который будет достигнут при выполнении какого-либо условия.",
+      "desktop": "<HatchingProgressBar value={40} hatchValue={60} />",
+      "mobile": null
+    }
+  ]
+}

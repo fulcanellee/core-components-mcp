@@ -1,0 +1,122 @@
+{
+  "componentName": "Indicator",
+  "packageName": "indicator",
+  "description": "Используется для визаулизации количества уведомлений, сообщений и т. д.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/indicator",
+      "named": [
+        "Indicator"
+      ]
+    }
+  ],
+  "props": {
+    "value": {
+      "type": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "typeName": "enum",
+      "rawType": "number | ReactElement<any, string | JSXElementConstructor<any>>",
+      "enumValues": [
+        "number",
+        "ReactElement<any, string | JSXElementConstructor<any>>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение индикатора"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет заливки"
+    },
+    "height": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Высота компонента, min = 16; max = 48"
+    },
+    "size": {
+      "type": "40 | 8 | 16 | 24 | 32 | 20",
+      "typeName": "enum",
+      "rawType": "40 | 8 | 16 | 24 | 32 | 20",
+      "enumValues": [
+        "40",
+        "8",
+        "16",
+        "24",
+        "32",
+        "20"
+      ],
+      "required": false,
+      "defaultValue": "getSize(height, value)",
+      "description": "Размер компонента"
+    },
+    "border": {
+      "type": "boolean | Border",
+      "typeName": "enum",
+      "rawType": "boolean | Border",
+      "enumValues": [
+        "false",
+        "true",
+        "Border"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Настройки обводки"
+    },
+    "view": {
+      "type": "\"red\" | \"grey\" | \"white\"",
+      "typeName": "enum",
+      "rawType": "\"red\" | \"grey\" | \"white\"",
+      "enumValues": [
+        "\"red\"",
+        "\"grey\"",
+        "\"white\""
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Пресет компонента"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Размер",
+      "description": "Компонент занимает заданную высоту, подстраивая под неё свои отступы и стиль текста.",
+      "desktop": "const styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '20px',\nwidth: 342,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\n\nrender(\n<Container>\n<div style={styles}>\n<Indicator height={48} value={1} view='red' />\n<Indicator height={40} value={1} view='red' />\n<Indicator height={32} value={1} view='red' />\n<Indicator height={24} value={1} view='red' />\n<Indicator height={20} value={1} view='red' />\n<Indicator height={16} value={1} view='red' />\n<Indicator view='red' />\n</div>\n</Container>\n);",
+      "mobile": "const styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '12px',\nwidth: '100%',\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\n\nrender(\n<Container>\n<div style={styles}>\n<Indicator height={48} value={1} view='red' />\n<Indicator height={40} value={1} view='red' />\n<Indicator height={32} value={1} view='red' />\n<Indicator height={24} value={1} view='red' />\n<Indicator height={20} value={1} view='red' />\n<Indicator height={16} value={1} view='red' />\n<Indicator view='red' />\n</div>\n</Container>\n);"
+    },
+    {
+      "title": "Виды индикатора",
+      "description": "Индикатор имеет три преднастроенных вида.",
+      "desktop": "render(() => {\nconst [border, setBorder] = React.useState(false);\n\nconst styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '20px',\nwidth: 169,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\nreturn (\n<Container>\n\n<div style={styles}>\n<Indicator height={24} value={1} view='red' border={border} />\n<Indicator height={24} value={99} view='red' border={border} />\n<Indicator height={24} value={100} view='red' border={border} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Indicator height={24} value={1} view='grey' border={border} />\n<Indicator height={24} value={99} view='grey' border={border} />\n<Indicator height={24} value={100} view='grey' border={border} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Indicator height={24} value={1} view='white' border={border} />\n<Indicator height={24} value={99} view='white' border={border} />\n<Indicator height={24} value={100} view='white' border={border} />\n</div>\n<Gap size={24} />\n<Switch\nblock={true}\nchecked={border}\nlabel='Обводка'\nonChange={() => setBorder(!border)}\n/>\n</Container>\n);\n});",
+      "mobile": "render(() => {\nconst [border, setBorder] = React.useState(false);\n\nconst styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '12px',\nwidth: 320,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\n\nreturn (\n<Container>\n\n<div style={styles}>\n<Indicator height={24} value={1} view='red' border={border} />\n<Indicator height={24} value={99} view='red' border={border} />\n<Indicator height={24} value={100} view='red' border={border} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Indicator height={24} value={1} view='grey' border={border} />\n<Indicator height={24} value={99} view='grey' border={border} />\n<Indicator height={24} value={100} view='grey' border={border} />\n</div>\n<Gap size={8} />\n<div style={styles}>\n<Indicator height={24} value={1} view='white' border={border} />\n<Indicator height={24} value={99} view='white' border={border} />\n<Indicator height={24} value={100} view='white' border={border} />\n</div>\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={border}\nlabel='Обводка'\nonChange={() => setBorder(!border)}\n/>\n</Container>\n);\n});"
+    },
+    {
+      "title": "Кастомизация",
+      "description": "При необходимости, можно задать индикатору кастомный фон, цвет текста, цвет и толщину обводки.",
+      "desktop": "const styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '20px',\nwidth: 108,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\n\nrender(\n<Container>\n<div style={styles}>\n<Indicator\nvalue={1}\nheight={24}\nbackgroundColor='var(--color-light-status-attention)'\ncolor='var(--color-light-status-negative)'\nborder={{\nwidth: 4,\ncolor: 'var(--color-light-status-negative)',\n}}\n/>\n<Indicator\nvalue={1}\nheight={24}\nbackgroundColor='var(--color-light-base-bg-primary)'\ncolor='var(--color-light-status-info)'\nborder={{\nwidth: 2,\ncolor: 'var(--color-light-status-info)',\n}}\n/>\n</div>\n</Container>\n);",
+      "mobile": "const styles = {\ndisplay: 'flex',\njustifyContent: 'center',\ngap: '12px',\nwidth: 320,\npadding: 20,\nbackgroundColor: 'var(--color-light-base-bg-secondary)',\nborderRadius: '12px',\nboxSizing: 'border-box',\nalignItems: 'center',\n};\n\nrender(\n<Container>\n<div style={styles}>\n<Indicator\nvalue={1}\nheight={24}\nbackgroundColor='var(--color-light-status-attention)'\ncolor='var(--color-light-status-negative)'\nborder={{\nwidth: 4,\ncolor: 'var(--color-light-status-negative)',\n}}\n/>\n<Indicator\nvalue={1}\nheight={24}\nbackgroundColor='var(--color-light-base-bg-primary)'\ncolor='var(--color-light-status-info)'\nborder={{\nwidth: 2,\ncolor: 'var(--color-light-status-info)',\n}}\n/>\n</div>\n</Container>\n);"
+    }
+  ]
+}

@@ -1,57 +1,15 @@
-# Minimal MCP Server
+# core-components-mcp
 
-Минимальный MCP сервер на официальном TypeScript SDK.
+MCP-сервер, предоставляющий информацию о компонентах core UI библиотеки через три инструмента.
 
-## Что внутри
+## Примеры подключения
 
-- transport: `stdio`
-- 1 tool: `hello_world`
+[DEV](./examples/mcp.dev.json) и [PROD](./examples/mcp.prod.json)
 
-## Установка
+## Инструменты
 
-```bash
-npm install
-```
-
-## Запуск в dev-режиме
-
-```bash
-npm run dev
-```
-
-## Что делает tool
-
-`hello_world` принимает необязательный параметр `name` и возвращает текстовое приветствие.
-
-Пример логики:
-
-- без аргументов: `Hello, world! This response came from your MCP server.`
-- c `name: "John"`: `Hello, John! This response came from your MCP server.`
-
-## Следующий шаг
-
-Подключить сервер к MCP-клиенту, который умеет запускать локальные `stdio` серверы.
-
-## Конфиг подключения
-
-Ниже универсальные примеры в формате `mcpServers`, без привязки к конкретному клиенту.
-
-Готовые файлы примеров:
-
-- `examples/mcp.dev.json`
-
-### Dev-режим
-
-Когда сервер запускается напрямую из TypeScript:
-
-```json
-{
-  "mcpServers": {
-    "core-components-mcp-dev": {
-      "command": "npm",
-      "args": ["run", "dev"],
-      "cwd": "path/to/folder"
-    }
-  }
-}
-```
+| Инструмент | Описание |
+|------------|----------|
+| `list_components` | Возвращает список всех доступных компонентов |
+| `get_component` | Возвращает детали компонента (props, типы, описания) по имени пакета или компонента |
+| `generate_component_usage` | Помогает написать код использования компонента с примерами, импортами и props |

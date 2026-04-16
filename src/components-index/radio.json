@@ -1,0 +1,232 @@
+{
+  "componentName": "Radio",
+  "packageName": "radio",
+  "description": "",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/radio",
+      "named": [
+        "Radio"
+      ]
+    }
+  ],
+  "props": {
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "hint": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подсказки снизу"
+    },
+    "label": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Текст подписи"
+    },
+    "size": {
+      "type": "24 | 20",
+      "typeName": "enum",
+      "rawType": "24 | 20",
+      "enumValues": [
+        "24",
+        "20"
+      ],
+      "required": false,
+      "defaultValue": "20",
+      "description": "Размер компонента"
+    },
+    "checked": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление состоянием отмечен/не отмечен"
+    },
+    "disabled": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Управление состоянием включен / выключен"
+    },
+    "name": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Html аттрибут name инпута"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Класс компонента"
+    },
+    "circleClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс радио кнопки"
+    },
+    "contentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Доп. класс контента"
+    },
+    "align": {
+      "type": "Align",
+      "typeName": "enum",
+      "rawType": "Align",
+      "enumValues": [
+        "\"center\"",
+        "\"start\""
+      ],
+      "required": false,
+      "defaultValue": "start",
+      "description": "Выравнивание"
+    },
+    "addons": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный слот"
+    },
+    "block": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Растягивать ли компонент на всю ширину"
+    },
+    "labelProps": {
+      "type": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>",
+      "enumValues": [
+        "DetailedHTMLProps<LabelHTMLAttributes<HTMLLabelElement>, HTMLLabelElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Пропсы для label"
+    },
+    "onChange": {
+      "type": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "typeName": "enum",
+      "rawType": "((event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string; }) => void)",
+      "enumValues": [
+        "(event: ChangeEvent<HTMLInputElement>, payload: { checked: boolean; name?: string | undefined; }) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик на выбор элемента"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  },
+  "examples": [
+    {
+      "title": "Размеры",
+      "description": "Компонент поддерживате два размера, 24 и 20 px",
+      "desktop": "render(() => {\nconst [selectedOptions, setSelectedOptions] = React.useState({\ngroup_1: 'checkbox24_1',\ngroup_2: 'checkbox20_1',\n});\nconst [switchChecked, setSwitchChecked] = React.useState(true);\nconst [disabled, setDisabled] = React.useState(false);\n\nconst handleChange = (group, name) => () => {\nsetSelectedOptions((prevOptions) => ({\n...prevOptions,\n[group]: name,\n}));\n};\n\nreturn (\n<React.Fragment>\n<div\nstyle={{\nwidth: document.body.clientWidth < 450 ? '100%' : 320,\n}}\n>\n<div style={{ minHeight: '46px' }}>\n<Radio\nsize={24}\nonChange={handleChange('group_1', 'checkbox24_1')}\nchecked={selectedOptions.group_1 === 'checkbox24_1'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n\n<Gap size={20} />\n<div style={{ minHeight: '46px' }}>\n<Radio\nsize={24}\nonChange={handleChange('group_1', 'checkbox24_2')}\nchecked={selectedOptions.group_1 === 'checkbox24_2'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n\n<Gap size={32} />\n<div style={{ marginLeft: '8px' }}>\n<div style={{ minHeight: '42px' }}>\n<Radio\nsize={20}\nonChange={handleChange('group_2', 'checkbox20_1')}\nchecked={selectedOptions.group_2 === 'checkbox20_1'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n<Gap size={12} />\n<div style={{ minHeight: '42px' }}>\n<Radio\nsize={20}\nonChange={handleChange('group_2', 'checkbox20_2')}\nchecked={selectedOptions.group_2 === 'checkbox20_2'}\nlabel='Согласен с условиями'\ndisabled={disabled}\n{...(switchChecked && { hint: 'И внимательно их прочитал' })}\nblock={true}\n/>\n</div>\n</div>\n</div>\n<Gap size={32} />\n<Divider />\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={switchChecked}\nlabel='Подпись под лейблом'\nonChange={() => setSwitchChecked((prevState) => !prevState)}\n/>\n<Gap size={20} />\n<Switch\nblock={true}\nchecked={disabled}\nlabel='Заблокирован'\nonClick={() => setDisabled((prevState) => !prevState)}\n/>\n</React.Fragment>\n);\n});",
+      "mobile": null
+    },
+    {
+      "title": "Состояния",
+      "description": "Радиокнопка может находиться в выбранном и невыбранном состоянии.\nЕсли радиокнопка заблокирована, используется состояние «недоступна».",
+      "desktop": "render(() => {\nreturn (\n<div style={{ width: document.body.clientWidth < 450 ? '100%' : 320 }}>\n<Radio size={24} label='Выбрана' checked={true} block={true} />\n<Gap size={20} />\n<Radio\nsize={24}\nlabel='Выбрана и недоступна'\ndisabled={true}\nchecked={true}\nblock={true}\n/>\n<Gap size={20} />\n<Radio size={24} label='По умолчанию' block={true} />\n<Gap size={20} />\n<Radio size={24} label='По умолчанию и недоступна' disabled={true} block={true} />\n</div>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

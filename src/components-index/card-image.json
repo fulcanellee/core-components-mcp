@@ -1,0 +1,145 @@
+{
+  "componentName": "CardImage",
+  "packageName": "card-image",
+  "description": "Компонент изображения карты.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/card-image",
+      "named": [
+        "CardImage"
+      ]
+    }
+  ],
+  "props": {
+    "cardId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор карты\n(например: ER, GQ, SU)"
+    },
+    "layers": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "BACKGROUND,CARD_NUMBER,CARD_HOLDER,PAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE",
+      "description": "Какие слои показывать, через запятую без пробелов\n(полный набор: BACKGROUND,CARD_NUMBER,CARD_HOLDER,\nPAY_PASS,CHIP,LOGO,PAYMENT_SYSTEM,RESERVED_1,RESERVED_2,VALID_DATE)"
+    },
+    "width": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "280",
+      "description": "Ширина изображения"
+    },
+    "rounded": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Скругление углов"
+    },
+    "baseUrl": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": "https://online.alfabank.ru/cards-images/cards/",
+      "description": "Базовый URL сервиса с изображениями"
+    },
+    "onLoad": {
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Колбек, вызываемый при загрузке изображения"
+    },
+    "onError": {
+      "type": "ReactEventHandler<HTMLImageElement>",
+      "typeName": "enum",
+      "rawType": "ReactEventHandler<HTMLImageElement>",
+      "enumValues": [
+        "ReactEventHandler<HTMLImageElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Колбек, вызываемый при ошибке загрузки изображения"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "alt": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Текстовое описание изображения"
+    },
+    "id": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Уникальный идентификатор блока"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<CardImage\ncardId='EG'\nwidth={isMobile() ? 320 : 380}\nbaseUrl='https://online.alfabank.ru/cards-images/cards/'\nclassName='some name'\nid='some id'\ndataTestId='test id'\n/>",
+      "mobile": null
+    }
+  ]
+}

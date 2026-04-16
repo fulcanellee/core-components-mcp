@@ -1,0 +1,409 @@
+{
+  "componentName": "BaseModal",
+  "packageName": "base-modal",
+  "description": "Используется для построения модальных сущностей.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/base-modal",
+      "named": [
+        "BaseModal"
+      ]
+    }
+  ],
+  "props": {
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Контент"
+    },
+    "Backdrop": {
+      "type": "ComponentType<BackdropProps>",
+      "typeName": "enum",
+      "rawType": "ComponentType<BackdropProps>",
+      "enumValues": [
+        "ComponentClass<BackdropProps, any>",
+        "FunctionComponent<BackdropProps>"
+      ],
+      "required": false,
+      "defaultValue": "({\n    className,\n    open = false,\n    invisible = false,\n    timeout = 200,\n    children,\n    onClose,\n    dataTestId,\n    transitionClassNames = styles,\n    transparent = false,\n    ...restProps\n}) => {\n    const nodeRef = useRef(null);\n\n    return (\n        <CSSTransition\n            timeout={timeout}\n            unmountOnExit={true}\n            classNames={transitionClassNames}\n            in={!invisible && open}\n            appear={true}\n            {...restProps}\n            nodeRef={nodeRef}\n        >\n            <div\n                ref={nodeRef}\n                aria-hidden={true}\n                onClick={onClose}\n                data-test-id={dataTestId}\n                className={cn(styles.backdrop, className, {\n                    [styles.transparent]: transparent,\n                })}\n            >\n                {children}\n            </div>\n        </CSSTransition>\n    );\n}",
+      "description": "Компонент бэкдропа"
+    },
+    "backdropProps": {
+      "type": "(Partial<BackdropProps> & Record<string, unknown>)",
+      "typeName": "enum",
+      "rawType": "(Partial<BackdropProps> & Record<string, unknown>)",
+      "enumValues": [
+        "Partial<Partial<TimeoutProps<undefined>> & { invisible?: boolean | undefined; open: boolean; onClose?: ((event: MouseEvent<HTMLElement, MouseEvent>) => void) | undefined; ... 4 more ...; transparent?: boolean | undefined; }> & Record<...>",
+        "Partial<Partial<EndListenerProps<undefined>> & { invisible?: boolean | undefined; open: boolean; onClose?: ((event: MouseEvent<HTMLElement, MouseEvent>) => void) | undefined; ... 4 more ...; transparent?: boolean | undefined; }> & Record<...>"
+      ],
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Свойства для Бэкдропа"
+    },
+    "container": {
+      "type": "(() => Element | null)",
+      "typeName": "enum",
+      "rawType": "(() => Element | null)",
+      "enumValues": [
+        "() => Element | null | undefined"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Нода, компонент или функция возвращающая их\n\nКонтейнер к которому будут добавляться порталы"
+    },
+    "disableAutoFocus": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает автоматический перевод фокуса на модалку при открытии"
+    },
+    "disableFocusLock": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает ловушку фокуса"
+    },
+    "disableRestoreFocus": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает восстановление фокуса на предыдущем элементе после закрытия модалки"
+    },
+    "disableEscapeKeyDown": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при нажатии Escape"
+    },
+    "disableBackdropClick": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает вызов `callback` при клике на бэкдроп"
+    },
+    "disableBlockingScroll": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Отключает блокировку скролла при открытии модального окна\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "scrollLock": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Управляет блокировкой скролла/overscroll фона при открытой модалке."
+    },
+    "keepMounted": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Содержимое модалки всегда в DOM"
+    },
+    "open": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": true,
+      "defaultValue": null,
+      "description": "Управление видимостью модалки"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "contentClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "wrapperProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на dialog wrapper"
+    },
+    "contentProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на обертку контента"
+    },
+    "componentDivProps": {
+      "type": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "typeName": "enum",
+      "rawType": "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>",
+      "enumValues": [
+        "DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительные пропсы на компонентную обертку контента"
+    },
+    "wrapperClassName": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс для обертки (Modal)"
+    },
+    "scrollHandler": {
+      "type": "\"content\" | MutableRefObject<HTMLDivElement | null> | \"wrapper\"",
+      "typeName": "enum",
+      "rawType": "\"content\" | MutableRefObject<HTMLDivElement | null> | \"wrapper\"",
+      "enumValues": [
+        "\"content\"",
+        "MutableRefObject<HTMLDivElement | null>",
+        "\"wrapper\""
+      ],
+      "required": false,
+      "defaultValue": "wrapper",
+      "description": "Обработчик скролла контента"
+    },
+    "transitionProps": {
+      "type": "Partial<CSSTransitionProps>",
+      "typeName": "enum",
+      "rawType": "Partial<CSSTransitionProps>",
+      "enumValues": [
+        "Partial<TimeoutProps<undefined> & { classNames?: string | CSSTransitionClassNames | undefined; }>",
+        "Partial<EndListenerProps<undefined> & { classNames?: string | CSSTransitionClassNames | undefined; }>"
+      ],
+      "required": false,
+      "defaultValue": "{}",
+      "description": "Пропсы для анимации (CSSTransition)"
+    },
+    "usePortal": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "true",
+      "description": "Рендерить ли в контейнер через портал."
+    },
+    "onBackdropClick": {
+      "type": "((event: MouseEvent<Element, MouseEvent>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<Element, MouseEvent>) => void)",
+      "enumValues": [
+        "(event: MouseEvent<Element, MouseEvent>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на бэкдроп"
+    },
+    "onEscapeKeyDown": {
+      "type": "((event: KeyboardEvent<Element>) => void)",
+      "typeName": "enum",
+      "rawType": "((event: KeyboardEvent<Element>) => void)",
+      "enumValues": [
+        "(event: KeyboardEvent<Element>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события нажатия на Escape\n\nЕсли `disableEscapeKeyDown` - false и модальное окно в фокусе"
+    },
+    "onClose": {
+      "type": "((event: MouseEvent<HTMLElement, MouseEvent> | KeyboardEvent<HTMLElement>, reason?: \"backdropClick\" | \"escapeKeyDown\" | \"closerClick\") => void)",
+      "typeName": "enum",
+      "rawType": "((event: MouseEvent<HTMLElement, MouseEvent> | KeyboardEvent<HTMLElement>, reason?: \"backdropClick\" | \"escapeKeyDown\" | \"closerClick\") => void)",
+      "enumValues": [
+        "(event: MouseEvent<HTMLElement, MouseEvent> | KeyboardEvent<HTMLElement>, reason?: \"backdropClick\" | \"escapeKeyDown\" | \"closerClick\" | undefined) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик закрытия"
+    },
+    "onMount": {
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onEntered компонента Transition"
+    },
+    "onUnmount": {
+      "type": "(() => void)",
+      "typeName": "enum",
+      "rawType": "(() => void)",
+      "enumValues": [
+        "() => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик события onExited компонента Transition"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования"
+    },
+    "zIndex": {
+      "type": "number",
+      "typeName": "enum",
+      "rawType": "number",
+      "enumValues": [
+        "number"
+      ],
+      "required": false,
+      "defaultValue": "100",
+      "description": "z-index компонента"
+    },
+    "componentRef": {
+      "type": "MutableRefObject<HTMLDivElement | null>",
+      "typeName": "enum",
+      "rawType": "MutableRefObject<HTMLDivElement | null>",
+      "enumValues": [
+        "MutableRefObject<HTMLDivElement | null>"
+      ],
+      "required": false,
+      "defaultValue": "null",
+      "description": "Реф, который должен быть установлен компонентной области"
+    },
+    "contentElementRef": {
+      "type": "MutableRefObject<HTMLDivElement | null>",
+      "typeName": "enum",
+      "rawType": "MutableRefObject<HTMLDivElement | null>",
+      "enumValues": [
+        "MutableRefObject<HTMLDivElement | null>"
+      ],
+      "required": false,
+      "defaultValue": "null",
+      "description": "Реф контентной области"
+    },
+    "iOSLock": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Блокирует скролл когда модальное окно открыто. Работает только на iOS.\n@deprecated Используйте `scrollLock={true}`."
+    },
+    "onWheel": {
+      "type": "((e: WheelEvent<HTMLElement>) => void)",
+      "typeName": "enum",
+      "rawType": "((e: WheelEvent<HTMLElement>) => void)",
+      "enumValues": [
+        "(e: WheelEvent<HTMLElement>) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Хэндлер события прокрутки колесиком"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "render(() => {\nconst [open, setOpen] = React.useState(false);\nconst handleModalOpen = () => setOpen(!open);\n\nreturn (\n<>\n<Button\nsize={56}\nonClick={handleModalOpen}\nblock={isMobile()}\nbreakpoint={BREAKPOINT}\n>\nПоказать BaseModal\n</Button>\n\n<BaseModal open={open} onClose={handleModalOpen}>\n<div style={{ padding: '100px' }}>BaseModal</div>\n</BaseModal>\n</>\n);\n});",
+      "mobile": null
+    }
+  ]
+}

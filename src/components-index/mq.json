@@ -1,0 +1,89 @@
+{
+  "componentName": "Mq",
+  "packageName": "mq",
+  "description": "Используется для имплементации поддержки медиа запросов.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/mq",
+      "named": [
+        "Mq",
+        "useMatchMedia"
+      ]
+    }
+  ],
+  "props": {
+    "query": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Media выражение или кастомный запрос из `mq.json`, например `--mobile`."
+    },
+    "touch": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Запрос на поддержку тач-событий"
+    },
+    "defaultMatchMediaValue": {
+      "type": "boolean | (() => boolean)",
+      "typeName": "enum",
+      "rawType": "boolean | (() => boolean)",
+      "enumValues": [
+        "false",
+        "true",
+        "() => boolean"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Значение по-умолчанию для хука useMatchMedia"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    },
+    "onMatchChange": {
+      "type": "((isMatched: boolean) => void)",
+      "typeName": "enum",
+      "rawType": "((isMatched: boolean) => void)",
+      "enumValues": [
+        "(isMatched: boolean) => void"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Обработчик изменений в совпадении запросов"
+    }
+  },
+  "examples": [
+    {
+      "title": "Пример",
+      "description": "В этом примере при изменении ширины окна браузера кнопка будет переключаться между мобильной и десктопной версией.",
+      "desktop": "<div>\n<Mq query='--mobile'>\n<Button breakpoint={BREAKPOINT} >Мобильная кнопка</Button>\n</Mq>\n<Mq query='--tablet-s'>\n<Button breakpoint={BREAKPOINT} >Десктопная кнопка</Button>\n</Mq>\n</div>",
+      "mobile": null
+    }
+  ]
+}

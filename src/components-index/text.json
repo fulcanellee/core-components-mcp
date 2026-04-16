@@ -1,0 +1,248 @@
+{
+  "componentName": "Text",
+  "packageName": "text",
+  "description": "Используется для отображения и форматирования текстового контента. Компонент поддерживает все доступные дизайнерам стили текста, но не поддерживает адаптивность.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/text",
+      "named": [
+        "Text"
+      ]
+    }
+  ],
+  "props": {
+    "tag": {
+      "type": "\"span\" | \"p\" | \"div\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\"",
+      "typeName": "enum",
+      "rawType": "\"span\" | \"p\" | \"div\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\"",
+      "enumValues": [
+        "\"span\"",
+        "\"p\"",
+        "\"div\"",
+        "\"h1\"",
+        "\"h2\"",
+        "\"h3\"",
+        "\"h4\"",
+        "\"h5\"",
+        "\"h6\""
+      ],
+      "required": false,
+      "defaultValue": "span",
+      "description": "HTML тег"
+    },
+    "view": {
+      "type": "TypographyType",
+      "typeName": "enum",
+      "rawType": "TypographyType",
+      "enumValues": [
+        "\"accent-caps\"",
+        "\"accent-component-primary\"",
+        "\"accent-component-secondary\"",
+        "\"accent-primary-large\"",
+        "\"accent-primary-medium\"",
+        "\"accent-primary-small\"",
+        "\"accent-secondary-large\"",
+        "\"accent-secondary-medium\"",
+        "\"accent-secondary-small\"",
+        "\"accent-tagline\"",
+        "\"action-caps\"",
+        "\"action-component-primary\"",
+        "\"action-component-secondary\"",
+        "\"action-primary-large\"",
+        "\"action-primary-medium\"",
+        "\"action-primary-small\"",
+        "\"action-secondary-large\"",
+        "\"action-secondary-medium\"",
+        "\"action-secondary-small\"",
+        "\"action-tagline\"",
+        "\"headline-large\"",
+        "\"headline-medium\"",
+        "\"headline-small\"",
+        "\"headline-xlarge\"",
+        "\"headline-xsmall\"",
+        "\"headline-mobile-large\"",
+        "\"headline-mobile-medium\"",
+        "\"headline-mobile-small\"",
+        "\"headline-mobile-xlarge\"",
+        "\"headline-mobile-xsmall\"",
+        "\"headline-system-large\"",
+        "\"headline-system-medium\"",
+        "\"headline-system-small\"",
+        "\"headline-system-xlarge\"",
+        "\"headline-system-xsmall\"",
+        "\"headline-system-mobile-large\"",
+        "\"headline-system-mobile-medium\"",
+        "\"headline-system-mobile-small\"",
+        "\"headline-system-mobile-xlarge\"",
+        "\"headline-system-mobile-xsmall\"",
+        "\"paragraph-caps\"",
+        "\"paragraph-component-primary\"",
+        "\"paragraph-component-secondary\"",
+        "\"paragraph-primary-large\"",
+        "\"paragraph-primary-medium\"",
+        "\"paragraph-primary-small\"",
+        "\"paragraph-secondary-large\"",
+        "\"paragraph-secondary-medium\"",
+        "\"paragraph-secondary-small\"",
+        "\"paragraph-tagline\"",
+        "\"promo-large\"",
+        "\"promo-medium\"",
+        "\"promo-small\"",
+        "\"promo-xlarge\"",
+        "\"promo-xsmall\"",
+        "\"promo-mobile-large\"",
+        "\"promo-mobile-medium\"",
+        "\"promo-mobile-small\"",
+        "\"promo-mobile-xlarge\"",
+        "\"promo-mobile-xsmall\"",
+        "\"promo-system-large\"",
+        "\"promo-system-medium\"",
+        "\"promo-system-small\"",
+        "\"promo-system-xlarge\"",
+        "\"promo-system-xsmall\"",
+        "\"promo-system-mobile-large\"",
+        "\"promo-system-mobile-medium\"",
+        "\"promo-system-mobile-small\"",
+        "\"promo-system-mobile-xlarge\"",
+        "\"promo-system-mobile-xsmall\"",
+        "\"accent-component\"",
+        "\"action-component\"",
+        "\"key-large\"",
+        "\"key-medium\"",
+        "\"key-small\"",
+        "\"key-xlarge\"",
+        "\"key-xsmall\"",
+        "\"paragraph-component\""
+      ],
+      "required": false,
+      "defaultValue": "paragraph-primary-medium",
+      "description": "Cтиль типографики"
+    },
+    "align": {
+      "type": "\"left\" | \"center\" | \"right\"",
+      "typeName": "enum",
+      "rawType": "\"left\" | \"center\" | \"right\"",
+      "enumValues": [
+        "\"left\"",
+        "\"center\"",
+        "\"right\""
+      ],
+      "required": false,
+      "defaultValue": "left",
+      "description": "Выравнивание текста"
+    },
+    "color": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет текста"
+    },
+    "textBackgroundColor": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Цвет фона"
+    },
+    "rowLimit": {
+      "type": "1 | 2 | 3",
+      "typeName": "enum",
+      "rawType": "1 | 2 | 3",
+      "enumValues": [
+        "1",
+        "2",
+        "3"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Количество строк"
+    },
+    "monospaceNumbers": {
+      "type": "boolean",
+      "typeName": "enum",
+      "rawType": "boolean",
+      "enumValues": [
+        "false",
+        "true"
+      ],
+      "required": false,
+      "defaultValue": "false",
+      "description": "Делает цифры моноширинными"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дополнительный класс"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Идентификатор для систем автоматизированного тестирования."
+    }
+  },
+  "examples": [
+    {
+      "title": "Стили текста",
+      "description": "Компоненту можно задать необходимый стиль текста.",
+      "desktop": "<div>\n<TextComponent view='headline-system-small'>Headline-system-small</TextComponent>\n<Gap size={16} />\n<TextComponent view='paragraph-primary-medium'>Paragraph-primary-medium</TextComponent>\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Цвет текста и фона",
+      "description": "Тексту и фону под ним можно здать необходимый цвет.",
+      "desktop": "<TextComponent\ncolor='var(--color-light-text-positive)'\ntextBackgroundColor='var(--color-light-status-muted-attention)'\n>\nПример с покраской фона\n</TextComponent>",
+      "mobile": null
+    },
+    {
+      "title": "Отсечение текста",
+      "description": "Можно настроить отсечение текста при переполнении одной, двух или трёх строк.",
+      "desktop": "<div style={{ width: isMobile() ? 320 : 430 }}>\n<TextComponent rowLimit={1}>\nЯ взял со стола, как теперь помню, червонного туза и бросил кверху: дыхание у всех\nостановилось;\n</TextComponent>\n</div>",
+      "mobile": null
+    },
+    {
+      "title": "Выравнивание",
+      "description": "",
+      "desktop": "<div style={{ width: isMobile() ? 320 : 200 }}>\n<TextComponent tag='div' align='center'>\nПо центру\n</TextComponent>\n<Gap size={12} />\n<TextComponent tag='div' align='left'>\nПо левому краю\n</TextComponent>\n<Gap size={12} />\n<TextComponent tag='div' align='right'>\nПо правому краю\n</TextComponent>\n</div>",
+      "mobile": null
+    }
+  ]
+}

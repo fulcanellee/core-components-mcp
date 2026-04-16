@@ -1,0 +1,75 @@
+{
+  "componentName": "Comment",
+  "packageName": "comment",
+  "description": "Используется для отображаения комментариев.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/comment",
+      "named": [
+        "Comment"
+      ]
+    }
+  ],
+  "props": {
+    "rowLimit": {
+      "type": "2 | 5",
+      "typeName": "enum",
+      "rawType": "2 | 5",
+      "enumValues": [
+        "2",
+        "5"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Количество строк"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Сss класс для стилизации общей обёртки"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "children": {
+      "type": "ReactNode",
+      "typeName": "enum",
+      "rawType": "ReactNode",
+      "enumValues": [
+        "null",
+        "string",
+        "number",
+        "false",
+        "true",
+        "ReactElement<any, string | JSXElementConstructor<any>>",
+        "Iterable<ReactNode>",
+        "ReactPortal"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Дочерние элементы."
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<div style={{ width: 290 }}>\n<Comment>Короткий комментарий</Comment>\n<Gap size={16} />\n<Comment>Длинный комментарий без ограничения по количеству строк</Comment>\n<Gap size={16} />\n<Comment rowLimit={2}>Длинный комментарий с ограничением по количеству строк</Comment>\n</div>",
+      "mobile": null
+    }
+  ]
+}

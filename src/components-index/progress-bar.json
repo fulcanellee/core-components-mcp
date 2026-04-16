@@ -1,0 +1,96 @@
+{
+  "componentName": "ProgressBar",
+  "packageName": "progress-bar",
+  "description": "Используется для отображения прогресса.",
+  "imports": [
+    {
+      "from": "@alfalab/core-components/progress-bar",
+      "named": [
+        "ProgressBar"
+      ]
+    }
+  ],
+  "props": {
+    "value": {
+      "type": "number",
+      "typeName": "number",
+      "rawType": null,
+      "enumValues": [],
+      "required": true,
+      "defaultValue": null,
+      "description": "Значение заполненной части 0-100"
+    },
+    "className": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Css-класс для стилизации"
+    },
+    "view": {
+      "type": "\"link\" | \"positive\" | \"negative\" | \"attention\" | \"tertiary\" | \"secondary\" | \"primary\" | \"accent\"",
+      "typeName": "enum",
+      "rawType": "\"link\" | \"positive\" | \"negative\" | \"attention\" | \"tertiary\" | \"secondary\" | \"primary\" | \"accent\"",
+      "enumValues": [
+        "\"link\"",
+        "\"positive\"",
+        "\"negative\"",
+        "\"attention\"",
+        "\"tertiary\"",
+        "\"secondary\"",
+        "\"primary\"",
+        "\"accent\""
+      ],
+      "required": false,
+      "defaultValue": "positive",
+      "description": "Цвет заполнения"
+    },
+    "size": {
+      "type": "8 | 4",
+      "typeName": "enum",
+      "rawType": "8 | 4",
+      "enumValues": [
+        "8",
+        "4"
+      ],
+      "required": false,
+      "defaultValue": "8",
+      "description": "Размер компонента"
+    },
+    "dataTestId": {
+      "type": "string",
+      "typeName": "enum",
+      "rawType": "string",
+      "enumValues": [
+        "string"
+      ],
+      "required": false,
+      "defaultValue": null,
+      "description": "Id компонента для тестов"
+    },
+    "colors": {
+      "type": "\"default\" | \"inverted\"",
+      "typeName": "enum",
+      "rawType": "\"default\" | \"inverted\"",
+      "enumValues": [
+        "\"default\"",
+        "\"inverted\""
+      ],
+      "required": false,
+      "defaultValue": "default",
+      "description": "Набор цветов для компонента"
+    }
+  },
+  "examples": [
+    {
+      "title": "Примеры",
+      "description": "",
+      "desktop": "<Space size={20} fullWidth>\n<ProgressBar value={40} />\n<ProgressBar view='link' size={4} value={20} />\n</Space>",
+      "mobile": null
+    }
+  ]
+}
